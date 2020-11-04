@@ -82,7 +82,7 @@ window.onload = function () {
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
-  const settingsWindow = document.querySelector(".settings-window");
+  // const settingsWindow = document.querySelector(".settings-window");
 
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
@@ -90,8 +90,6 @@ window.onload = function () {
   const musicDesktop = document.querySelector(".music-vis");
   const robotDesktop = document.querySelector(".singing-robot");
   const mariposaDesktop = document.querySelector(".mariposa");
-
-
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -348,27 +346,46 @@ window.onload = function () {
     // change color theme desktop
     const colors = document.getElementsByClassName("color");
     const backgroundColorPc = document.querySelector(".background-color");
+    const monitor = document.getElementById("monitor");
+    const buttons = document.getElementsByClassName("classic-btn");
+    const settingsWindow = document.getElementsByClassName("settings-window ")[0];
+    clickSettingsMenu.onclick = () => {
+      settingsWindow.hidden = false;
+    }
 
     function changeTheme() {
       if (!backgroundColorPc.style.backgroundColor) {
         backgroundColorPc.style.backgroundColor = "purple";
       }
       for (let i = 0; i < colors.length; i++) {
-        // colors[i].style.backgroundColor = "white";
         let selected;
         colors[i].onclick = () => {
           selected = colors[i];
           // change background selected color
           colors[i].style.backgroundColor = "purple";
-          for (let j = 0; j < colors.lengths; j++) {
-            colors[j].style.backgroundColor = "white";
+          for (let j = 0; j < colors.length; j++) {
+            if (colors[i] !== colors[j]) {
+              colors[j].style.backgroundColor = "white";
+              console.log(colors[j]);
+            }
           }
           // change to selected color on pc display
           let selectedColor = colors[i].innerHTML.toLowerCase();
           backgroundColorPc.style.backgroundColor = selectedColor;
+          monitor.style.backgroundColor = selectedColor;
         }
       }
       // when confirmed, change whole styling
+      buttons[0].onclick = () => {
+        console.log("clicked ok");
+        buttons[0].active = true;
+        settingsWindow.hidden = true;
+      }
+
+      buttons[1].onclick = () => {
+        monitor.style.backgroundColor = "purple";
+        settingsWindow.hidden = true;
+      }
     }
     changeTheme();
   }

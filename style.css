@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: rgb(77, 37, 77);
   font-family: "minion-pro", times, serif;
   height: 100%;
   margin: 0;
@@ -19,7 +19,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("http://api.thumbr.it/whitenoise-361x370.png?background=532c69ff&noise=470c47&density=100&opacity=80");
+  background-color: "purple";
+  /* background: url("http://api.thumbr.it/whitenoise-361x370.png?background=532c69ff&noise=470c47&density=100&opacity=80"); */
   overflow: hidden;
 }
 
@@ -489,7 +490,7 @@ img#contact-img {
 
 .settings-window {
   width: 350px;
-  height: 400px;
+  height: 430px;
   border: outset 2px;
   background: #c0c0c0;
   position: relative;
@@ -517,8 +518,8 @@ img#contact-img {
 }
 
 .background-choices {
-  width: 154px;
-  height: 96px;
+  width: 118px;
+  height: 80px;
   border: inset;
   background: white;
   margin: 10px;
@@ -530,7 +531,8 @@ img#contact-img {
 
 .color {
   padding: 0;
-  margin-left: 10px;
+  padding-left: 5px;
+  margin-left: 7px;
   margin-top: 0;
   cursor: pointer;
 }
@@ -538,6 +540,25 @@ img#contact-img {
 .color:active {
   background-color: purple;
   color: white;
+}
+
+.settings-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 29px;
+  margin-right: 20px;
+}
+
+.classic-btn {
+  width: 87px;
+  height: 23px;
+  margin: 5px;
+  border: 1px solid;
+  box-shadow: 2px 2px;
+}
+
+.classic-btn:active {
+  outline: blue auto 5px;
 }
 
 ul {
