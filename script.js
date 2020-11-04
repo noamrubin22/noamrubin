@@ -392,6 +392,7 @@ window.onload = function () {
         settingsWindow.hidden = true;
       }
 
+      // if canceled, got back to old
       buttons[1].onclick = () => {
         monitor.style.backgroundColor = "var(--color-primary)";
         settingsWindow.hidden = true;
