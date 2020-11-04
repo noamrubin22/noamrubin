@@ -20,6 +20,27 @@
   --font-color: white
 }
 
+.theme-portoflavors {
+  --color-primary: url("./images/porto.png");
+  --color-secondary: rgb(31, 56, 31);
+  --color-accent: rgb(106, 143, 106);
+  --font-color: rgb(165, 165, 87);
+}
+
+.theme-yourock {
+  --color-primary: url("./images/yourock.png");
+  --color-secondary: rgb(130, 144, 162);
+  --color-accent: rgb(206, 172, 135);
+  --font-color: rgb(165, 165, 87);
+}
+
+.theme-burnbabyburn {
+  --color-primary: rgb(149, 25, 25);
+  --color-secondary: rgb(102, 12, 12);
+  --color-accent: rgb(110, 12, 12);
+  --font-color: rgb(65, 5, 5);
+}
+
 body {
   background: var(--color-primary);
   font-family: "minion-pro", times, serif;
