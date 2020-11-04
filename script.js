@@ -70,7 +70,6 @@ window.onload = function () {
   const clickMariposaMenu = document.querySelector(".mariposa-menu");
   const clickGerritMenu = document.querySelector(".gerrit-menu");
   const clickMusicMenu = document.querySelector(".music-menu");
-  const clickRobotMenu = document.querySelector(".robot-menu");
   const clickSpotavibeMenu = document.querySelector(".spotavibe-menu");
   const clickSettingsMenu = document.querySelector(".settings");
 
@@ -78,7 +77,6 @@ window.onload = function () {
   const gerritWindow = document.querySelector(".gerrit-window");
   const spotavibeWindow = document.querySelector(".spotavibe-window");
   const musicWindow = document.querySelector(".music-window");
-  const robotWindow = document.querySelector(".robot-window");
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
@@ -88,7 +86,6 @@ window.onload = function () {
   const spotavibeDesktop = document.querySelector(".spotavibe");
   const gerritDesktop = document.querySelector(".gerrit");
   const musicDesktop = document.querySelector(".music-vis");
-  const robotDesktop = document.querySelector(".singing-robot");
   const mariposaDesktop = document.querySelector(".mariposa");
 
   const aboutProps = {
@@ -119,14 +116,6 @@ window.onload = function () {
     windowElement: musicWindow,
     iconClassName: "music-icon",
     taskText: "music-visualization.txt",
-  };
-
-  const robotProps = {
-    desktopButton: robotDesktop,
-    menuButton: clickRobotMenu,
-    windowElement: robotWindow,
-    iconClassName: "robot-icon",
-    taskText: "tibetan-singing-robot.txt",
   };
 
   const spotavibeProps = {
@@ -193,9 +182,7 @@ window.onload = function () {
       if (this.props.desktopButton) {
         this.props.desktopButton.addEventListener("click", () => {
           console.log("clickedonce");
-          this.props.desktopButton.style.cssText =
-            "background-color: rebeccapurple";
-
+          this.props.desktopButton.style.backgroundColor = "var(--color-accent)"
           item = this.props.desktopButton;
 
           setTimeout(function () {
@@ -208,7 +195,7 @@ window.onload = function () {
           desktopButton.style.cssText = "background-color: none";
         }
         function setToPurple(desktopButton) {
-          desktopButton.style.cssText = "background-color: rebeccapurple";
+          desktopButton.style.cssText = `background-color: var(--color-secondary)`;
         }
       }
 
@@ -259,7 +246,6 @@ window.onload = function () {
   new Window(contactProps);
   new Window(gerritProps);
   new Window(spotavibeProps);
-  new Window(robotProps);
   new Window(musicProps);
   new Window(mariposaProps);
   // new Window(settingsProps);
@@ -344,46 +330,70 @@ window.onload = function () {
 
 
     // change color theme desktop
-    const colors = document.getElementsByClassName("color");
+    const themes = document.getElementsByClassName("theme");
     const backgroundColorPc = document.querySelector(".background-color");
-    const monitor = document.getElementById("monitor");
+    // const monitor = document.getElementById("monitor");
     const buttons = document.getElementsByClassName("classic-btn");
     const settingsWindow = document.getElementsByClassName("settings-window ")[0];
+
+
+    /* open settings when clicked on menu */
     clickSettingsMenu.onclick = () => {
       settingsWindow.hidden = false;
     }
 
+    // function to set a given theme/color-scheme
+    function setTheme(themeName) {
+      localStorage.setItem('theme', themeName);
+      document.documentElement.className = themeName;
+    }
+    // // function to toggle between themes
+    // function toggleTheme() {
+    //   if (localStorage.getItem('theme') === 'theme-purplelady') {
+    //     setTheme('theme-purplelady');
+    //   } else {
+    //     setTheme('theme-oceantheme');
+    //   }
+    // }
+    // // Immediately invoked function to set the theme on initial load
+    // (function () {
+    //   if (localStorage.getItem('theme') === 'theme-purplelady') {
+    //     setTheme('theme-purplelady');
+    //   } else {
+    //     setTheme('theme-oceanview');
+    //   }
+    // })();
+
     function changeTheme() {
       if (!backgroundColorPc.style.backgroundColor) {
-        backgroundColorPc.style.backgroundColor = "purple";
+        backgroundColorPc.style.backgroundColor = "var(--color-primary)";
       }
-      for (let i = 0; i < colors.length; i++) {
-        let selected;
-        colors[i].onclick = () => {
-          selected = colors[i];
+      for (let i = 0; i < themes.length; i++) {
+        themes[i].onclick = () => {
+          selected = themes[i];
           // change background selected color
-          colors[i].style.backgroundColor = "purple";
-          for (let j = 0; j < colors.length; j++) {
-            if (colors[i] !== colors[j]) {
-              colors[j].style.backgroundColor = "white";
-              console.log(colors[j]);
+          themes[i].style.backgroundColor = "var(--color-accent)";
+          themes[i].style.color = "white";
+          for (let j = 0; j < themes.length; j++) {
+            if (themes[i] !== themes[j]) {
+              themes[j].style.backgroundColor = "white";
+              themes[j].style.color = "black";
             }
           }
           // change to selected color on pc display
-          let selectedColor = colors[i].innerHTML.toLowerCase();
-          backgroundColorPc.style.backgroundColor = selectedColor;
-          monitor.style.backgroundColor = selectedColor;
+          let selectedTheme = themes[i].innerHTML.toLowerCase().split(" ").join("");
+          console.log('theme-' + selectedTheme);
+          setTheme('theme-' + selectedTheme);
         }
       }
       // when confirmed, change whole styling
       buttons[0].onclick = () => {
-        console.log("clicked ok");
         buttons[0].active = true;
         settingsWindow.hidden = true;
       }
 
       buttons[1].onclick = () => {
-        monitor.style.backgroundColor = "purple";
+        monitor.style.backgroundColor = "var(--color-primary)";
         settingsWindow.hidden = true;
       }
     }

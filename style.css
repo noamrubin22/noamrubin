@@ -1,5 +1,27 @@
+/* change theme */
+.theme-purplelady {
+  --color-primary: rgb(77, 37, 77);
+  --color-secondary: #3f1d44;
+  --color-accent: #44193e;
+  --font-color: white
+}
+
+.theme-oceanview {
+  --color-primary: #1c4375;
+  --color-secondary: #131352;
+  --color-accent: #0a127c;
+  --font-color: white
+}
+
+.theme-windowsclassic {
+  --color-primary: rgb(0, 131, 130);
+  --color-secondary: #131352;
+  --color-accent: #0a127c;
+  --font-color: white
+}
+
 body {
-  background: rgb(77, 37, 77);
+  background: var(--color-primary);
   font-family: "minion-pro", times, serif;
   height: 100%;
   margin: 0;
@@ -19,8 +41,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: "purple";
-  /* background: url("http://api.thumbr.it/whitenoise-361x370.png?background=532c69ff&noise=470c47&density=100&opacity=80"); */
   overflow: hidden;
 }
 
@@ -197,7 +217,7 @@ body {
 }
 
 .start__menu-main-items-item:hover {
-  background: purple;
+  background: var(--color-accent);
 }
 
 .start__menu-main-items-item:hover .start__menu-main-items-item-title {
@@ -255,7 +275,7 @@ body {
 }
 
 .start__menu-sub-items-item:hover {
-  background: purple;
+  background: var(--color-accent);
 }
 
 .start__menu-sub-items-item:hover .start__menu-sub-items-item-title {
@@ -273,7 +293,7 @@ body {
 }
 
 .sub__programs {
-  bottom: 44%;
+  bottom: 52%;
 }
 
 .desktop-icon {
@@ -512,7 +532,6 @@ img#contact-img {
   width: 179px;
   height: 126px;
   border: inset 2px;
-  /* background: url(http://api.thumbr.it/whitenoise-361x370.png?background=532c69ff&noise=470c47&density=100&opacity=80); */
   margin: auto;
   margin-top: 11px;
 }
@@ -538,7 +557,7 @@ img#contact-img {
 }
 
 .color:active {
-  background-color: purple;
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -558,7 +577,7 @@ img#contact-img {
 }
 
 .classic-btn:active {
-  outline: blue auto 5px;
+  outline: var(--color-primary) auto 5px;
 }
 
 ul {
@@ -749,7 +768,7 @@ img {
 #linkedin-icon:hover,
 #email-icon:hover {
   cursor: pointer;
-  background: purple;
+  background: var(--color-accent);
 }
 
 .linkedin-icon,
@@ -862,7 +881,7 @@ img {
 }
 
 .titlebar {
-  background: #370955;
+  background: var(--color-secondary);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -918,7 +937,7 @@ img {
   border: inset 2px;
   /* color: url("http://api.thumbr.it/whitenoise-361x370.png?background=532c69ff&noise=470c47&density=100&opacity=80"); */
   background: white;
-  color: #432954;
+  color: var(--color-accent);
   margin: 5px;
   height: 90%;
   padding: 2px;
