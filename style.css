@@ -20,17 +20,10 @@
   --font-color: white
 }
 
-.theme-portoflavors {
-  --color-primary: url("./images/porto.png");
+.theme-eatyourgreens {
+  --color-primary: rgb(38, 85, 38);
   --color-secondary: rgb(31, 56, 31);
   --color-accent: rgb(106, 143, 106);
-  --font-color: rgb(165, 165, 87);
-}
-
-.theme-yourock {
-  --color-primary: url("./images/yourock.png");
-  --color-secondary: rgb(130, 144, 162);
-  --color-accent: rgb(206, 172, 135);
   --font-color: rgb(165, 165, 87);
 }
 
@@ -560,10 +553,10 @@ img#contact-img {
 
 .pc-bg-img {
   width: 85px;
-  height: 60px;
+  height: 65px;
   margin: auto;
-  margin-top: 35px;
-  margin-left: 45px;
+  margin-top: 32px;
+  margin-left: 46px;
 }
 
 .background-choices {

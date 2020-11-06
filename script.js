@@ -401,15 +401,17 @@ window.onload = function () {
       }
     }
 
-    function setImage(selectedImage) {
+    function setImage(selectedImage, title) {
       if (selectedImage === "none") {
         chosenBackgroundImage.hidden = true;
         backgroundImagePc.hidden = true;
       } else {
         chosenBackgroundImage.hidden = false;
-        backgroundImagePc.hidden = false;
         chosenBackgroundImage.src = "./images/" + selectedImage + ".png";
+        chosenBackgroundImage.alt = title;
+        backgroundImagePc.hidden = false;
         backgroundImagePc.src = "./images/" + selectedImage + ".png";
+        backgroundImagePc.alt = title;
       }
     }
 
@@ -427,9 +429,9 @@ window.onload = function () {
             }
           }
           // change to selected color on pc display
+          let title = images[i].innerHTML;
           let selectedImage = images[i].innerHTML.toLowerCase().split(" ").join("");
-          console.log(selectedImage);
-          setImage(selectedImage);
+          setImage(selectedImage, title);
         }
       }
     }
