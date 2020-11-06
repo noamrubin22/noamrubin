@@ -335,7 +335,9 @@ window.onload = function () {
     // const monitor = document.getElementById("monitor");
     const buttons = document.getElementsByClassName("classic-btn");
     const settingsWindow = document.getElementsByClassName("settings-window ")[0];
-
+    const images = document.getElementsByClassName("display-img");
+    const chosenBackgroundImage = document.getElementById("chosen-background-img");
+    const backgroundImagePc = document.getElementsByClassName("pc-bg-img")[0];
 
     /* open settings when clicked on menu */
     clickSettingsMenu.onclick = () => {
@@ -398,6 +400,40 @@ window.onload = function () {
         settingsWindow.hidden = true;
       }
     }
+
+    function setImage(selectedImage) {
+      if (selectedImage === "none") {
+        chosenBackgroundImage.hidden = true;
+        backgroundImagePc.hidden = true;
+      } else {
+        chosenBackgroundImage.hidden = false;
+        backgroundImagePc.hidden = false;
+        chosenBackgroundImage.src = "./images/" + selectedImage + ".png";
+        backgroundImagePc.src = "./images/" + selectedImage + ".png";
+      }
+    }
+
+    function changeImage() {
+      for (let i = 0; i < images.length; i++) {
+        images[i].onclick = () => {
+          // selected = images[i];
+          // change background selected color
+          images[i].style.backgroundColor = "var(--color-accent)";
+          images[i].style.color = "white";
+          for (let j = 0; j < images.length; j++) {
+            if (images[i] !== images[j]) {
+              images[j].style.backgroundColor = "white";
+              images[j].style.color = "black";
+            }
+          }
+          // change to selected color on pc display
+          let selectedImage = images[i].innerHTML.toLowerCase().split(" ").join("");
+          console.log(selectedImage);
+          setImage(selectedImage);
+        }
+      }
+    }
     changeTheme();
+    changeImage();
   }
 };

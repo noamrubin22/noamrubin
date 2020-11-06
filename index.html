@@ -11,7 +11,11 @@
 <body>
   <img id="screensaver" src="images/ScreenSaver_01.gif" alt="screensaver" />
   <div class="monitor" id="monitor">
-    <div class="start" id="start">
+    <div class="background-container">
+      <img id="chosen-background-img" src="./images/theroomandoneself.jpg" alt="Chosen Background" hidden>
+      <!-- <p>By Katharina Michalsky</p> -->
+    </div>
+    <div class=" start" id="start">
       <div class="start__button">
         <div class="start__logo">
         </div>
@@ -114,14 +118,16 @@
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-close class="notepad-exit closeme-settings">
+        <!-- <div data-close class="notepad-exit closeme-settings">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
-        </div>
+        </div> -->
         <div class="content">
           <div class="pc">
-            <div class="background-color"></div>
+            <div class="background-color">
+              <img class="pc-bg-img" src="./images/90ieskid.png" hidden>
+            </div>
           </div>
           <div class="display-options">
             <div class="background-choices">
@@ -134,13 +140,13 @@
                 <div class="theme" id="burnbabyburn">Burn Baby Burn</ol>
               </ul>
             </div>
-            <div class="screensaver-choices">
+            <div class="bgimg-choices">
               <ul tabindex=1>
-                <div class="screensaver">Spiral</div>
-                <div class="screensaver">Flowers</div>
-                <div class="screensaver">Flowers</div>
-                <div class="screensaver">Flowers</div>
-                <div class="screensaver">Flowers</div>
+                <div class="display-img">None</div>
+                <div class="display-img">90ies Kid</div>
+                <div class="display-img">The Ocean</div>
+                <div class="display-img">The Room And Oneself</div>
+                <div class="display-img">You Rock</div>
               </ul>
             </div>
           </div>
