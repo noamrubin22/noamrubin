@@ -396,10 +396,30 @@ window.onload = function () {
 
     /* sets the selected image as background */
     function setImage(selectedImage, title, artist) {
+      const backgroundContainer = document.getElementsByClassName("background-container")[0];
+      const artistInsta = document.getElementById("insta-artist");
+
       if (selectedImage === "none") {
         chosenBackgroundImage.hidden = true;
         backgroundImagePc.hidden = true;
+        artistInsta.hidden = true;
       } else {
+        // add artist link
+        if (artist) {
+          artistInsta.hidden = false;
+          if (artist === "kathi") {
+            artistInsta.innerHTML = "by @katherinamichalsky";
+            artistInsta.href = "https://www.instagram.com/katherinamichalsky"
+          } else if (artist === "shruti") {
+            artistInsta.innerHTML = "by @shrooodi";
+            artistInsta.href = "https://www.instagram.com/shrooodi"
+          } else {
+            artistInsta.innerHTML = "by @iti.art";
+            artistInsta.href = "https://www.instagram.com/iti.art"
+          }
+        } else {
+          artistInsta.hidden = true;
+        }
         // add image to both backgrounds (pc and real display)
         chosenBackgroundImage.hidden = false;
         chosenBackgroundImage.src = "./images/" + selectedImage + ".png";
@@ -407,35 +427,10 @@ window.onload = function () {
         backgroundImagePc.hidden = false;
         backgroundImagePc.src = "./images/" + selectedImage + ".png";
         backgroundImagePc.alt = title;
-
-        // add artist link
-        const backgroundContainer = document.getElementsByClassName("background-container")[0];
-        let artistDiv = document.getElementsByClassName("artist")[0];
-        if (artist) {
-          // let artistDiv = document.createElement("DIV");
-          // console.log(artistDiv);
-          artistDiv.hidden = false;
-          if (artist === "kathi") {
-            artistDiv.innerHTML = "by @katherinamichalsky";
-          } else if (artist === "shruti") {
-            artistDiv.innerHTML = "by @shrooodi";
-          } else {
-            artistDiv.innerHTML = "by @iti.art";
-          }
-          backgroundContainer.appendChild(artistDiv);
-        } else {
-          artistDiv.hidden = true;
-        }
       }
     }
-    // function addArtist() {
-
-    // }
-    // check id for artist name
-    // add p tag with artists instagram and link
 
     function changeImage() {
-
       for (let i = 0; i < images.length; i++) {
         // if image is selected
         images[i].onclick = () => {

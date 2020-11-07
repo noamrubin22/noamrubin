@@ -627,11 +627,24 @@ img#contact-img {
 }
 
 .artist {
-  align-self: center;
+  /* align-self: center; */
   position: absolute;
   bottom: 77px;
   background-color: white;
   font-size: 20px;
+  margin-top: 3px;
+  left: 50%;
+}
+
+#insta-artist {
+  position: absolute;
+  bottom: 77px;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 3px;
+  align-self: center;
+  text-decoration: none;
+  color: black;
 }
 
 .settings-buttons {
