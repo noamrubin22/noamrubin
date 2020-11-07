@@ -28,9 +28,9 @@
 }
 
 .theme-burnbabyburn {
-  --color-primary: rgb(149, 25, 25);
+  --color-primary: rgb(75, 24, 24);
   --color-secondary: rgb(102, 12, 12);
-  --color-accent: rgb(110, 12, 12);
+  --color-accent: rgb(173, 36, 36);
   --font-color: rgb(65, 5, 5);
 }
 
@@ -622,8 +622,17 @@ img#contact-img {
 .background-container {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  /* height: 100%; */
 }
 
+.artist {
+  align-self: center;
+  position: absolute;
+  bottom: 77px;
+  background-color: white;
+  font-size: 20px;
+}
 
 .settings-buttons {
   display: flex;

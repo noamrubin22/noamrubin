@@ -134,13 +134,6 @@ window.onload = function () {
     taskText: "mariposa.txt",
   };
 
-  // const settingsProps = {
-  //   menuButton: clickSettingsMenu,
-  //   windowElement: settingsWindow,
-  //   iconClassName: "settings-icon",
-  //   taskText: "Settings",
-  // };
-
   class Window {
     constructor(props) {
       this.props = props;
@@ -401,37 +394,65 @@ window.onload = function () {
       }
     }
 
-    function setImage(selectedImage, title) {
+    /* sets the selected image as background */
+    function setImage(selectedImage, title, artist) {
       if (selectedImage === "none") {
         chosenBackgroundImage.hidden = true;
         backgroundImagePc.hidden = true;
       } else {
+        // add image to both backgrounds (pc and real display)
         chosenBackgroundImage.hidden = false;
         chosenBackgroundImage.src = "./images/" + selectedImage + ".png";
         chosenBackgroundImage.alt = title;
         backgroundImagePc.hidden = false;
         backgroundImagePc.src = "./images/" + selectedImage + ".png";
         backgroundImagePc.alt = title;
+
+        // add artist link
+        const backgroundContainer = document.getElementsByClassName("background-container")[0];
+        let artistDiv = document.getElementsByClassName("artist")[0];
+        if (artist) {
+          // let artistDiv = document.createElement("DIV");
+          // console.log(artistDiv);
+          artistDiv.hidden = false;
+          if (artist === "kathi") {
+            artistDiv.innerHTML = "by @katherinamichalsky";
+          } else if (artist === "shruti") {
+            artistDiv.innerHTML = "by @shrooodi";
+          } else {
+            artistDiv.innerHTML = "by @iti.art";
+          }
+          backgroundContainer.appendChild(artistDiv);
+        } else {
+          artistDiv.hidden = true;
+        }
       }
     }
+    // function addArtist() {
+
+    // }
+    // check id for artist name
+    // add p tag with artists instagram and link
 
     function changeImage() {
+
       for (let i = 0; i < images.length; i++) {
+        // if image is selected
         images[i].onclick = () => {
-          // selected = images[i];
-          // change background selected color
+          // change its background in the list
           images[i].style.backgroundColor = "var(--color-accent)";
           images[i].style.color = "white";
+          // make sure that the rest of the list is not selected
           for (let j = 0; j < images.length; j++) {
             if (images[i] !== images[j]) {
               images[j].style.backgroundColor = "white";
               images[j].style.color = "black";
             }
           }
-          // change to selected color on pc display
+          // change to selected image on pc display
           let title = images[i].innerHTML;
           let selectedImage = images[i].innerHTML.toLowerCase().split(" ").join("");
-          setImage(selectedImage, title);
+          setImage(selectedImage, title, images[i].id);
         }
       }
     }
