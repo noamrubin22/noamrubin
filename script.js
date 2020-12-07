@@ -10,8 +10,10 @@ window.onload = function () {
   let startButton = document.querySelector(".start__button");
   let startMenu = document.querySelector(".start__menu-main");
   let body = document.querySelector("body");
-  let programsItem = document.querySelector(".programs");
+  let projectsItem = document.querySelector(".projects");
   let programsMenu = document.querySelector(".sub__programs");
+  let documentsItem = document.querySelector(".documents");
+  let documentsMenu = document.querySelector(".sub__documents");
   let screenSaver = document.getElementById("screensaver");
   let shutDown = document.querySelector(".shutdown");
   let item;
@@ -63,10 +65,13 @@ window.onload = function () {
     menuDisplay(startMenu);
   });
 
-  programsItem.addEventListener("click", function () {
+  projectsItem.addEventListener("click", function () {
     menuDisplay(programsMenu);
   });
 
+  documentsItem.addEventListener("click", function () {
+    menuDisplay(documentsMenu);
+  })
   /* OPENS WINDOW AND ADD TASK TO TASKBAR */
   // menu buttons
   const clickAboutMenu = document.querySelector(".about");
@@ -84,6 +89,7 @@ window.onload = function () {
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
+  const videoWindow = document.querySelector(".video-window");
   // const settingsWindow = document.querySelector(".settings-window");
 
   // desktop items
@@ -138,6 +144,12 @@ window.onload = function () {
     taskText: "mariposa.txt",
   };
 
+  const videoProps = {
+    windowElement: videoWindow,
+    iconClassName: "video-icon",
+    taskText: "groove.mov",
+  };
+
   class Window {
     constructor(props) {
       this.props = props;
@@ -175,7 +187,7 @@ window.onload = function () {
         starField();
       });
 
-      // make desktop items are "selected" by clicking ones
+      // make desktop items are "selected" by clicking once
       if (this.props.desktopButton) {
         this.props.desktopButton.addEventListener("click", () => {
           console.log("clickedonce");
@@ -245,7 +257,7 @@ window.onload = function () {
   new Window(spotavibeProps);
   new Window(musicProps);
   new Window(mariposaProps);
-  // new Window(settingsProps);
+  // new Window(videoProps);
 
   /* DRAGGABLE */
   // Make the desktop icons draggable
@@ -257,6 +269,7 @@ window.onload = function () {
   let windows = document.getElementsByClassName("window");
   for (let i = 0; i < windows.length; i++) {
     dragElement(windows[i]);
+    console.log(windows[i]);
   }
 
   function dragElement(elmnt) {
@@ -324,140 +337,5 @@ window.onload = function () {
       document.onmouseup = null;
       document.onmousemove = null;
     }
-
-
-
-    //   // change color theme desktop
-    //   const themes = document.getElementsByClassName("theme");
-    //   const backgroundColorPc = document.querySelector(".background-color");
-    //   // const monitor = document.getElementById("monitor");
-    //   const buttons = document.getElementsByClassName("classic-btn");
-    //   const settingsWindow = document.getElementsByClassName("settings-window ")[0];
-    //   const images = document.getElementsByClassName("display-img");
-    //   const chosenBackgroundImage = document.getElementById("chosen-background-img");
-    //   const backgroundImagePc = document.getElementsByClassName("pc-bg-img")[0];
-
-    //   /* open settings when clicked on menu */
-    //   clickSettingsMenu.onclick = () => {
-    //     settingsWindow.hidden = false;
-    //   }
-
-    //   // function to set a given theme/color-scheme
-    //   function setTheme(themeName) {
-    //     localStorage.setItem('theme', themeName);
-    //     document.documentElement.className = themeName;
-    //   }
-    //   // // function to toggle between themes
-    //   // function toggleTheme() {
-    //   //   if (localStorage.getItem('theme') === 'theme-purplelady') {
-    //   //     setTheme('theme-purplelady');
-    //   //   } else {
-    //   //     setTheme('theme-oceantheme');
-    //   //   }
-    //   // }
-    //   // // Immediately invoked function to set the theme on initial load
-    //   // (function () {
-    //   //   if (localStorage.getItem('theme') === 'theme-purplelady') {
-    //   //     setTheme('theme-purplelady');
-    //   //   } else {
-    //   //     setTheme('theme-oceanview');
-    //   //   }
-    //   // })();
-
-    //   function changeTheme() {
-    //     if (!backgroundColorPc.style.backgroundColor) {
-    //       backgroundColorPc.style.backgroundColor = "var(--color-primary)";
-    //     }
-    //     for (let i = 0; i < themes.length; i++) {
-    //       themes[i].onclick = () => {
-    //         selected = themes[i];
-    //         // change background selected color
-    //         themes[i].style.backgroundColor = "var(--color-accent)";
-    //         themes[i].style.color = "white";
-    //         for (let j = 0; j < themes.length; j++) {
-    //           if (themes[i] !== themes[j]) {
-    //             themes[j].style.backgroundColor = "white";
-    //             themes[j].style.color = "black";
-    //           }
-    //         }
-    //         // change to selected color on pc display
-    //         let selectedTheme = themes[i].innerHTML.toLowerCase().split(" ").join("");
-    //         console.log('theme-' + selectedTheme);
-    //         setTheme('theme-' + selectedTheme);
-    //       }
-    //     }
-    //     // when confirmed, change whole styling
-    //     buttons[0].onclick = () => {
-    //       buttons[0].active = true;
-    //       settingsWindow.hidden = true;
-    //     }
-
-    //     // if canceled, got back to old
-    //     buttons[1].onclick = () => {
-    //       monitor.style.backgroundColor = "var(--color-primary)";
-    //       settingsWindow.hidden = true;
-    //     }
-    //   }
-
-    //   /* sets the selected image as background */
-    //   function setImage(selectedImage, title, artist) {
-    //     const backgroundContainer = document.getElementsByClassName("background-container")[0];
-    //     const artistInsta = document.getElementById("insta-artist");
-
-    //     if (selectedImage === "none") {
-    //       chosenBackgroundImage.hidden = true;
-    //       backgroundImagePc.hidden = true;
-    //       artistInsta.hidden = true;
-    //     } else {
-    //       // add artist link
-    //       if (artist) {
-    //         artistInsta.hidden = false;
-    //         if (artist === "kathi") {
-    //           artistInsta.innerHTML = "by @katharina.michalsky";
-    //           artistInsta.href = "https://www.instagram.com/katharina.michalsky"
-    //         } else if (artist === "shruti") {
-    //           artistInsta.innerHTML = "by @shrooodi";
-    //           artistInsta.href = "https://www.instagram.com/shrooodi"
-    //         } else {
-    //           artistInsta.innerHTML = "by @iti.art";
-    //           artistInsta.href = "https://www.instagram.com/iti.art"
-    //         }
-    //       } else {
-    //         artistInsta.hidden = true;
-    //       }
-    //       // add image to both backgrounds (pc and real display)
-    //       chosenBackgroundImage.hidden = false;
-    //       chosenBackgroundImage.src = "./images/" + selectedImage + ".png";
-    //       chosenBackgroundImage.alt = title;
-    //       backgroundImagePc.hidden = false;
-    //       backgroundImagePc.src = "./images/" + selectedImage + ".png";
-    //       backgroundImagePc.alt = title;
-    //     }
-    //   }
-
-    //   function changeImage() {
-    //     for (let i = 0; i < images.length; i++) {
-    //       // if image is selected
-    //       images[i].onclick = () => {
-    //         // change its background in the list
-    //         images[i].style.backgroundColor = "var(--color-accent)";
-    //         images[i].style.color = "white";
-    //         // make sure that the rest of the list is not selected
-    //         for (let j = 0; j < images.length; j++) {
-    //           if (images[i] !== images[j]) {
-    //             images[j].style.backgroundColor = "white";
-    //             images[j].style.color = "black";
-    //           }
-    //         }
-    //         // change to selected image on pc display
-    //         let title = images[i].innerHTML;
-    //         let selectedImage = images[i].innerHTML.toLowerCase().split(" ").join("");
-    //         setImage(selectedImage, title, images[i].id);
-    //       }
-    //     }
-    //   }
-    //   changeTheme();
-    //   changeImage();
-    // }
   }
 }

@@ -9,7 +9,12 @@ function Settings() {
     const chosenBackgroundImage = document.getElementById("chosen-background-img");
     const backgroundImagePc = document.getElementsByClassName("pc-bg-img")[0];
     const closeSettings = document.getElementsByClassName("closeme-settings")[0];
-    const currentTheme = document.getElementsByTagName("html")[0].className;
+    let currentTheme = document.getElementsByTagName("html")[0].className;
+    let currentImage = "none";
+    let currentTitle;
+    let currentArtist;
+    let prevTheme;
+    let prevImage;
 
     /* open settings when clicked on menu */
     clickSettingsMenu.onclick = () => {
@@ -23,23 +28,6 @@ function Settings() {
 
     changeTheme();
     changeImage();
-    Cancel(currentTheme);
-
-    // when confirmed, change whole styling
-    buttons[0].onclick = () => {
-        buttons[0].active = true;
-        settingsWindow.hidden = true;
-    }
-
-    function Cancel(currentTheme, currentImage, currentTitle, currentArtist) {
-        // if canceled, got back to old
-        buttons[1].onclick = () => {
-            monitor.style.backgroundColor = "var(--color-primary)";
-            settingsWindow.hidden = true;
-            setTheme(currentTheme);
-            setImage(currentImage, currentTitle, currentArtist);
-        }
-    }
 
     /* set a given theme/color-scheme */
     function setTheme(themeName) {
@@ -67,7 +55,21 @@ function Settings() {
                 // change to selected color on pc display
                 let selectedTheme = themes[i].innerHTML.toLowerCase().split(" ").join("");
                 setTheme('theme-' + selectedTheme);
+                prevTheme = currentTheme;
+                currentTheme = 'theme-' + selectedTheme;
             }
+        }
+        // when confirmed, change whole styling
+        buttons[0].onclick = () => {
+            buttons[0].active = true;
+            settingsWindow.hidden = true;
+        }
+
+        // when canceled, go back to old theme
+        buttons[1].onclick = () => {
+            monitor.style.backgroundColor = "var(--color-primary)";
+            settingsWindow.hidden = true;
+            setTheme(prevTheme);
         }
     }
 
@@ -85,16 +87,26 @@ function Settings() {
                 artistInsta.hidden = false;
                 if (artist === "kathi") {
                     artistInsta.innerHTML = "by @katharina.michalsky";
-                    artistInsta.href = "https://www.instagram.com/katharina.michalsky"
+                    artistInsta.href = "https://www.instagram.com/katharina.michalsky";
+                    chosenBackgroundImage.style.width = "450";
                 } else if (artist === "shruti") {
                     artistInsta.innerHTML = "by @shrooodi";
-                    artistInsta.href = "https://www.instagram.com/shrooodi"
-                } else {
+                    artistInsta.href = "https://www.instagram.com/shrooodi";
+                    chosenBackgroundImage.style.width = "450";
+                } else if (artist === "chris") {
                     artistInsta.innerHTML = "by @iti.art";
-                    artistInsta.href = "https://www.instagram.com/iti.art"
+                    artistInsta.href = "https://www.instagram.com/iti.art";
+                    chosenBackgroundImage.style.width = "450";
+                } else if (artist === "djamillia") {
+                    artistInsta.innerHTML = "by @manush420";
+                    artistInsta.href = "https://www.instagram.com/manush420"
+                    chosenBackgroundImage.style.width = "800";
+                } else {
+                    return
                 }
             } else {
                 artistInsta.hidden = true;
+                chosenBackgroundImage.style.width = "450";
             }
             // add image to both backgrounds (pc and real display)
             chosenBackgroundImage.hidden = false;
@@ -107,9 +119,6 @@ function Settings() {
     }
 
     function changeImage() {
-        const currentImage = document.getElementById("chosen-background-img").alt.toLowerCase().split(" ").join("");
-        const currentTitle = document.getElementById("chosen-background-img").alt;
-
         for (let i = 0; i < images.length; i++) {
             // if image is selected
             images[i].onclick = () => {
@@ -125,10 +134,28 @@ function Settings() {
                 }
                 // change to selected image on pc display
                 let title = images[i].innerHTML;
-                console.log(images[i].id);
                 let selectedImage = images[i].innerHTML.toLowerCase().split(" ").join("");
                 setImage(selectedImage, title, images[i].id);
+                prevImage = currentImage;
+                prevTitle = currentTitle;
+                prevArtist = currentArtist;
+                currentImage = selectedImage;
+                currentTitle = title;
+                currentArtist = images[i].id;
             }
+        }
+        // when confirmed, change whole styling
+        buttons[0].onclick = () => {
+            buttons[0].active = true;
+            settingsWindow.hidden = true;
+        }
+
+        // when canceled, go back to old theme
+        buttons[1].onclick = () => {
+            monitor.style.backgroundColor = "var(--color-primary)";
+            settingsWindow.hidden = true;
+            setImage(prevImage, prevTitle, prevArtist);
+            setTheme(prevTheme);
         }
     }
 }
