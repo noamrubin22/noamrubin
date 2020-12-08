@@ -534,29 +534,37 @@ img#contact-img {
   box-shadow: 3px 3px;
 }
 
+.titles-settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: black;
+}
+
 .pc {
   width: 206px;
-  height: 153px;
-  border: outset 2px;
-  background: rgb(192, 192, 192);
+  height: 179px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 28px;
+  background: url("./images/desktop.png") no-repeat;
+  overflow: auto;
+  margin-left: 83px;
 }
 
 .background-color {
-  width: 179px;
-  height: 126px;
+  width: 152px;
+  height: 111px;
   border: inset 2px;
-  margin: auto;
-  margin-top: 11px;
+  margin-left: 14px;
+  margin-top: 15px;
 }
 
 .pc-bg-img {
   width: 85px;
   height: 65px;
   margin: auto;
-  margin-top: 32px;
-  margin-left: 46px;
+  margin-top: 25px;
+  margin-left: 33px;
 }
 
 .background-choices {
@@ -564,13 +572,26 @@ img#contact-img {
   height: 80px;
   border: inset;
   background: white;
-  margin: 10px;
-  margin-top: 44px;
+  margin: 6px;
+  /* margin-top: 44px; */
   color: black;
   overflow: auto;
   white-space: nowrap;
 }
 
+.background-image-settings>p {
+  color: black;
+  margin: 0;
+  margin-left: 41px;
+  padding: 0;
+}
+
+.themes-settings>p {
+  color: black;
+  margin: 0;
+  margin-left: 52px;
+  padding: 0;
+}
 
 .theme {
   padding: 0;
@@ -588,7 +609,7 @@ img#contact-img {
 .display-options {
   display: flex;
   justify-content: center;
-  /* flex-direction: row; */
+  margin-top: 18px;
 }
 
 .bgimg-choices {
@@ -597,7 +618,7 @@ img#contact-img {
   border: inset;
   background: white;
   margin: 6px;
-  margin-top: 44px;
+  /* margin-top: 44px; */
   color: black;
   overflow: auto;
   white-space: nowrap;

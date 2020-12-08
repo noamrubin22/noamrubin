@@ -98,6 +98,8 @@ window.onload = function () {
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
 
+  const closeAbout = document.querySelector(".closeme-about");
+
   const aboutProps = {
     menuButton: clickAboutMenu,
     windowElement: aboutWindow,
@@ -258,6 +260,35 @@ window.onload = function () {
   new Window(musicProps);
   new Window(mariposaProps);
   // new Window(videoProps);
+
+  let audioElement;
+  const muteFire = document.getElementById("mute-fire");
+
+  // FIRE sound about window
+  // clickAboutMenu.onclick = () => {
+  //   audioElement = new Audio("./images/fire.mp3");
+  //   audioElement.play();
+  // }
+
+  // closeAbout.onclick = () => {
+  //   audioElement.pause();
+  // }
+  // let isPlaying = false;
+
+  // function togglePlay() {
+  //   isPlaying ? audioElement.pause() : audioElement.play();
+  // };
+
+  // audioElement.onplaying = function () {
+  //   isPlaying = true;
+  // };
+  // audioElement.onpause = function () {
+  //   isPlaying = false;
+  // };
+
+  // muteFire.onclick = () => {
+  //   togglePlay();
+  // }
 
   /* DRAGGABLE */
   // Make the desktop icons draggable
