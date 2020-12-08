@@ -523,7 +523,7 @@ img#contact-img {
 }
 
 .settings-window {
-  width: 350px;
+  width: 385px;
   height: 430px;
   border: outset 2px;
   background: #c0c0c0;
@@ -548,7 +548,7 @@ img#contact-img {
   margin-top: 28px;
   background: url("./images/desktop.png") no-repeat;
   overflow: auto;
-  margin-left: 83px;
+  margin-left: 94px;
 }
 
 .background-color {
@@ -613,7 +613,7 @@ img#contact-img {
 }
 
 .bgimg-choices {
-  width: 180px;
+  width: 160px;
   height: 80px;
   border: inset;
   background: white;
