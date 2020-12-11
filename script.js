@@ -190,25 +190,25 @@ window.onload = function () {
       });
 
       // make desktop items are "selected" by clicking once
-      if (this.props.desktopButton) {
-        this.props.desktopButton.addEventListener("click", () => {
-          console.log("clickedonce");
-          this.props.desktopButton.style.backgroundColor = "var(--color-accent)"
-          item = this.props.desktopButton;
+      // if (this.props.desktopButton) {
+      //   this.props.desktopButton.addEventListener("click", () => {
+      //     console.log("clickedonce");
+      //     this.props.desktopButton.style.backgroundColor = "var(--color-accent)"
+      //     item = this.props.desktopButton;
 
-          setTimeout(function () {
-            setToPurple(item);
-            setColorToNone(item);
-          }, 500);
-        });
+      //     setTimeout(function () {
+      //       setToPurple(item);
+      //       setColorToNone(item);
+      //     }, 500);
+      //   });
 
-        function setColorToNone(desktopButton) {
-          desktopButton.style.cssText = "background-color: none";
-        }
-        function setToPurple(desktopButton) {
-          desktopButton.style.cssText = `background-color: var(--color-secondary)`;
-        }
-      }
+      //   function setColorToNone(desktopButton) {
+      //     desktopButton.style.cssText = "background-color: none";
+      //   }
+      //   function setToPurple(desktopButton) {
+      //     desktopButton.style.cssText = `background-color: var(--color-secondary)`;
+      //   }
+      // }
 
       if (this.props.desktopButton) {
         this.props.desktopButton.addEventListener("dblclick", () => {
@@ -295,6 +295,7 @@ window.onload = function () {
   let desktopIcons = document.getElementsByClassName("desktop-icon");
   for (let i = 0; i < desktopIcons.length; i++) {
     dragElement(desktopIcons[i]);
+    console.log(desktopIcons[i]);
   }
 
   let windows = document.getElementsByClassName("window");
