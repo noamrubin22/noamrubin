@@ -265,14 +265,14 @@ window.onload = function () {
   const muteFire = document.getElementById("mute-fire");
 
   // FIRE sound about window
-  // clickAboutMenu.onclick = () => {
-  //   audioElement = new Audio("./images/fire.mp3");
-  //   audioElement.play();
-  // }
+  clickAboutMenu.onclick = () => {
+    audioElement = new Audio("./images/fire.mp3");
+    audioElement.play();
+  }
 
-  // closeAbout.onclick = () => {
-  //   audioElement.pause();
-  // }
+  closeAbout.onclick = () => {
+    audioElement.pause();
+  }
   // let isPlaying = false;
 
   // function togglePlay() {

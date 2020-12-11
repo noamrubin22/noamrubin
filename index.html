@@ -13,7 +13,7 @@
   <img id="screensaver" src="images/ScreenSaver_01.gif" alt="screensaver" />
   <div class="monitor" id="monitor">
     <div class="background-container">
-      <img id="chosen-background-img" src="./images/theroomandoneself.jpg" alt="Chosen Background" hidden>
+      <img id="chosen-background-img" src="./images/berlinautumn.png" alt="Chosen Background">
       <a target="_blank" href="https://www.instagram.com" id="insta-artist" id="blink">
       </a>
     </div>
@@ -90,8 +90,6 @@
               <div class="project-description">
                 <span>use your voice to move the butterfly!</span>
                 <br>
-                <br>
-                <span>p5.js * HTML * CSS</span>
               </div>
               <br>
               <a target="_blank" href="https://noamrubin22.github.io/game/">
@@ -103,21 +101,21 @@
               </a>
             </div>
             <br>
-            <hr>
             <br>
             <div class="image">
-              <img id="project-img" src="./images/Mariposa_game.png" alt="mariposa game">
+              <img id="project-img" src="./images/Mariposa_game.png" alt="mariposa game" style="width:100%">
             </div>
+            <div class="project-inf text">
+              <p><center>A non-traditional "run and jump"-game created in <a
+                  target="_blank" href="https://p5js.org/">p5.js</a>. Use your voice instead of your keyboard. A high frequency will move the player up, a low frequency will move the player down.
+                  <br>
+                  <br>
+                  <b>Technologies</b>
+                  <br>
+                  p5.js | HTML | CSS
+                </center>
+              </p>
           </div>
-          <div class="project-inf text">
-            <h2 id="project-subtitle">Context</h2>
-            <p>For the first project of the Ironhack web development bootcamp we had 3 days to create a game in <a
-                target="_blank" href="https://p5js.org/">p5.js</a>. I created a “run and jump” game that responds to
-              sound. The goal of the game is to catch as many light orbs as possible in the given time. The butterfly
-              responds to frequency.</p>
-            <h4 id="project-subtitle">Development</h4>
-            <p>I used the p5.sound library, using .getEnergy() to obtain the frequency input given by the player. The
-              designs for the backgrounds, I found on itch.io.</p>
             <div class="links">
               <a target="_blank" href="https://noamrubin22.github.io/game/">
                 <span id="blink">go to game</span>
@@ -161,9 +159,6 @@
               <div class="project-description">
                 <span>catches your vibe and calms you down</span>
                 <br>
-                <br>
-                <span>Arduino * handlebars * restAPI * Spotify API * MongoDB * Mongoose * Node.js * HTML * CSS *
-                  JavaScript</span>
               </div>
               <br>
               <a target="_blank" href="http://spotavibe.herokuapp.com/">
@@ -182,17 +177,7 @@
             </div>
           </div>
           <div class="project-inf text">
-            <h2 id="project-subtitle">Context</h2>
-            <p>In the second project week of the Ironhack bootcamp we had 4 days to create a web application with a
-              backend, working in teams of 2. My team created a web application that generates Spotify playlists that
-              calms the users down by filtering songs on BPM using their heart pulse. Users can choose one of the 3
-              BPM
-              measurement options. A statistics page is keeping track of the BPM history and playlists of the user.
-            </p>
-            <h4 id="project-subtitle">Development</h4>
-            <p>We were using the Arduino heart pulse sensor and connected it to node.js with the serial port library,
-              using childprocessing. We were able to collect the filtered songs from the metadata by the use of the
-              Spotify API.
+            <center><p>This web-application intents to calm you down by:<br><br>- determining your heart rate<br> - filtering Spotify metadata on BPM<br>- creating a personalized playlist<br><br><br><b>Technologies</b><br> Arduino | JavaScript | CSS | HTML | Node.js | MongoDB | mongoose | handlebars | restAPI | Spotify API</center>
             </p>
             <div class="links">
               <a target="_blank" href="http://spotavibe.herokuapp.com/">
@@ -259,7 +244,8 @@
           </div>
           <div class="project-inf gerrit text">
             <h2 id="project-subtitle">Context</h2>
-            <p>For the last project of the Ironhack bootcamp we had to create a full-stack MERN (MongoDB, Express,
+            <p> 
+              For the last project of the Ironhack bootcamp we had to create a full-stack MERN (MongoDB, Express,
               React, Node.js) web application. In teams of 3, we had one week to make it happen. We decided to create
               a
               mobile web application that allows users to chat with others only while being in the same location. The
@@ -314,7 +300,6 @@
                 <span>alter your songs and learn about the mechanism behind them</span>
                 <br>
                 <br>
-                <span> JavaScript * d3.js * HTML * CSS </span>
               </div>
               <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
                 <span id="blink">go to website</span>
@@ -325,20 +310,18 @@
               </a>
             </div>
           </div>
+          <div class="image">
+            <img id="project-img" src="./images/musicviz.png" alt="Music visualization" style="width:100%; filter:grayscale(90%)">
+          </div>
           <div class="project-inf text">
-            <h4 id="project-subtitle">Context</h4>
-            <p>For the final project of my Computer Science minor we had to create a data visualization linking 3
-              different graphs using <a href="https://d3js.org/">d3.js</a>. I chose to use music as my data and also
-              added a “synthesizer” to give the user the possibility to manipulate sound and graphs, creating a
-              learning
-              environment. During that time I didn’t have enough time to work on the styling so I decided to give <a
-                target="_blank" href="https://github.com/noamrubin22/finalproject">my old project</a> new life. I
-              fixed
-              some bugs, changed the styling and made sure that users can upload their own songs.</p>
-            <h4 id="project-subtitle">Development</h4>
-            <p>The AudioContext WebAPI, helped me to retrieve and manipulate data from different songs. I obtained the
-              frequency and wavelength to form a bar chart and circle chart, using recursive functions to create
-              live-updating charts.</p>
+            <p><center>A music visualization created in <a target="_blank" href="https://d3js.org/">d3.js</a>. Users can manipulate sound and visuals by adjusting filters. I used recursive functions to create live-updating charts.
+              <br>
+              <br>
+              <b>Technologies</b>
+              <br>
+              JavaScript | d3.js | HTML | CSS
+            </center>
+              </p>
             <div class="links">
               <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
                 <span id="blink">go to website</span>
@@ -373,41 +356,19 @@
       <div class="content">
         <div data-textbox class="textbox-about textbox">
           <div class="text about-text">
-            <img id="mute-fire" src="./images//fire.jpg" alt="Mute Fire Sound" onclick=togglePlay()>
-            <p><span>Hi! Happy to have you here :)</span>.<span> I am <b>Noam Rubin</b>. <span>My name stems from the
-                  Hebrew word נעים / <i>na-iem</i>, which means <i>pleasant</i>.</span>
-                <br>
-                <br>
-                <span>I am a Dutch- Israeli web developer with a background in <b>neuroscience</b>, currently living
-                  in
-                  <b>Berlin</b>.</span></span>
-              <br>
-            <div class="about-img" alt="Noam"></div>
-            <br>
-            <span>The first time I was introduced to the world of code was during my bachelor. I did a Computer
-              Science
-              minor collaborated between the University of Amsterdam and Harvard University. For a long time I had
-              been
-              looking for a medium to express myself creatively. The immediate feedback, analytical challenge and
-              immense creative potential got me hooked.</span> In October 2020 I participated in a full stack <b>web
-              development</b> bootcamp held by Ironhack Berlin to upgrade my skills.
-            <br>
-            <br>
-            <span>As a <b>creative</b> person, I cherish how coding gives me boundless possibilities, knowing that
-              only
-              my imagination is the limit. Now that I have found my medium for creative expression, I am able to bring
-              my own ideas into <b>tangible form</b> and integrate my various areas of interest in <b>innovative</b>
-              ways. It makes me feel passionate, motivated and free.</span>
-            <br>
-            <br>
-            As for my future ambition I would like to work as an artist in the field of <b>transformative
-              technology</b>
-            in which technology is used to foster mental and emotional wellbeing. I hope to combine my background in
-            neuroscience, my creativity and technology to help people get to know themselves, and feel better.
-            <br>
-            <br>
-            Please feel free to reach out to me if you are interested in my projects, looking for a collaboration or
-            want to exchange ideas ;)
+            <img src="/images/aboutNoam.png" alt="Noam" style="width:100%; filter:invert(10%)">
+            <p><span>
+                  I am an innovative Berlin-based web developer with a background in neuroscience and am interested in the emerging field of transformative technology. <br>In my work, I seek to enhance mental and emotional wellbeing by combining (interactive) art, neuroscience, technology, and spirituality/self-knowledge. 
+                  <br>
+                  <br>
+                  <b>Stack</b>
+                  <br> 
+                  JavaScript | React | Node.js | Express | MongoDB | HTML | CSS | Arduino
+                  <br>
+                  <br>
+                  <b>Further interests</b>
+                  <br>
+                  the gut-brain connection / neuroaesthetics / emotions / bio & neuro-feedback / meditation / connection / harmony / the flow-state / sound / epigenetics / attention / trauma / psychedelics / sustainability / synergy / consciousness
             </p>
           </div>
         </div>
