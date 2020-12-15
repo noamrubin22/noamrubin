@@ -7,20 +7,20 @@ window.onload = function () {
   setInterval(updateTime, 1000);
 
   // store needed objects
-  let startButton = document.querySelector(".start__button");
-  let startMenu = document.querySelector(".start__menu-main");
-  let body = document.querySelector("body");
-  let projectsItem = document.querySelector(".projects");
-  let programsMenu = document.querySelector(".sub__programs");
-  let documentsItem = document.querySelector(".documents");
-  let documentsMenu = document.querySelector(".sub__documents");
-  let screenSaver = document.getElementById("screensaver");
-  let shutDown = document.querySelector(".shutdown");
+  const startButton = document.querySelector(".start__button");
+  const startMenu = document.querySelector(".start__menu-main");
+  const body = document.querySelector("body");
+  const projectsItem = document.querySelector(".projects");
+  const programsMenu = document.querySelector(".sub__programs");
+  const documentsItem = document.querySelector(".documents");
+  const documentsMenu = document.querySelector(".sub__documents");
+  const screenSaver = document.getElementById("screensaver");
+  const shutDown = document.querySelector(".shutdown");
   let item;
 
   /* SCREENSAVER */
   // show screensaver after no mousemove
-  var timeout;
+  let timeout;
   document.onmousemove = function () {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
@@ -271,7 +271,7 @@ window.onload = function () {
 
   /* DRAGGABLE */
   // Make the desktop icons draggable
-  let desktopIcons = document.getElementsByClassName("desktop-icon");
+  const desktopIcons = document.getElementsByClassName("desktop-icon");
   for (let i = 0; i < desktopIcons.length; i++) {
     dragElement(desktopIcons[i]);
     console.log(desktopIcons[i]);

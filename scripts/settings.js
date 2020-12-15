@@ -2,8 +2,6 @@ function Settings() {
     // global variables
     const clickSettingsMenu = document.querySelector(".settings");
     const themes = document.getElementsByClassName("theme");
-    const backgroundColorPc = document.querySelector(".background-color");
-    const buttons = document.getElementsByClassName("classic-btn");
     const settingsWindow = document.getElementsByClassName("settings-window ")[0];
     const images = document.getElementsByClassName("display-img");
     const chosenBackgroundImage = document.getElementById("chosen-background-img");
