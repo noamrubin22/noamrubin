@@ -189,27 +189,6 @@ window.onload = function () {
         starField();
       });
 
-      // make desktop items are "selected" by clicking once
-      // if (this.props.desktopButton) {
-      //   this.props.desktopButton.addEventListener("click", () => {
-      //     console.log("clickedonce");
-      //     this.props.desktopButton.style.backgroundColor = "var(--color-accent)"
-      //     item = this.props.desktopButton;
-
-      //     setTimeout(function () {
-      //       setToPurple(item);
-      //       setColorToNone(item);
-      //     }, 500);
-      //   });
-
-      //   function setColorToNone(desktopButton) {
-      //     desktopButton.style.cssText = "background-color: none";
-      //   }
-      //   function setToPurple(desktopButton) {
-      //     desktopButton.style.cssText = `background-color: var(--color-secondary)`;
-      //   }
-      // }
-
       if (this.props.desktopButton) {
         this.props.desktopButton.addEventListener("dblclick", () => {
           if (this.task) {
@@ -371,3 +350,25 @@ window.onload = function () {
     }
   }
 }
+
+
+      // make desktop items are "selected" by clicking once
+      // if (this.props.desktopButton) {
+      //   this.props.desktopButton.addEventListener("click", () => {
+      //     console.log("clickedonce");
+      //     this.props.desktopButton.style.backgroundColor = "var(--color-accent)"
+      //     item = this.props.desktopButton;
+
+      //     setTimeout(function () {
+      //       setToPurple(item);
+      //       setColorToNone(item);
+      //     }, 500);
+      //   });
+
+      //   function setColorToNone(desktopButton) {
+      //     desktopButton.style.cssText = "background-color: none";
+      //   }
+      //   function setToPurple(desktopButton) {
+      //     desktopButton.style.cssText = `background-color: var(--color-secondary)`;
+      //   }
+      // }
