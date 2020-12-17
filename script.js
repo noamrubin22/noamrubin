@@ -11,12 +11,11 @@ window.onload = function () {
   const startMenu = document.querySelector(".start__menu-main");
   const body = document.querySelector("body");
   const projectsItem = document.querySelector(".projects");
-  const programsMenu = document.querySelector(".sub__programs");
+  const projectsMenu = document.querySelector(".sub__projects");
   const documentsItem = document.querySelector(".documents");
   const documentsMenu = document.querySelector(".sub__documents");
   const screenSaver = document.getElementById("screensaver");
   const shutDown = document.querySelector(".shutdown");
-  let item;
 
   /* SCREENSAVER */
   // show screensaver after no mousemove
@@ -66,7 +65,7 @@ window.onload = function () {
   });
 
   projectsItem.addEventListener("click", function () {
-    menuDisplay(programsMenu);
+    menuDisplay(projectsMenu);
   });
 
   documentsItem.addEventListener("click", function () {
@@ -76,11 +75,10 @@ window.onload = function () {
   // menu buttons
   const clickAboutMenu = document.querySelector(".about");
   const clickContactMenu = document.querySelector(".contact");
-  const clickMariposaMenu = document.querySelector(".mariposa-menu");
-  const clickGerritMenu = document.querySelector(".gerrit-menu");
-  const clickMusicMenu = document.querySelector(".music-menu");
-  const clickSpotavibeMenu = document.querySelector(".spotavibe-menu");
-  // const clickSettingsMenu = document.querySelector(".settings");
+  const clickMariposaMenu = document.querySelector(".sub__projects-mariposa");
+  const clickGerritMenu = document.querySelector(".sub__projects-gerrit");
+  const clickMusicMenu = document.querySelector(".sub__projects-musicvis");
+  const clickSpotavibeMenu = document.querySelector(".sub__projects-spotavibe");
 
   // windows
   const gerritWindow = document.querySelector(".gerrit-window");
@@ -90,7 +88,6 @@ window.onload = function () {
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
   const videoWindow = document.querySelector(".video-window");
-  // const settingsWindow = document.querySelector(".settings-window");
 
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
@@ -277,7 +274,7 @@ window.onload = function () {
     console.log(desktopIcons[i]);
   }
 
-  let windows = document.getElementsByClassName("window");
+  const windows = document.getElementsByClassName("window");
   for (let i = 0; i < windows.length; i++) {
     dragElement(windows[i]);
     console.log(windows[i]);

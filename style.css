@@ -180,7 +180,7 @@ body {
   margin-top: 151px;
 }
 
-.start__menu-main-side-text .windows {
+.start__menu-main-side-text-windows {
   font-weight: bold;
   color: #c3c6cd;
   -webkit-transform: rotate(270deg);
@@ -190,7 +190,7 @@ body {
   margin-left: 5px;
 }
 
-.start__menu-main-side-text .ninefive {
+.start__menu-main-side-text-nintyfive {
   color: white;
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
@@ -307,7 +307,7 @@ body {
   justify-content: flex-start;
 }
 
-.sub__programs {
+.sub__projects {
   bottom: 52%;
 }
 
@@ -445,7 +445,7 @@ img#contact-img {
   /* background: green; */
 }
 
-.bg-img {
+.settings-icon {
   background-image: url(https://i.pinimg.com/originals/96/17/c0/9617c03faeb0986659acd2fa7ff87a26.png);
   -o-object-fit: cover;
   object-fit: cover;
@@ -817,19 +817,19 @@ ul {
 }
 
 /* social media buttons */
-.social-media {
+.tasks__social {
   display: flex;
   flex-direction: row;
 }
 
-.sidebar {
+.tasks__sidebar {
   height: 34px;
   margin: 2px;
   align-self: center;
   border: outset 2px;
 }
 
-.stripe {
+.tasks__stripe {
   height: 100%;
   width: 1px;
   border: inset 1px;

@@ -47,12 +47,12 @@
               <p>Background image</p>
               <div class="bgimg-choices">
                 <ul tabindex=1>
-                  <div class="display-img">None</div>
-                  <div data-url="/images/90ieskid.png" class="display-img">90ies Kid</div>
-                  <div data-url="/images/theroomandoneself.png" class="display-img" id="kathi">The Room And Oneself</div>
-                  <div data-url="/images/ichgebäredich.png" class="display-img" id="djamillia">Ich Gebäre Dich</div>
-                  <div data-url="/images/innerfloating.png" class="display-img" id="chris">Inner Floating</div>
-                  <div data-url="/images/shruti.png" class="display-img" id="shruti">Shruti</div>
+                  <li class="display-img">None</li>
+                  <li data-url="/images/90ieskid.png" class="display-img">90ies Kid</li>
+                  <li data-url="/images/theroomandoneself.png" class="display-img" id="kathi">The Room And Oneself</li>
+                  <li data-url="/images/ichgebäredich.png" class="display-img" id="djamillia">Ich Gebäre Dich</li>
+                  <li data-url="/images/innerfloating.png" class="display-img" id="chris">Inner Floating</li>
+                  <li data-url="/images/shruti.png" class="display-img" id="shruti">Shruti</li>
                 </ul>
               </div>
             </div>
@@ -410,7 +410,7 @@
         </div>
       </div>
     </div>
-    <div class=" start" id="start">
+    <div class="start" id="start">
       <div class="start__button">
         <div class="start__logo">
         </div>
@@ -418,19 +418,76 @@
           Start
         </p>
       </div>
+      <div class="start__menu-main">
+        <div class="start__menu-main-side">
+          <div class="start__menu-main-side-text text">
+            <p class="start__menu-main-side-text-nintyfive">95</p>
+            <p class="start__menu-main-side-text-windows">Windows</p>
+          </div>
+        </div>
+        <div class="start__menu-main-items">
+          <ul class="start__menu-main-items-list1">
+            <li class="start__menu-main-items-item projects">
+              <img class="programs-img icon" src="https://i.ya-webdesign.com/images/windows-95-icons-png-7.png"
+                alt="Projects" />
+              <p class="start__menu-main-items-item-title projects">
+                <span class="underline">P</span>rojects
+              </p>
+              <div class="start__menu-main-items-item-arrowright"></div>
+              <ul class="start__menu-sub sub__projects">
+                <li class="start__menu-sub-items-item sub__projects-mariposa">
+                  <img class="icon" src="./images/Mariposa_01.png" alt="Mariposa" />
+                  <p class="start__menu-sub-items-item-title">Mariposa</p>
+                </li>
+                <li class="start__menu-sub-items-item sub__projects-musicvis">
+                  <img class="icon" src="./images/Muxisvi_01.png" alt="Music Visualization" />
+                  <p class="start__menu-sub-items-item-title">Music visualization</p>
+                </li>
+                <li class="start__menu-sub-items-item sub__projects-gerrit">
+                  <img class="icon" src="./images/Gerrit_01.png" alt="Gerrit" />
+                  <p class="start__menu-sub-items-item-title">Gerrit</p>
+                </li>
+                <li class="start__menu-sub-items-item sub__projects-spotavibe">
+                  <img class="icon" src="./images/spotavibe_01.png" alt="Spotavibe" />
+                  <p class="start__menu-sub-items-item-title">Spotavibe</p>
+                </li>
+              </ul>
+            </li>
+            <li class="start__menu-main-items-item settings">
+              <div class="settings-img icon settings-icon"></div>
+              <p class="start__menu-main-items-item-title settings"><span class="underline"> S</span>ettings</p>
+            </li>
+            <li class="start__menu-main-items-item documents about">
+              <img class="documents-img icon" src="./images/about_01.png" alt="About" />
+              <p class="start__menu-main-items-item-title"><span class="underline">A</span>bout</p>
+            </li>
+            <li class="start__menu-main-items-item contact clickme-contact">
+              <img id="contact-img" src="./images/contact.png" alt="contact" style="margin: 10px" />
+              <p class="start__menu-main-items-item-title"><span class="underline"> C</span>ontact</p>
+            </li>
+          </ul>
+          <ul class="start__menu-main-items-list2">
+            <li class="start__menu-main-items-item shutdown">
+              <div class="shutdown-img icon bg-img"></div>
+              <p class="start__menu-main-items-item-title shutdown" style="margin-top:20px">Sh<span
+                  class="underline">u</span>t Down...</p>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="tasks" id="tasks">
-        <div class="social-media">
-          <div class="sidebar"></div>
+        <div class="tasks__social">
+          <div class="tasks__sidebar"></div>
           <a target="_blank" href="https://www.linkedin.com/in/noam-rubin">
-            <img id="linkedin-icon" src="./images/in_01.png" alt="linked-in">
+            <img id="linkedin-icon" src="./images/in_01.png" alt="LinkedIn">
           </a>
           <a target="_blank" href="https://www.github.com/noamrubin22">
-            <img id="github-icon" src="./images/gihub_01.png" alt="github">
+            <img id="github-icon" src="./images/gihub_01.png" alt="GitGub">
           </a>
           <a href="mailto:noamru22@gmail.com">
-            <img id="email-icon" src="./images/email_01.png" alt="mail">
+            <img id="email-icon" src="./images/email_01.png" alt="Email">
           </a>
-          <div class="stripe"></div>
+          <div class="tasks__stripe"></div>
           <div class="sidebar"></div>
         </div>
         <div id="placeholder-tasks"></div>
@@ -439,63 +496,6 @@
         <img id="volume-img" src="./images/volume_01.png" alt="volume">
         <p class="start__time-text">
         </p>
-      </div>
-    </div>
-    <div class="start__menu-main">
-      <div class="start__menu-main-side">
-        <div class="start__menu-main-side-text text">
-          <p class="ninefive">95</p>
-          <p class="windows">Windows</p>
-        </div>
-      </div>
-      <div class="start__menu-main-items">
-        <ul class="start__menu-main-items-list1">
-          <li class="start__menu-main-items-item projects">
-            <img class="programs-img icon" src="https://i.ya-webdesign.com/images/windows-95-icons-png-7.png"
-              alt="Programs" />
-            <p class="start__menu-main-items-item-title projects">
-              <span class="underline">P</span>rojects
-            </p>
-            <div class="start__menu-main-items-item-arrowright"></div>
-            <ul class="start__menu-sub sub__programs">
-              <li class="start__menu-sub-items-item sub__programs-items mariposa-menu">
-                <img class="accessories-img icon" src="./images/Mariposa_01.png" alt="Accessories" />
-                <p class="start__menu-sub-items-item-title accessories">Mariposa</p>
-              </li>
-              <li class="start__menu-sub-items-item sub__programs-items music-menu">
-                <img class="startup-img icon" src="./images/Muxisvi_01.png" alt="StartUp" />
-                <p class="start__menu-sub-items-item-title startup">Music visualization</p>
-              </li>
-              <li class="start__menu-sub-items-item sub__programs-items gerrit-menu">
-                <img class="dos-img icon" src="./images/Gerrit_01.png" alt="DOS" />
-                <p class="start__menu-sub-items-item-title dos">Gerrit</p>
-              </li>
-              <li class="start__menu-sub-items-item sub__programs-items spotavibe-menu">
-                <img class="dos-img icon" src="./images/spotavibe_01.png" alt="DOS" />
-                <p class="start__menu-sub-items-item-title dos">Spotavibe</p>
-              </li>
-            </ul>
-          </li>
-          <li class="start__menu-main-items-item settings clickme-settings">
-            <div class="settings-img icon bg-img"></div>
-            <p class="start__menu-main-items-item-title settings"><span class="underline"> S</span>ettings</p>
-          </li>
-          <li class="start__menu-main-items-item documents about clickme-about">
-            <img class="documents-img icon" src="./images/about_01.png" alt="About" />
-            <p class="start__menu-main-items-item-title"><span class="underline">A</span>bout</p>
-          </li>
-          <li class="start__menu-main-items-item contact clickme-contact">
-            <img id="contact-img" src="./images/contact.png" alt="contact" style="margin: 10px" />
-            <p class="start__menu-main-items-item-title"><span class="underline"> C</span>ontact</p>
-          </li>
-        </ul>
-        <ul class="start__menu-main-items-list2">
-          <li class="start__menu-main-items-item shutdown">
-            <div class="shutdown-img icon bg-img"></div>
-            <p class="start__menu-main-items-item-title shutdown" style="margin-top:20px">Sh<span
-                class="underline">u</span>t Down...</p>
-          </li>
-        </ul>
       </div>
     </div>
     <div class="computer desktop-icon mariposa">

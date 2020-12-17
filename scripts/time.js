@@ -23,7 +23,7 @@ function updateTime() {
 
   let time = hours12 + ":" + minutes + suffix;
 
-  let timeBox = document.querySelector(".start__time-text");
+  const timeBox = document.querySelector(".start__time-text");
 
   timeBox.innerHTML = time;
 }

@@ -101,7 +101,6 @@ function Settings() {
                 chosenBackgroundImage.style.width = "450";
             }
             // add image to both backgrounds (pc and real display)
-            // chosenBackgroundImage.hidden = false;
             chosenBackgroundImage.src = selectedImage;
             chosenBackgroundImage.alt = title;
             backgroundImagePc.hidden = false;
