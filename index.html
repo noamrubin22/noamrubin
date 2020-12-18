@@ -11,14 +11,14 @@
 
 <body>
   <img id="screensaver" src="images/ScreenSaver_01.gif" alt="screensaver" />
-  <div class="monitor" id="monitor">
-    <div class="background-container">
-      <img id="chosen-background-img" src="./images/berlinautumn.png" alt="Chosen Background">
-      <a target="_blank" href="https://www.instagram.com" id="insta-artist" id="blink">
+  <div class="container__monitor" id="monitor">
+    <div class="container__background">
+      <img class="background-img" src="/images/berlinautumn.png" alt="Chosen Background">
+      <a target="_blank" href="https://www.instagram.com" id="link__instagram" id="blink">
       </a>
     </div>
     <div class="settings-window window" hidden>
-      <div class="titlebar">Display Properties
+      <div class="window__titlebar">Display Properties
         <div data-close class="notepad-exit closeme-settings">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
@@ -27,7 +27,7 @@
         <div class="content">
           <div class="pc">
             <div class="background-color">
-              <img class="pc-bg-img" src="./images/90ieskid.png" hidden>
+              <img class="pc-bg-img" src="/images/90ieskid.png" hidden>
             </div>
           </div>
           <div class="display-options">
@@ -65,7 +65,7 @@
       </div>
     </div>
     <div hidden class="mariposa-window project-window window">
-      <div class="titlebar">Mariposa
+      <div class="window__titlebar">Mariposa
         <div data-close class="notepad-exit closeme-mariposa">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
@@ -130,7 +130,7 @@
       </div>
     </div>
     <div hidden class="spotavibe-window project-window window">
-      <div class="titlebar">
+      <div class="window__titlebar">
         Spotavibe
         <div data-close class="notepad-exit closeme-contact">
           <div class="button-exit">
@@ -193,7 +193,7 @@
       </div>
     </div>
     <div hidden class="gerrit-window project-window window">
-      <div class="titlebar">
+      <div class="window__titlebar">
         Just Gerrit
         <div data-close class="notepad-exit closeme-contact">
           <div class="button-exit">
@@ -213,7 +213,7 @@
       </div>
       <div class="content">
         <div data-textbox class="textbox-gerrit textbox">
-          <div class="left-wi gerrit">
+          <div class="left-wi">
             <div class="project-header text">
               <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
               <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
@@ -242,7 +242,7 @@
               <img id="gerrit-project-img" src="./images/geriit_screenshot_01.png" alt="gerrit">
             </div>
           </div>
-          <div class="project-inf gerrit text">
+          <div class="project-inf text">
             <h2 id="project-subtitle">Context</h2>
             <p> 
               For the last project of the Ironhack bootcamp we had to create a full-stack MERN (MongoDB, Express,
@@ -272,7 +272,7 @@
       </div>
     </div>
     <div hidden class="music-window project-window window">
-      <div class="titlebar">
+      <div class="window__titlebar">
         Music visualization
         <div data-close class="notepad-exit closeme-contact">
           <div class="button-exit">
@@ -336,7 +336,7 @@
       </div>
     </div>
     <div hidden class="about-window window">
-      <div class="titlebar">About me
+      <div class="window__titlebar">About me
         <div data-close class="notepad-exit closeme-about">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
@@ -376,7 +376,7 @@
       </div>
     </div>
     <div hidden class="contact-window window">
-      <div class="titlebar"> The power of synergy
+      <div class="window__titlebar"> The power of synergy
         <div data-close class="notepad-exit closeme-contact">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
@@ -454,101 +454,98 @@
               </ul>
             </li>
             <li class="start__menu-main-items-item settings">
-              <div class="settings-img icon settings-icon"></div>
+              <div class="settings-img icon bg-img"></div>
               <p class="start__menu-main-items-item-title settings"><span class="underline"> S</span>ettings</p>
             </li>
-            <li class="start__menu-main-items-item documents about">
-              <img class="documents-img icon" src="./images/about_01.png" alt="About" />
+            <li class="start__menu-main-items-item about">
+              <img class="icon" src="./images/about_01.png" alt="About" />
               <p class="start__menu-main-items-item-title"><span class="underline">A</span>bout</p>
             </li>
-            <li class="start__menu-main-items-item contact clickme-contact">
-              <img id="contact-img" src="./images/contact.png" alt="contact" style="margin: 10px" />
+            <li class="start__menu-main-items-item contact">
+              <img class="icon" src="./images/contact.png" alt="Contact" />
               <p class="start__menu-main-items-item-title"><span class="underline"> C</span>ontact</p>
             </li>
           </ul>
           <ul class="start__menu-main-items-list2">
             <li class="start__menu-main-items-item shutdown">
               <div class="shutdown-img icon bg-img"></div>
-              <p class="start__menu-main-items-item-title shutdown" style="margin-top:20px">Sh<span
+              <p class="start__menu-main-items-item-title shutdown">Sh<span
                   class="underline">u</span>t Down...</p>
             </li>
           </ul>
         </div>
       </div>
-      <div class="tasks" id="tasks">
+      <div class="tasks">
         <div class="tasks__social">
           <div class="tasks__sidebar"></div>
           <a target="_blank" href="https://www.linkedin.com/in/noam-rubin">
             <img id="linkedin-icon" src="./images/in_01.png" alt="LinkedIn">
           </a>
           <a target="_blank" href="https://www.github.com/noamrubin22">
-            <img id="github-icon" src="./images/gihub_01.png" alt="GitGub">
+            <img id="github-icon" src="./images/gihub_01.png" alt="GitHub">
           </a>
           <a href="mailto:noamru22@gmail.com">
             <img id="email-icon" src="./images/email_01.png" alt="Email">
           </a>
           <div class="tasks__stripe"></div>
-          <div class="sidebar"></div>
+          <div class="tasks__sidebar"></div>
         </div>
-        <div id="placeholder-tasks"></div>
       </div>
       <div class="start__time" id="start__time">
-        <img id="volume-img" src="./images/volume_01.png" alt="volume">
+        <img class="volume-img" src="./images/volume_01.png" alt="Volume">
         <p class="start__time-text">
         </p>
       </div>
     </div>
     <div class="computer desktop-icon mariposa">
       <div class="computer__icon desktop-icon__icon ">
-        <img id="mariposa-icon" src="./images/Mariposa_01.png" alt="mariposa">
+        <img class="mariposa-img" src="./images/Mariposa_01.png" alt="Mariposa">
       </div>
-      <p class="computer__text desktop-icon__text">
+      <p class="desktop-icon__text desktop-icon-mariposa__text">
         Mariposa
       </p>
-    </div>
-    <div class="video-window window" hidden>
-      <div class="titlebar">
-        Groove Is In The Heart
-        <div data-close class="notepad-exit closeme-video">
-          <div class="button-exit">
-            <div class="icon-exit">&times;</div>
-          </div>
-        </div>
-        <div data-maximize class="notepad-maximize video-maximize">
-          <div class="button-maximize">
-            <div class="icon-maximize"></div>
-          </div>
-        </div>
-        <div data-minimize class="notepad-minimize clickme-video">
-          <div class="button-minimize">
-            <div class="icon-minimize"></div>
-          </div>
-        </div>
-      </div>
-          <video src="/images/groove.mp4"></video>
-      </div>
-    </div>
-    
+    </div>    
     <div class="computer desktop-icon spotavibe">
-      <img id="spotavibe-icon" src="./images/spotavibe_01.png" alt="spotavibe">
-      <p class="computer__text desktop-icon__text">
+      <img class="spotavibe-img" src="./images/spotavibe_01.png" alt="Spotavibe">
+      <p class="desktop-icon__text">
         Spotavibe
       </p>
     </div>
     <div class="computer desktop-icon music-vis">
-      <img id="muvi-icon" src="./images/Muxisvi_01.png" alt="music visualization">
-      <p class="computer__text desktop-icon__text">
+      <img class="musicviz-img" src="./images/Muxisvi_01.png" alt="Music visualization">
+      <p class="desktop-icon__text">
         Music visualization
       </p>
     </div>
     <div class="computer desktop-icon gerrit">
-      <img id="gerrit-icon" src="./images/Gerrit_01.png" alt="gerrit">
-      <p class="recycle__text desktop-icon__text">
+      <img class="gerrit-img" src="./images/Gerrit_01.png" alt="Gerrit">
+      <p class="desktop-icon__text">
         Gerrit
       </p>
     </div>
-    <div id="placeholder-projects">
     </div>
 </body>
 
 </html>
+<!-- <div class="video-window window" hidden>
+  <div class="titlebar">
+    Groove Is In The Heart
+    <div data-close class="notepad-exit closeme-video">
+      <div class="button-exit">
+        <div class="icon-exit">&times;</div>
+      </div>
+    </div>
+    <div data-maximize class="notepad-maximize video-maximize">
+      <div class="button-maximize">
+        <div class="icon-maximize"></div>
+      </div>
+    </div>
+    <div data-minimize class="notepad-minimize clickme-video">
+      <div class="button-minimize">
+        <div class="icon-minimize"></div>
+      </div>
+    </div>
+  </div>
+      <video src="/images/groove.mp4"></video>
+  </div>
+</div> -->

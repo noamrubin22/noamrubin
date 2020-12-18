@@ -4,7 +4,7 @@ function Settings() {
     const themes = document.getElementsByClassName("theme");
     const settingsWindow = document.getElementsByClassName("settings-window ")[0];
     const images = document.getElementsByClassName("display-img");
-    const chosenBackgroundImage = document.getElementById("chosen-background-img");
+    const chosenBackgroundImage = document.querySelector(".background-img");
     const backgroundImagePc = document.getElementsByClassName("pc-bg-img")[0];
     const closeSettings = document.getElementsByClassName("closeme-settings")[0];
     let currentTheme = document.getElementsByTagName("html")[0].className;
@@ -65,41 +65,42 @@ function Settings() {
 
     /* sets the selected image as background */
     function previewImage({ selectedImage, title, artist }) {
-        const artistInsta = document.getElementById("insta-artist");
+        const artistInsta = document.getElementById("link__instagram");
 
         if (selectedImage === "none") {
             chosenBackgroundImage.hidden = true;
             backgroundImagePc.hidden = true;
             artistInsta.hidden = true;
         } else {
-            // add artist link
-
-            //verander naar switch
             if (artist) {
                 artistInsta.hidden = false;
-                if (artist === "kathi") {
-                    artistInsta.innerHTML = "by @katharina.michalsky";
-                    artistInsta.href = "https://www.instagram.com/katharina.michalsky";
-                    chosenBackgroundImage.style.width = "450";
-                } else if (artist === "shruti") {
-                    artistInsta.innerHTML = "by @shrooodi";
-                    artistInsta.href = "https://www.instagram.com/shrooodi";
-                    chosenBackgroundImage.style.width = "450";
-                } else if (artist === "chris") {
-                    artistInsta.innerHTML = "by @iti.art";
-                    artistInsta.href = "https://www.instagram.com/iti.art";
-                    chosenBackgroundImage.style.width = "450";
-                } else if (artist === "djamillia") {
-                    artistInsta.innerHTML = "by @manush420";
-                    artistInsta.href = "https://www.instagram.com/manush420"
-                    chosenBackgroundImage.style.width = "800";
-                } else {
-                    return
+                switch (artist) {
+                    case "kathi":
+                        artistInsta.innerHTML = "by @katharina.michalsky";
+                        artistInsta.href = "https://www.instagram.com/katharina.michalsky";
+                        chosenBackgroundImage.style.width = "450";
+                        break;
+                    case "chris":
+                        artistInsta.innerHTML = "by @iti.art";
+                        artistInsta.href = "https://www.instagram.com/iti.art";
+                        chosenBackgroundImage.style.width = "450";
+                        break;
+                    case "shruti":
+                        artistInsta.innerHTML = "by @shrooodi";
+                        artistInsta.href = "https://www.instagram.com/shrooodi";
+                        chosenBackgroundImage.style.width = "450";
+                        break;
+                    case "djamillia":
+                        artistInsta.innerHTML = "by @manush420";
+                        artistInsta.href = "https://www.instagram.com/manush420"
+                        chosenBackgroundImage.style.width = "800";
+                        break;
                 }
             } else {
                 artistInsta.hidden = true;
                 chosenBackgroundImage.style.width = "450";
             }
+
             // add image to both backgrounds (pc and real display)
             chosenBackgroundImage.src = selectedImage;
             chosenBackgroundImage.alt = title;

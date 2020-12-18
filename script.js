@@ -12,8 +12,6 @@ window.onload = function () {
   const body = document.querySelector("body");
   const projectsItem = document.querySelector(".projects");
   const projectsMenu = document.querySelector(".sub__projects");
-  const documentsItem = document.querySelector(".documents");
-  const documentsMenu = document.querySelector(".sub__documents");
   const screenSaver = document.getElementById("screensaver");
   const shutDown = document.querySelector(".shutdown");
 
@@ -68,9 +66,7 @@ window.onload = function () {
     menuDisplay(projectsMenu);
   });
 
-  documentsItem.addEventListener("click", function () {
-    menuDisplay(documentsMenu);
-  })
+
   /* OPENS WINDOW AND ADD TASK TO TASKBAR */
   // menu buttons
   const clickAboutMenu = document.querySelector(".about");
@@ -92,6 +88,7 @@ window.onload = function () {
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
   const gerritDesktop = document.querySelector(".gerrit");
+  console.log("GERRIT", gerritDesktop);
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
 
@@ -160,7 +157,7 @@ window.onload = function () {
     createTask() {
       const task = document.createElement("div");
       const icon = document.createElement("div");
-      const tasksList = document.getElementById("tasks");
+      const tasksList = document.querySelector(".tasks");
       const content = document.createTextNode(this.props.taskText);
       icon.classList.add(this.props.iconClassName);
       task.appendChild(icon);
