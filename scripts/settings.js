@@ -3,14 +3,14 @@ function Settings() {
     const clickSettingsMenu = document.querySelector(".settings");
     const themes = document.getElementsByClassName("theme");
     const settingsWindow = document.getElementsByClassName("settings-window ")[0];
-    const images = document.getElementsByClassName("display-img");
-    const chosenBackgroundImage = document.querySelector(".background-img");
-    const backgroundImagePc = document.getElementsByClassName("pc-bg-img")[0];
-    const closeSettings = document.getElementsByClassName("closeme-settings")[0];
+    const images = document.getElementsByClassName("display__props-background-image");
+    const chosenBackgroundImage = document.querySelector(".monitor__background-img");
+    const backgroundImagePc = document.getElementsByClassName("pc__background-img")[0];
+    const closeSettings = document.getElementsByClassName("settings-exit")[0];
     let currentTheme = document.getElementsByTagName("html")[0].className;
     let currentImage;
 
-
+    console.log(chosenBackgroundImage);
     /* open settings when clicked on menu */
     clickSettingsMenu.onclick = () => {
         settingsWindow.hidden = false;
@@ -21,9 +21,9 @@ function Settings() {
         settingsWindow.hidden = true;
     };
 
-    changeTheme();
+    chooseTheme();
     previewTheme(getCurrentTheme());
-    changeImage();
+    chooseImage();
     previewImage(getCurrentImage());
 
     /* set a given theme/color-scheme */
@@ -40,7 +40,7 @@ function Settings() {
     }
 
     /* changes chosen theme */
-    function changeTheme() {
+    function chooseTheme() {
 
         for (let i = 0; i < themes.length; i++) {
             themes[i].onclick = () => {
@@ -111,21 +111,24 @@ function Settings() {
     }
 
     function getCurrentImage() {
-        let storedImage = localStorage.getItem("display-img");
+        let storedImage = localStorage.getItem("display__props-background-image");
+        console.log(storedImage);
+        // return { selectedImage: "none" };
+        // gives error sometimes!!
         return storedImage ? JSON.parse(storedImage) : { selectedImage: "none" }
     }
 
     function storeImage(image) {
-        localStorage.setItem("display-img", JSON.stringify(image));
+        localStorage.setItem("display__props-background-image", JSON.stringify(image));
     }
 
-    function changeImage() {
+    function chooseImage() {
         for (let i = 0; i < images.length; i++) {
             // if image is selected
             images[i].onclick = () => {
                 selected = images[i];
                 // change styling according to selection in themelist
-                let activeImage = document.querySelector(".display-img.active");
+                let activeImage = document.querySelector(".display__props-background-image.active");
                 if (activeImage) {
                     activeImage.classList.remove("active");
                 }
@@ -144,6 +147,8 @@ function Settings() {
             }
         }
     }
+
+    /* Buttons  */
     const okButton = document.querySelector("[data-ok]");
     const cancelButton = document.querySelector("[data-cancel]");
 

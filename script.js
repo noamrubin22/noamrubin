@@ -25,6 +25,7 @@ window.onload = function () {
     }, 180000);
   };
 
+  screenSaver.hidden = true;
   // hide screensaver on mouse move
   screenSaver.addEventListener("mousemove", function () {
     screenSaver.hidden = true;
@@ -88,11 +89,8 @@ window.onload = function () {
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
   const gerritDesktop = document.querySelector(".gerrit");
-  console.log("GERRIT", gerritDesktop);
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
-
-  const closeAbout = document.querySelector(".closeme-about");
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -234,18 +232,18 @@ window.onload = function () {
   new Window(mariposaProps);
   // new Window(videoProps);
 
-  let audioElement;
-  const muteFire = document.getElementById("mute-fire");
+  // let audioElement;
+  // const muteFire = document.getElementById("mute-fire");
 
-  // FIRE sound about window
-  clickAboutMenu.onclick = () => {
-    audioElement = new Audio("./images/fire.mp3");
-    audioElement.play();
-  }
+  // // FIRE sound about window
+  // clickAboutMenu.onclick = () => {
+  //   audioElement = new Audio("./images/fire.mp3");
+  //   audioElement.play();
+  // }
 
-  closeAbout.onclick = () => {
-    audioElement.pause();
-  }
+  // closeAbout.onclick = () => {
+  //   audioElement.pause();
+  // }
   // let isPlaying = false;
 
   // function togglePlay() {

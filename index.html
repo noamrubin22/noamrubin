@@ -13,51 +13,51 @@
   <img id="screensaver" src="images/ScreenSaver_01.gif" alt="screensaver" />
   <div class="container__monitor" id="monitor">
     <div class="container__background">
-      <img class="background-img" src="/images/berlinautumn.png" alt="Chosen Background">
+      <img class="monitor__background-img" src="/images/berlinautumn.png" alt="Chosen Background">
       <a target="_blank" href="https://www.instagram.com" id="link__instagram" id="blink">
       </a>
     </div>
     <div class="settings-window window" hidden>
       <div class="window__titlebar">Display Properties
-        <div data-close class="notepad-exit closeme-settings">
+        <div data-close class="notepad-exit settings-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
         <div class="content">
           <div class="pc">
-            <div class="background-color">
-              <img class="pc-bg-img" src="/images/90ieskid.png" hidden>
+            <div class="pc__background-color">
+              <img class="pc__background-img" src="/images/90ieskid.png" hidden>
             </div>
           </div>
-          <div class="display-options">
-            <div class="themes-settings">
+          <div class="display__props">
+            <div class="display__props-themes">
               <p>Themes</p>
-              <div class="background-choices">
-                <ul tabindex="1">
-                  <li class="theme" id="classic">Windows Classic</li>
-                  <li class="theme" id="purple">Purple Lady</li>
-                  <li class="theme" id="ocean">Ocean View</li>
-                  <li class="theme" id="porto-patterns">Eat Your Greens</li>
-                  <li class="theme" id="burnbabyburn">Burn Baby Burn</li>
+              <div class="display__props-themes-options">
+                <ul tabindex="1" >
+                  <li class="theme" >Windows Classic</li>
+                  <li class="theme">Purple Lady</li>
+                  <li class="theme" >Ocean View</li>
+                  <li class="theme">Eat Your Greens</li>
+                  <li class="theme">Burn Baby Burn</li>
                 </ul>
               </div>
             </div>
-            <div class="background-image-settings">
+            <div class="display__props-background">
               <p>Background image</p>
-              <div class="bgimg-choices">
+              <div class="display__props-background-options">
                 <ul tabindex=1>
-                  <li class="display-img">None</li>
-                  <li data-url="/images/90ieskid.png" class="display-img">90ies Kid</li>
-                  <li data-url="/images/theroomandoneself.png" class="display-img" id="kathi">The Room And Oneself</li>
-                  <li data-url="/images/ichgebäredich.png" class="display-img" id="djamillia">Ich Gebäre Dich</li>
-                  <li data-url="/images/innerfloating.png" class="display-img" id="chris">Inner Floating</li>
-                  <li data-url="/images/shruti.png" class="display-img" id="shruti">Shruti</li>
+                  <li class="display__props-background-image">None</li>
+                  <li data-url="/images/90ieskid.png" class="display__props-background-image">90ies Kid</li>
+                  <li data-url="/images/theroomandoneself.png" class="display__props-background-image" id="kathi">The Room And Oneself</li>
+                  <li data-url="/images/ichgebäredich.png" class="display__props-background-image" id="djamillia">Ich Gebäre Dich</li>
+                  <li data-url="/images/innerfloating.png" class="display__props-background-image" id="chris">Inner Floating</li>
+                  <li data-url="/images/shruti.png" class="display__props-background-image" id="shruti">Shruti</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="settings-buttons">
+          <div class="display__props-buttons">
             <button data-ok class="classic-btn" id="ok">OK</button>
             <button data-cancel class="classic-btn" id="cancel">Cancel</button>
           </div>
@@ -66,65 +66,65 @@
     </div>
     <div hidden class="mariposa-window project-window window">
       <div class="window__titlebar">Mariposa
-        <div data-close class="notepad-exit closeme-mariposa">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize mariposa-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-mariposa">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content">
-        <div data-textbox class="textbox-about textbox">
-          <div class="left-wi">
-            <div class="project-header text">
-              <h1 id="project-title">Mariposa</h1>
-              <div class="project-description">
-                <span>use your voice to move the butterfly!</span>
-                <br>
-              </div>
-              <br>
+        <div data-textbox class="textbox">
+          <div class="project-header text">
+            <img src="./images/Mariposa_01.png" alt="Mariposa" style="width: 80px">
+            <img src="./images/Mariposa_01.png" alt="Mariposa" style="width: 50px">
+            <img src="./images/Mariposa_01.png" alt="Mariposa" style="width: 50px">
+            <img src="./images/Mariposa_01.png" alt="Mariposa" style="width: 80px">
+            <h1 class="project-title">Mariposa</h1>
+            <div class="project-description">
+              <span>use your voice to move the butterfly!</span>
+            </div>
+            <div class="project__links">
               <a target="_blank" href="https://noamrubin22.github.io/game/">
                 <span id="blink">go to game</span>
               </a>
-              <br>
               <a target="_blank" href="https://github.com/noamrubin22/game">
                 <span>see code</span>
               </a>
             </div>
-            <br>
-            <br>
-            <div class="image">
-              <img id="project-img" src="./images/Mariposa_game.png" alt="mariposa game" style="width:100%">
-            </div>
-            <div class="project-inf text">
-              <p><center>A non-traditional "run and jump"-game created in <a
-                  target="_blank" href="https://p5js.org/">p5.js</a>. Use your voice instead of your keyboard. A high frequency will move the player up, a low frequency will move the player down.
-                  <br>
-                  <br>
-                  <b>Technologies</b>
-                  <br>
-                  p5.js | HTML | CSS
-                </center>
-              </p>
           </div>
-            <div class="links">
+          <img class="project__img" src="./images/Mariposa_game.png" alt="Mariposa game" />
+          <div class="project__info text">
+            <center>
+              <p>A non-traditional "run and jump"-game created in <a
+                target="_blank" href="https://p5js.org/">p5.js</a>. <br> Use your voice instead of your keyboard. A high frequency will move the player up, a low frequency will move the player down.
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p>p5.js * HTML * CSS</p>
+              </div>
+              </center>
+          </div>
+          <div class="project__links">
+            <span id="blink">
               <a target="_blank" href="https://noamrubin22.github.io/game/">
-                <span id="blink">go to game</span>
+              go to game 
               </a>
-              <br>
+            </span>
+            <span>
               <a target="_blank" href="https://github.com/noamrubin22/game">
-                <span>see code</span>
+              see code
               </a>
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -132,58 +132,60 @@
     <div hidden class="spotavibe-window project-window window">
       <div class="window__titlebar">
         Spotavibe
-        <div data-close class="notepad-exit closeme-contact">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize contact-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-contact">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content">
-        <div data-textbox class="textbox-gerrit textbox">
+        <div data-textbox class="textbox">
           <div class="left-wi">
             <div class="project-header text">
-              <img id="spotavibe-img" src="./images/spotavibe_01.png" alt="spotavibe">
-              <img id="spotavibe-img" src="./images/spotavibe_01.png" alt="spotavibe">
-              <img id="spotavibe-img" src="./images/spotavibe_01.png" alt="spotavibe">
+              <img src="./images/spotavibe_01.png" alt="Spotavibe" style="width: 70px">
+              <img src="./images/spotavibe_01.png" alt="spotavibe" style="width: 80px">
+              <img src="./images/spotavibe_01.png" alt="spotavibe" style="width: 70px">
               <h1 id="project-title">Spotavibe</h1>
               <div class="project-description">
                 <span>catches your vibe and calms you down</span>
-                <br>
               </div>
               <br>
-              <a target="_blank" href="http://spotavibe.herokuapp.com/">
-                <span id="blink">go to website</span>
-              </a>
-              <br>
-              <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
-                <span>see code</span>
-              </a>
+              <div class="project__links">
+                <a target="_blank" href="http://spotavibe.herokuapp.com/">
+                  <span id="blink">go to website</span>
+                </a>
+                <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
+                  <span>see code</span>
+                </a>
+              </div>
             </div>
-            <br>
-            <hr>
-            <br>
-            <div class="image">
-              <img id="spotavibe-project-img" src="./images/spotavibe3.png" alt="spotavibe website">
-            </div>
+              <img class="project__img" src="./images/spotavibe3.png" alt="spotavibe website">
           </div>
-          <div class="project-inf text">
-            <center><p>This web-application intents to calm you down by:<br><br>- determining your heart rate<br> - filtering Spotify metadata on BPM<br>- creating a personalized playlist<br><br><br><b>Technologies</b><br> Arduino | JavaScript | CSS | HTML | Node.js | MongoDB | mongoose | handlebars | restAPI | Spotify API</center>
-            </p>
-            <div class="links">
+          <div class="project-info text">
+            <center>
+              <p>
+                This web-application intents to calm you down by:<br><br>- determining your heart rate<br> - filtering Spotify metadata on BPM<br>- creating a personalized playlist
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p> Arduino * JavaScript * CSS * HTML * Node.js * MongoDB * mongoose * handlebars * restAPI * Spotify API 
+                </p>
+            </div>
+          </center>
+            <div class="project__links">
               <a target="_blank" href="http://spotavibe.herokuapp.com/">
                 <span id="blink">go to website</span>
               </a>
-              <br>
               <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
                 <span>see code</span>
               </a>
@@ -195,77 +197,83 @@
     <div hidden class="gerrit-window project-window window">
       <div class="window__titlebar">
         Just Gerrit
-        <div data-close class="notepad-exit closeme-contact">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize contact-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-contact">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content">
-        <div data-textbox class="textbox-gerrit textbox">
-          <div class="left-wi">
-            <div class="project-header text">
-              <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
-              <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
-              <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
-              <img id="gerrit-img" src="./images/Gerrit_01.png" alt="gerrit">
-              <h1 id="project-title">Gerrit</h1>
-              <div class="project-description">
-                <span>chat with random people, near to you!</span>
-                <br>
-                <br>
-                <span>React * MongoDB * Mongoose * Express * socket.io * Node.js * CSS * HTML</span>
-              </div>
-              <br>
-              <a target="_blank" href="https://justgerrit.herokuapp.com/">
-                <span id="blink">go to web application</span>
-              </a>
-              <br>
-              <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">
-                <span>see code</span>
-              </a>
-              <br>
-              <hr>
-              <br>
+        <div data-textbox class="textbox">
+          <div class="project-header text">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <h1 class="project-title">Gerrit</h1>
+            <div class="project-description">
+              <span>chat with random people, near to you!</span>
             </div>
-            <div class="image">
-              <img id="gerrit-project-img" src="./images/geriit_screenshot_01.png" alt="gerrit">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <img src="./images/Gerrit_01.png" alt="gerrit" style="width: 50px">
+            <div class="project__links-gerrit">
+              <span id="blink">
+                <a target="_blank" href="https://justgerrit.herokuapp.com/">
+                go to web application</a>
+              </span>
+              <span>
+                <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">see code</a>
+              </span>
             </div>
           </div>
-          <div class="project-inf text">
-            <h2 id="project-subtitle">Context</h2>
-            <p> 
-              For the last project of the Ironhack bootcamp we had to create a full-stack MERN (MongoDB, Express,
-              React, Node.js) web application. In teams of 3, we had one week to make it happen. We decided to create
-              a
-              mobile web application that allows users to chat with others only while being in the same location. The
-              idea behind it was to create an environment where neighbors could talk to each other (for example if
-              someone lost their cat/keys), tourists could ask for restaurant tips while being in a specific area and
-              people in- or outside a club can communicate with each other concerning the queue, djs and vibes. Users
-              create a profile but can still stay anonymous, giving them a bit more freedom to express themselves. No
-              one can enter the chat box while not being in the specific location it concerns.</p>
-            <h4 id="project-subtitle">Development</h4>
-            <p>The chat was implemented with socket.io.</p>
-            <img id="gerrit-project-img2" src="./images/gerrit-chat.jpeg" alt="gerrit">
-            <br>
-            <div class="links">
-              <a target="_blank" href="https://justgerrit.herokuapp.com">
-                <span id="blink">go to web application</span>
-              </a>
-              <br>
-              <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">
-                <span>see code</span>
-              </a>
+          <div class="project-info text">
+            <center>
+              <p>
+              A full-stack MERN web application that allows users to chat, only while being in the same location. An environment where neighbors could get in touch, tourists could ask for area specific restaurant tips and people that feel alone could reach out to others near to them. No
+              one can enter the chat box while not being in the specific area it concerns.
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p>React * MongoDB * Mongoose * Express * socket.io * Node.js * CSS * HTML</p>
+              </div>
+            </center>
+            <div class="project__imgs">
+              <img class="project__img-gerrit" src="./images/geriit_screenshot_01.png" alt="Gerrit chat example">
+              <img class="project__img-gerrit" src="./images/gerrit-chat.jpeg" alt="Gerrit">
+            </div>
+            <div class="project__links-gerrit">
+              <a target="_blank" href="https://justgerrit.herokuapp.com/">
+                go to web application</a>
+              </span>
+              <span>
+                <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">see code</a>
+              </span>
             </div>
           </div>
         </div>
@@ -274,62 +282,64 @@
     <div hidden class="music-window project-window window">
       <div class="window__titlebar">
         Music visualization
-        <div data-close class="notepad-exit closeme-contact">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize contact-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-contact">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content">
-        <div data-textbox class="textbox-gerrit textbox">
-          <div class="left-wi">
+        <div data-textbox class="textbox">
             <div class="project-header text">
-              <img src="./images/Muxisvi_01.png" alt="music visualization">
+              <img src="./images/Muxisvi_01.png" alt="Music visualization" style="width: 70px">
               <h1 id="project-title">Music visualization</h1>
-              <div id="project-description">
+              <div class="project-description">
                 <span>alter your songs and learn about the mechanism behind them</span>
-                <br>
-                <br>
               </div>
-              <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
-                <span id="blink">go to website</span>
-              </a>
-              <br>
-              <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
-                <span>see code</span>
-              </a>
+              <div class="project__links">
+                <span id="blink">
+                  <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
+                  go to website
+                  </a>
+                </span>
+                <span>
+                  <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
+                  see code
+                  </a>
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="image">
-            <img id="project-img" src="./images/musicviz.png" alt="Music visualization" style="width:100%; filter:grayscale(90%)">
-          </div>
-          <div class="project-inf text">
-            <p><center>A music visualization created in <a target="_blank" href="https://d3js.org/">d3.js</a>. Users can manipulate sound and visuals by adjusting filters. I used recursive functions to create live-updating charts.
-              <br>
-              <br>
-              <b>Technologies</b>
-              <br>
-              JavaScript | d3.js | HTML | CSS
-            </center>
+            <img class="project__img" src="./images/musicviz.png" alt="Music visualization" >
+          <div class="project-info text">
+            <center>
+              <p>A music visualization created in <a target="_blank" href="https://d3js.org/">d3.js</a>. Users can manipulate sound and visuals by adjusting filters. I used recursive functions to create live-updating charts.
               </p>
-            <div class="links">
-              <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
-                <span id="blink">go to website</span>
-              </a>
-              <br>
-              <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
-                <span>see code</span>
-              </a>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p>JavaScript * d3.js * HTML * CSS</p>
+              </div>
+            </center>
+            <div class="project__links">
+              <span id="blink">
+                <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
+                go to website
+                </a>
+              </span>
+              <span>
+                <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
+                see code
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -337,75 +347,78 @@
     </div>
     <div hidden class="about-window window">
       <div class="window__titlebar">About me
-        <div data-close class="notepad-exit closeme-about">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize about-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-about">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content">
-        <div data-textbox class="textbox-about textbox">
+        <div data-textbox class="textbox">
           <div class="text about-text">
             <h2>N O A M | R U B I N </h2>
             <img src="/images/aboutNoam.png" alt="Noam" style="width:100%; filter:invert(10%)">
-            <p><span>
-                  I am an innovative Berlin-based web developer with a background in neuroscience and am interested in the emerging field of transformative technology. <br>In my work, I seek to enhance mental and emotional wellbeing by combining (interactive) art, neuroscience, technology, and spirituality/self-knowledge. 
-                  <br>
-                  <br>
-                  <b>Stack</b>
-                  <br> 
-                  JavaScript | React | Node.js | Express | MongoDB | HTML | CSS | Arduino
-                  <br>
-                  <br>
-                  <b>Further interests</b>
-                  <br>
-                  the gut-brain connection / neuroaesthetics / emotions / bio & neuro-feedback / meditation / connection / harmony / the flow-state / sound / epigenetics / attention / trauma / psychedelics / sustainability / synergy / consciousness
-            </p>
+            <div class="project__info">
+              <p>
+                I am an innovative Berlin-based web developer with a background in neuroscience and am interested in the emerging field of transformative technology. <br>In my work, I seek to enhance mental and emotional wellbeing by combining (interactive) art, neuroscience, technology, and spirituality/self-knowledge. 
+              </p>
+              <div class="project__info">
+                <p>
+                <b>Stack</b>
+                <br>
+                JavaScript * React * Node.js * Express * MongoDB * HTML * CSS * Arduino</p>
+              </div>
+              <div class="project__info">
+                <p><b>Further interests</b>
+                <br>
+                the gut-brain connection / neuroaesthetics / emotions / bio & neuro-feedback / meditation / connection / harmony / the flow-state / sound / epigenetics / attention / trauma / psychedelics / sustainability / synergy / consciousness
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div hidden class="contact-window window">
       <div class="window__titlebar"> The power of synergy
-        <div data-close class="notepad-exit closeme-contact">
+        <div data-close class="notepad-exit">
           <div class="button-exit">
             <div class="icon-exit">&times;</div>
           </div>
         </div>
-        <div data-maximize class="notepad-maximize contact-maximize">
+        <div data-maximize class="notepad-maximize">
           <div class="button-maximize">
             <div class="icon-maximize"></div>
           </div>
         </div>
-        <div data-minimize class="notepad-minimize clickme-contact">
+        <div data-minimize class="notepad-minimize">
           <div class="button-minimize">
             <div class="icon-minimize"></div>
           </div>
         </div>
       </div>
       <div class="content" id="contact-content">
-        <div data-textbox class="textbox-contact textbox">
+        <div data-textbox class="textbox">
           <canvas id="canvas">
           </canvas>
-          <img id="noam-contact" src="./images/noam_colors_02.gif" />
           <a target="_blank" href="https://www.github.com/noamrubin22">
-            <img id="github-contact" src="./images/gihub_01.png" alt="contact">
+            <img class="contact__img-github" src="./images/gihub_01.png" alt="contact" style="filter:grayscale(20)">
           </a>
           <a href="mailto:noamru22@gmail.com">
-            <img id="mail-contact" src="./images/email_01.png">
+            <img class="contact__img-mail" src="./images/email_01.png" style="filter:grayscale(20)">
           </a>
           <a target="_blank" id="linkedin-contact" href="https://www.linkedin.com/in/noam-rubin">
-            <img id="linkedin-contact" src="./images/in_01.png">
+            <img class="contact__img-linkedin" src="./images/in_01.png" style="filter:grayscale(20)">
           </a>
         </div>
       </div>
@@ -527,25 +540,3 @@
 </body>
 
 </html>
-<!-- <div class="video-window window" hidden>
-  <div class="titlebar">
-    Groove Is In The Heart
-    <div data-close class="notepad-exit closeme-video">
-      <div class="button-exit">
-        <div class="icon-exit">&times;</div>
-      </div>
-    </div>
-    <div data-maximize class="notepad-maximize video-maximize">
-      <div class="button-maximize">
-        <div class="icon-maximize"></div>
-      </div>
-    </div>
-    <div data-minimize class="notepad-minimize clickme-video">
-      <div class="button-minimize">
-        <div class="icon-minimize"></div>
-      </div>
-    </div>
-  </div>
-      <video src="/images/groove.mp4"></video>
-  </div>
-</div> -->
