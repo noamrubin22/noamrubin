@@ -672,6 +672,7 @@ ul {
   margin: 0;
 }
 
+/* About */
 .about-window {
   width: 600px;
   height: 700px;
@@ -683,6 +684,17 @@ ul {
   z-index: 9999;
 }
 
+.about-window .text {
+  width: 90%;
+  display: inline-block;
+}
+
+.about__img-noam {
+  width: 100%;
+  filter: invert(10%);
+}
+
+/* About max */
 .about-window.max {
   width: 100%;
   height: 93%;
@@ -696,11 +708,6 @@ ul {
   text-align: center;
 }
 
-.about-window .text {
-  width: 90%;
-  display: inline-block;
-}
-
 .about-window.max .text {
   width: 60%;
   display: inline-block;
@@ -709,6 +716,23 @@ ul {
 .textbox.max>.about-text {
   width: 100%;
   margin: 2rem;
+}
+
+.textbox.max>.about-text>.project__info>p {
+  font-size: 1.2rem;
+}
+
+.textbox.max>.about-text>.project__info>.project__info>p {
+  font-size: 1.2rem;
+}
+
+.textbox.max>.about-text>h2 {
+  font-size: 2rem;
+  margin: 1.3rem;
+}
+
+.textbox.max>.about-text>.about__img-noam {
+  width: 66%;
 }
 
 .project-inf>p span {
@@ -912,6 +936,12 @@ img {
   z-index: 9999;
 }
 
+.text {
+  width: 80%;
+  display: inline-block;
+}
+
+/* mariposa project max */
 .mariposa-project.max {
   width: 100%;
   height: 93%;
@@ -929,10 +959,125 @@ img {
   display: flex;
 }
 
-.text {
-  width: 80%;
-  display: inline-block;
+.project-window>.content>.textbox.max>.project-header.text {
+  width: 400px;
+  height: 200px;
+  margin-left: 3rem;
 }
+
+.project-window>.content>.textbox.max>.project__content>.project__img {
+  width: 90%;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+/* specific for spotaivbe */
+.spotavibe-window>.content>.textbox.max>.project__content>.project__img {
+  width: 80%;
+  align-self: center;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.spotavibe-window>.content>.textbox.max>.project__content {
+  margin-top: 10rem;
+}
+
+.music-window>.content>.textbox.max>.project__content>.project__info.text {
+  width: 45rem;
+  margin-right: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.music-window>.content>.textbox.max>.project-header.text {
+  margin-top: 5rem;
+  /* background-color: blue; */
+}
+
+.project-window.max>.content>.textbox.max>.project-header.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+
+/* flip over img and content */
+.project-window>.content>.textbox.max>.project__content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* width: 100%; */
+  align-self: center;
+  margin-bottom: 7rem;
+
+}
+
+/* remove extra project-links */
+.project-window>.content>.textbox.max>.project__content>.project__links {
+  display: none;
+}
+
+/* adjust size div for content*/
+.project-window>.content>.textbox.max>.project__content>.project__info.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-window>.content>.textbox.max>.project__content>.project__info.text>p {
+  width: 280px;
+  font-size: 1.5rem;
+  width: 40vw;
+  margin-right: 6rem;
+}
+
+.project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
+  align-self: center;
+  font-size: 1.4rem;
+  margin-right: 6rem;
+}
+
+/* spotavibe max specifications */
+/* #project__info-spotavibe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+/* gerrit max specifications */
+.gerrit-window.max>.content>.textbox.max>.project__content-gerrit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gerrit-window.max>.content>.textbox.max>.project-header.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__info.text {
+  font-size: 1.4rem;
+  width: 30rem;
+  position: absolute;
+  left: 220px;
+  bottom: 100px;
+}
+
+.gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__imgs {
+  margin: 2rem;
+  width: 1000px;
+}
+
+.gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__imgs>img {
+  width: 400px;
+  margin: 3rem;
+}
+
+.gerrit-window.max>.content>.textbox.max>.project__links-gerrit {
+  display: none;
+}
+
 
 /* buttons window */
 .notepad-minimize,
@@ -1142,7 +1287,6 @@ h1 {
 
 .project__imgs {
   display: flex;
-  /* width: 100%; */
   justify-content: center;
   margin-top: 3rem;
 }
@@ -1158,49 +1302,6 @@ h1 {
   margin-top: 2rem;
 }
 
-
-
-.textbox.max>.project-inf>.links {
-  text-align: center;
-  font-size: 1rem;
-  padding: 2rem;
-}
-
-.textbox.max>.left-wi>.project-header {
-  font-size: 1.2rem;
-}
-
-.textbox.max>.left-wi>.image>#project-img {
-  width: 100%;
-}
-
-.textbox.max>.project-inf {
-  margin: 1rem;
-  padding: 7rem;
-}
-
-.textbox.max>.left-wi {
-  margin: 4rem;
-}
-
-.links {
-  text-align: center;
-}
-
-.textbox.max>.left-wi.gerrit {
-  width: 60%;
-}
-
-.textbox.max>.project-inf.gerrit {
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.textbox.max>.project-inf.gerrit>img {
-  margin: auto;
-  padding-left: 25%;
-}
-
 #tbn-img {
   width: 100px;
 }
@@ -1208,8 +1309,6 @@ h1 {
 #music-img {
   width: 100%;
 }
-
-
 
 #spotavibe-project-img {
   width: 100%;
@@ -1224,15 +1323,6 @@ h1 {
   width: 100%;
 }
 
-.textbox.max>.project-inf.robot {
-  width: 100%;
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.textbox.max>.left-wi {
-  width: 70%;
-}
 
 .contact__img-github {
   position: absolute;
