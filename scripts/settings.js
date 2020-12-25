@@ -65,7 +65,7 @@ function Settings() {
 
     /* sets the selected image as background */
     function previewImage({ selectedImage, title, artist }) {
-        const artistInsta = document.getElementById("link__instagram");
+        const artistInsta = document.querySelector(".link__instagram");
 
         if (selectedImage === "none") {
             chosenBackgroundImage.hidden = true;

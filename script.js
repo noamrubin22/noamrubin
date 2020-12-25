@@ -12,7 +12,7 @@ window.onload = function () {
   const body = document.querySelector("body");
   const projectsItem = document.querySelector(".projects");
   const projectsMenu = document.querySelector(".sub__projects");
-  const screenSaver = document.getElementById("screensaver");
+  const screenSaver = document.querySelector(".screensaver");
   const shutDown = document.querySelector(".shutdown");
 
   /* SCREENSAVER */
