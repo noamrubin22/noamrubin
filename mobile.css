@@ -88,8 +88,8 @@
 
     /* Settings window */
     .settings-window {
-        width: 385px;
-        height: 430px;
+        width: 510px;
+        height: 540px;
         border: outset 2px;
         background: #c0c0c0;
         position: relative;
@@ -103,10 +103,10 @@
         width: 206px;
         height: 179px;
         margin: auto;
-        margin-top: 28px;
+        margin-top: 65px;
         background: url("./images/desktop.png") no-repeat;
         overflow: auto;
-        margin-left: 94px;
+        margin-left: 167px;
     }
 
     .pc__background-color {
@@ -133,8 +133,8 @@
     }
 
     .display__props-themes-options {
-        width: 140px;
-        height: 80px;
+        width: 200px;
+        height: 100px;
         border: inset;
         background: white;
         margin: 6px;
@@ -151,20 +151,22 @@
     .display__props-themes>p {
         color: black;
         margin: 0;
-        margin-left: 52px;
+        margin-left: 67px;
         padding: 0;
+        font-size: 23px;
     }
 
     .display__props-background>p {
         color: black;
         margin: 0;
-        margin-left: 41px;
+        margin-left: 26px;
         padding: 0;
+        font-size: 23px;
     }
 
     .display__props-background-options {
-        width: 160px;
-        height: 80px;
+        width: 200px;
+        height: 100px;
         border: inset;
         background: white;
         margin: 6px;
@@ -174,13 +176,14 @@
     }
 
     .display__props-background-image {
-        padding: 0;
         padding-left: 5px;
         margin-left: 7px;
         margin-top: 0;
         cursor: pointer;
         background-color: white;
         color: black;
+        font-size: 19px;
+        padding: 4px;
     }
 
     .display__props-background-image.active {
@@ -191,17 +194,18 @@
     .display__props-buttons {
         display: flex;
         justify-content: center;
-        margin-top: 19px;
+        margin-top: 36px;
     }
 
     .theme {
-        padding: 0;
         padding-left: 5px;
         margin-left: 7px;
         margin-top: 0;
         cursor: pointer;
         color: black;
+        font-size: 19px;
         background-color: white;
+        padding: 4px;
     }
 
     .theme.active {
@@ -219,11 +223,12 @@
     }
 
     .classic-btn {
-        width: 87px;
-        height: 23px;
+        width: 109px;
+        height: 37px;
         margin: 5px;
         border: 1px solid;
         box-shadow: 2px 2px;
+        font-size: 20px;
     }
 
     .classic-btn:active {
@@ -260,10 +265,10 @@
         top: 0px;
         right: 0px;
         left: 0px;
-        height: 22px;
+        height: 35px;
         border: none;
         color: #fff;
-        font-size: 14px;
+        font-size: 25px;
         line-height: 21px;
         padding-left: 5px;
     }
@@ -284,7 +289,7 @@
     .button-exit {
         background: #bfbfbf;
         height: 100%;
-        width: 17px;
+        width: 22px;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
         border-left: 1px solid white;
@@ -1107,17 +1112,18 @@
 
     .task {
         top: 1px;
-        width: 157px;
+        width: 156px;
         bottom: 1px;
         border: outset 2px;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 23px;
         display: flex;
         align-content: flex-start;
         align-items: center;
+        flex-direction: column;
     }
 
-    .contact-icon {
+    .task__icon-contact {
         width: 14px;
         height: 14px;
         margin: 6px;
@@ -1138,7 +1144,7 @@
         align-items: center;
     }
 
-    .about-icon {
+    .task__icon-about {
         width: 32px;
         height: 32px;
         background-image: url("./images/about_01_small.png");
@@ -1170,36 +1176,44 @@
         border: inset 2px;
     }
 
-    .gerrit-icon {
-        width: 32px;
-        height: 32px;
+    .task__icon-gerrit {
         background-image: url("./images//Gerrit_01_small.png");
+        width: 42px;
+        height: 42px;
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: contain;
+        margin-top: 21px;
     }
 
-    .mariposa-icon {
-        width: 32px;
-        height: 32px;
-        background-image: url("./images//Mariposa_01_small.png");
+    .task__icon-mariposa {
+        width: 42px;
+        height: 42px;
+        background-image: url(./images//Mariposa_01_small.png);
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: contain;
+        margin-top: 21px;
     }
 
-    .spotavibe-icon {
-        width: 32px;
-        height: 32px;
+    .task__icon-spotavibe {
         background-image: url("./images//Spotavibe_01_small.png");
+        width: 42px;
+        height: 42px;
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: contain;
+        margin-top: 21px;
     }
 
-    .music-icon {
-        width: 32px;
-        height: 32px;
+    .task__icon-musicviz {
         background-image: url("./images//Muxisvi_01_small.png");
+        width: 42px;
+        height: 42px;
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: contain;
+        margin-top: 7px;
     }
 
     img {

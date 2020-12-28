@@ -95,14 +95,14 @@ window.onload = function () {
   const aboutProps = {
     menuButton: clickAboutMenu,
     windowElement: aboutWindow,
-    iconClassName: "about-icon",
+    iconClassName: "task__icon-about",
     taskText: "about.txt",
   };
 
   const contactProps = {
     menuButton: clickContactMenu,
     windowElement: contactWindow,
-    iconClassName: "contact-icon",
+    iconClassName: "task__icon-contact",
     taskText: "contact.txt",
   };
 
@@ -110,7 +110,7 @@ window.onload = function () {
     desktopButton: gerritDesktop,
     menuButton: clickGerritMenu,
     windowElement: gerritWindow,
-    iconClassName: "gerrit-icon",
+    iconClassName: "task__icon-gerrit",
     taskText: "gerrit.txt",
   };
 
@@ -118,7 +118,7 @@ window.onload = function () {
     desktopButton: musicDesktop,
     menuButton: clickMusicMenu,
     windowElement: musicWindow,
-    iconClassName: "music-icon",
+    iconClassName: "task__icon-musicviz",
     taskText: "music-visualization.txt",
   };
 
@@ -126,7 +126,7 @@ window.onload = function () {
     desktopButton: spotavibeDesktop,
     menuButton: clickSpotavibeMenu,
     windowElement: spotavibeWindow,
-    iconClassName: "spotavibe-icon",
+    iconClassName: "task__icon-spotavibe",
     taskText: "spotavibe.txt",
   };
 
@@ -134,14 +134,8 @@ window.onload = function () {
     desktopButton: mariposaDesktop,
     menuButton: clickMariposaMenu,
     windowElement: mariposaWindow,
-    iconClassName: "mariposa-icon",
+    iconClassName: "task__icon-mariposa",
     taskText: "mariposa.txt",
-  };
-
-  const videoProps = {
-    windowElement: videoWindow,
-    iconClassName: "video-icon",
-    taskText: "groove.mov",
   };
 
   class Window {
@@ -230,36 +224,6 @@ window.onload = function () {
   new Window(spotavibeProps);
   new Window(musicProps);
   new Window(mariposaProps);
-  // new Window(videoProps);
-
-  // let audioElement;
-  // const muteFire = document.getElementById("mute-fire");
-
-  // // FIRE sound about window
-  // clickAboutMenu.onclick = () => {
-  //   audioElement = new Audio("./images/fire.mp3");
-  //   audioElement.play();
-  // }
-
-  // closeAbout.onclick = () => {
-  //   audioElement.pause();
-  // }
-  // let isPlaying = false;
-
-  // function togglePlay() {
-  //   isPlaying ? audioElement.pause() : audioElement.play();
-  // };
-
-  // audioElement.onplaying = function () {
-  //   isPlaying = true;
-  // };
-  // audioElement.onpause = function () {
-  //   isPlaying = false;
-  // };
-
-  // muteFire.onclick = () => {
-  //   togglePlay();
-  // }
 
   /* DRAGGABLE */
   // Make the desktop icons draggable

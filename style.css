@@ -1056,7 +1056,7 @@
     align-items: center;
   }
 
-  .contact-icon {
+  .task_icon-contact {
     width: 14px;
     height: 14px;
     margin: 6px;
@@ -1077,7 +1077,7 @@
     align-items: center;
   }
 
-  .about-icon {
+  .task_icon-about {
     width: 32px;
     height: 32px;
     background-image: url("./images/about_01_small.png");
@@ -1128,7 +1128,7 @@
     border: inset 1px;
   }
 
-  .gerrit-icon {
+  .task__icon-gerrit {
     width: 32px;
     height: 32px;
     background-image: url("./images//Gerrit_01_small.png");
@@ -1136,7 +1136,7 @@
     background-position: center center;
   }
 
-  .mariposa-icon {
+  .task__icon-mariposa {
     width: 32px;
     height: 32px;
     background-image: url("./images//Mariposa_01_small.png");
@@ -1144,7 +1144,7 @@
     background-position: center center;
   }
 
-  .spotavibe-icon {
+  .task__icon-spotavibe {
     width: 32px;
     height: 32px;
     background-image: url("./images//Spotavibe_01_small.png");
@@ -1152,7 +1152,7 @@
     background-position: center center;
   }
 
-  .music-icon {
+  .task__icon-musicviz {
     width: 32px;
     height: 32px;
     background-image: url("./images//Muxisvi_01_small.png");
