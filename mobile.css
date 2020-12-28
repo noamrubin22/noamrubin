@@ -691,7 +691,7 @@
     }
 
     .start__button {
-        width: 25%;
+        width: 29%;
         height: 89%;
         background: #c3c6cd;
         border-top: 2px solid #deebf3;
@@ -719,8 +719,8 @@
     }
 
     .start__logo {
-        width: 36px;
-        height: 21px;
+        width: 70px;
+        height: 41px;
         position: relative;
     }
 
@@ -735,8 +735,8 @@
         right: 0;
         position: absolute;
         background-repeat: no-repeat;
-        width: 36px;
-        height: 21px;
+        width: 80px;
+        height: 80px;
     }
 
     .start__text {
@@ -746,7 +746,7 @@
     }
 
     .start__time {
-        width: 200px;
+        width: 20%;
         height: 84%;
         background: #c3c6cd;
         border-top: 2px solid #85888f;
@@ -765,7 +765,7 @@
 
     .start__time-text {
         margin: auto;
-        font-size: 32px;
+        font-size: 33px;
     }
 
     .start__menu-main {
@@ -796,7 +796,7 @@
         color: #c3c6cd;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        font-size: 34px;
+        font-size: 49px;
         margin-bottom: 0px;
         margin-left: 5px;
     }
@@ -805,8 +805,8 @@
         color: white;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        margin-bottom: 100px;
-        font-size: 30px;
+        margin-bottom: 145px;
+        font-size: 48px;
         margin-left: 5px;
     }
 
@@ -816,10 +816,10 @@
     }
 
     .start__menu-main-items .icon {
-        width: 42px;
-        height: 42px;
-        padding-left: 5px;
-        padding-right: 5px;
+        width: 72px;
+        height: 72px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .start__menu-main-items-item {
@@ -833,6 +833,47 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+    }
+
+    .start__menu-main-items-item-img-projects {
+        background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
+        width: 61px;
+        height: 60px;
+        mix-blend-mode: multiply;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: contain;
+        margin: auto;
+    }
+
+    .start__menu-main-items-item-img-settings {
+        background: url(/images/settings.png);
+        width: 68px;
+        height: 60px;
+        mix-blend-mode: multiply;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: contain;
+        margin-right: 23px;
+        margin-left: 29px;
+    }
+
+    .start__menu-main-items-item-img-shutdown {
+        background: url(/images/shutdown.png);
+        width: 68px;
+        height: 60px;
+        mix-blend-mode: multiply;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: contain;
+        margin-right: 23px;
+        margin-left: 29px;
     }
 
     .start__menu-main-items-item-arrowright {
@@ -881,7 +922,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        width: 280px;
+        width: 85%;
         left: 100%;
         padding: 0;
         display: none;
@@ -889,8 +930,8 @@
     }
 
     .start__menu-sub .icon {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
         margin-right: 10px;
     }
 
@@ -1031,7 +1072,7 @@
     }
 
     .volume-img {
-        width: 27px;
+        width: 59px;
         margin-top: 0px;
     }
 
