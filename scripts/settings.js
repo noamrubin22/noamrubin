@@ -19,6 +19,9 @@ function Settings() {
     /* close settings when clicked on x*/
     closeSettings.onclick = () => {
         settingsWindow.hidden = true;
+        previewTheme(getCurrentTheme());
+        previewImage(getCurrentImage());
+        settingsWindow.hidden = true;
     };
 
     chooseTheme();
@@ -164,5 +167,7 @@ function Settings() {
         previewImage(getCurrentImage());
         settingsWindow.hidden = true;
     }
+
+
 }
 

@@ -182,7 +182,7 @@ window.onload = function () {
       });
 
       if (this.props.desktopButton) {
-        this.props.desktopButton.addEventListener("dblclick", () => {
+        this.props.desktopButton.addEventListener("click", () => {
           if (this.task) {
             if (!this.isOpen) {
               this.toggleWindow();
