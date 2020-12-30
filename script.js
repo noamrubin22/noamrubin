@@ -2,6 +2,7 @@ window.onload = function () {
 
   // settings function
   Settings();
+  dragMobile();
 
   // set clock
   setInterval(updateTime, 1000);
@@ -38,18 +39,16 @@ window.onload = function () {
 
   /* START MENU */
   // start menu appears on click, dissapears on click somewhere else
-  body.onclick = function (e) {
-    for (let i = 0, l = e.target.classList.length; i < l; ++i) {
-      if ((/start__.*/.test(e.target.classList[i])) || ((/start__menu-sub-items.sub-items.*/.test(e.target.classList[i])))) {
-        break;
-        // } else if ((/start__menu-sub-items.sub-items.*/.test(e.target.classList[i]))) {
-        //   startMenu.classList.remove("menu-open");
-      } else {
-        startMenu.classList.remove("menu-open");
-      }
+  function closeStartMenu(e) {
+    const { classList } = e.target;
+    const shouldNotClose = classList.contains('start__button') || classList.contains('start__text') || classList.contains('start__logo') || classList.contains('projects');
+    if (shouldNotClose) {
+      return
     }
+    startMenu.classList.remove("menu-open");
   };
 
+  body.onclick = closeStartMenu;
   // show/hide menu on click
   function menuDisplay(menu) {
     if (menu.classList.contains("menu-open")) {
@@ -59,6 +58,7 @@ window.onload = function () {
     }
   }
 
+
   startButton.addEventListener("click", function () {
     menuDisplay(startMenu);
   });
@@ -66,7 +66,6 @@ window.onload = function () {
   projectsItem.addEventListener("click", function () {
     menuDisplay(projectsMenu);
   });
-
 
   /* OPENS WINDOW AND ADD TASK TO TASKBAR */
   // menu buttons
@@ -230,13 +229,11 @@ window.onload = function () {
   const desktopIcons = document.getElementsByClassName("desktop-icon");
   for (let i = 0; i < desktopIcons.length; i++) {
     dragElement(desktopIcons[i]);
-    console.log(desktopIcons[i]);
   }
 
   const windows = document.getElementsByClassName("window");
   for (let i = 0; i < windows.length; i++) {
     dragElement(windows[i]);
-    console.log(windows[i]);
   }
 
   function dragElement(elmnt) {
@@ -306,7 +303,6 @@ window.onload = function () {
     }
   }
 }
-
 
       // make desktop items are "selected" by clicking once
       // if (this.props.desktopButton) {

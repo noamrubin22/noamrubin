@@ -2,19 +2,20 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="mobile.css">
-  <link rel="stylesheet" href="style.css" >
+  <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1023px)">
+  <link rel="stylesheet" href="style.css" media="screen and (min-width: 1024px)">
   <script src="script.js"></script>
   <script src="./scripts/starfield.js"></script>
   <script src="./scripts/time.js"></script>
   <script src="./scripts/settings.js"></script>
+  <script src="./scripts/drag.js"></script>
 </head>
 
 <body>
   <img class="screensaver" src="images/ScreenSaver_01.gif" alt="screensaver" />
   <div class="container__monitor" id="monitor">
     <div class="container__background">
-      <img class="monitor__background-img" src="/images/berlinautumn.png" alt="Chosen Background">
+      <img class="monitor__background-img" src="/images/90tieskid" alt="Chosen Background">
       <a target="_blank" href="https://www.instagram.com" class="link__instagram" id="blink">
       </a>
     </div>
@@ -35,10 +36,10 @@
             <div class="display__props-themes">
               <p>Themes</p>
               <div class="display__props-themes-options">
-                <ul class="display__props-options" tabindex="1" >
-                  <li class="theme" >Windows Classic</li>
+                <ul class="display__props-options" tabindex="1">
+                  <li class="theme">Windows Classic</li>
                   <li class="theme">Purple Lady</li>
-                  <li class="theme" >Ocean View</li>
+                  <li class="theme">Ocean View</li>
                   <li class="theme">Eat Your Greens</li>
                   <li class="theme">Burn Baby Burn</li>
                 </ul>
@@ -50,10 +51,14 @@
                 <ul class="display__props-options" tabindex=1>
                   <li class="display__props-background-image">None</li>
                   <li data-url="/images/90ieskid.png" class="display__props-background-image">90ies Kid</li>
-                  <li data-url="/images/theroomandoneself.png" class="display__props-background-image" id="kathi">The Room And Oneself</li>
-                  <li data-url="/images/ichgebäredich.png" class="display__props-background-image" id="djamillia">Ich Gebäre Dich</li>
-                  <li data-url="/images/innerfloating.png" class="display__props-background-image" id="chris">Inner Floating</li>
-                  <li data-url="/images/shruti.png" class="display__props-background-image" id="shruti">Steps Of Consciousness</li>
+                  <li data-url="/images/theroomandoneself.png" class="display__props-background-image" id="kathi">The
+                    Room And Oneself</li>
+                  <li data-url="/images/ichgebäredich.png" class="display__props-background-image" id="djamillia">Ich
+                    Gebäre Dich</li>
+                  <li data-url="/images/innerfloating.png" class="display__props-background-image" id="chris">Inner
+                    Floating</li>
+                  <li data-url="/images/shruti.png" class="display__props-background-image" id="shruti">Steps Of
+                    Consciousness</li>
                 </ul>
               </div>
             </div>
@@ -99,36 +104,39 @@
             <div class="project__links">
               <span id="blink">
                 <a target="_blank" href="https://noamrubin22.github.io/game/">
-                go to game 
+                  go to game
                 </a>
               </span>
               <span>
                 <a target="_blank" href="https://github.com/noamrubin22/game">
-                see code
+                  see code
                 </a>
               </span>
             </div>
           </div>
-          <div class="project__content">
+          <div class="project__img-wrapper">
             <img class="project__img" src="./images/Mariposa_game.png" alt="Mariposa game" />
+          </div>
+          <div class="project__content">
             <div class="project__info text">
-                <p>A non-traditional "run and jump"-game created in <a
-                  target="_blank" href="https://p5js.org/">p5.js</a>. <br> Use your voice instead of your keyboard. A high frequency will move the player up, a low frequency will move the player down.
-                </p>
-                <div class="project__info-tech">
-                  <b>Technologies</b>
-                  <p>p5.js * HTML * CSS</p>
-                </div>
+              <p>A non-traditional "run and jump"-game created in <a target="_blank" href="https://p5js.org/">p5.js</a>.
+                <br> Use your voice instead of your keyboard. A high frequency will move the player up, a low frequency
+                will move the player down.
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p>p5.js * HTML * CSS</p>
+              </div>
             </div>
             <div class="project__links">
               <span id="blink">
                 <a target="_blank" href="https://noamrubin22.github.io/game/">
-                go to game 
+                  go to game
                 </a>
               </span>
               <span>
                 <a target="_blank" href="https://github.com/noamrubin22/game">
-                see code
+                  see code
                 </a>
               </span>
             </div>
@@ -158,49 +166,53 @@
       <div class="content">
         <div data-textbox class="textbox">
           <div class="project-header text">
-              <div class="project-header-img">
+            <div class="project-header-img">
               <img src="./images/spotavibe_01.png" alt="Spotavibe" style="width: 70px">
               <img src="./images/spotavibe_01.png" alt="spotavibe" style="width: 80px">
               <img src="./images/spotavibe_01.png" alt="spotavibe" style="width: 70px">
             </div>
-              <h1 id="project-title">Spotavibe</h1>
-              <div class="project-description">
-                <span>catches your vibe and calms you down</span>
-              </div>
-              <div class="project__links">
-                <span id="blink">
-                  <a target="_blank" href="http://spotavibe.herokuapp.com/">
-                  go to website
-                  </a>
-                </span>
-                <span>
-                  <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
-                  see code
-                  </a>
-                </span>
-              </div>
+            <h1 id="project-title">Spotavibe</h1>
+            <div class="project-description">
+              <span>catches your vibe and calms you down</span>
             </div>
-            <div class="project__content">
-              <img class="project__img" src="./images/spotavibe3.png" alt="spotavibe website">
-              <div class="project__info text" id="project__info-spotavibe">
-                <p>
-                  This web-application intents to calm you down by:<br><br>- determining your heart rate<br> - filtering Spotify metadata on BPM<br>- creating a personalized playlist
-                </p>
-                <div class="project__info-tech">
-                  <b>Technologies</b>
-                  <p> Arduino * JavaScript * CSS * HTML * Node.js * MongoDB * mongoose * handlebars * restAPI * Spotify API 
-                  </p>
-                </div>
-              </div>
             <div class="project__links">
               <span id="blink">
                 <a target="_blank" href="http://spotavibe.herokuapp.com/">
-                go to website
+                  go to website
                 </a>
               </span>
               <span>
                 <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
-                see code
+                  see code
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="project__img-wrapper">
+            <img class="project__img" src="./images/spotavibe3.png" alt="spotavibe website">
+          </div>
+          <div class="project__content">
+            <div class="project__info text" id="project__info-spotavibe">
+              <p>
+                This web-application intents to calm you down by:<br><br>- determining your heart rate<br> - filtering
+                Spotify metadata on BPM<br>- creating a personalized playlist
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p> Arduino * JavaScript * CSS * HTML * Node.js * MongoDB * mongoose * handlebars * restAPI * Spotify
+                  API
+                </p>
+              </div>
+            </div>
+            <div class="project__links">
+              <span id="blink">
+                <a target="_blank" href="http://spotavibe.herokuapp.com/">
+                  go to website
+                </a>
+              </span>
+              <span>
+                <a target="_blank" href="https://github.com/noamrubin22/spotavibe">
+                  see code
                 </a>
               </span>
             </div>
@@ -263,7 +275,7 @@
             <div class="project__links-gerrit">
               <span id="blink">
                 <a target="_blank" href="https://justgerrit.herokuapp.com/">
-                go to web application</a>
+                  go to web application</a>
               </span>
               <span>
                 <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">see code</a>
@@ -273,26 +285,28 @@
           <div class="project__content-gerrit">
             <div class="project__info text">
               <p>
-              A full-stack MERN web application that allows users to chat, only while being in the same location. An environment where neighbors could get in touch, tourists could ask for area specific restaurant tips and people that feel alone could reach out to others near to them. No
-              one can enter the chat box while not being in the specific area it concerns.
+                A full-stack MERN web application that allows users to chat, only while being in the same location. An
+                environment where neighbors could get in touch, tourists could ask for area specific restaurant tips and
+                people that feel alone could reach out to others near to them. No
+                one can enter the chat box while not being in the specific area it concerns.
               </p>
               <div class="project__info-tech">
                 <b>Technologies</b>
                 <p>React * MongoDB * Mongoose * Express * socket.io * Node.js * CSS * HTML</p>
               </div>
             </div>
-            <div class="project__imgs">
+            <div class="project__img-wrapper">
               <img class="project__img-gerrit" src="./images/geriit_screenshot_01.png" alt="Gerrit chat example">
               <img class="project__img-gerrit" src="./images/gerrit-chat.jpeg" alt="Gerrit">
             </div>
           </div>
-            <div class="project__links-gerrit project__links">
-              <a target="_blank" href="https://justgerrit.herokuapp.com/">
-                go to web application</a>
-              </span>
-              <span>
-                <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">see code</a>
-              </span>
+          <div class="project__links-gerrit project__links">
+            <a target="_blank" href="https://justgerrit.herokuapp.com/">
+              go to web application</a>
+            </span>
+            <span>
+              <a target="_blank" href="https://github.com/noamrubin22/gerrit-project3">see code</a>
+            </span>
           </div>
         </div>
       </div>
@@ -318,46 +332,50 @@
       </div>
       <div class="content">
         <div data-textbox class="textbox">
-            <div class="project-header text">
-              <div class="project-header-img">
-                <img src="./images/Muxisvi_01.png" alt="Music visualization">
-              </div>
-              <h1 class="project-title">Music visualization</h1>
-              <div class="project-description">
-                <span>alter your songs and learn about the mechanism behind them</span>
-              </div>
-              <div class="project__links">
-                <span id="blink">
-                  <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
-                  go to website
-                  </a>
-                </span>
-                <span>
-                  <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
-                  see code
-                  </a>
-                </span>
-              </div>
+          <div class="project-header text">
+            <div class="project-header-img">
+              <img src="./images/Muxisvi_01.png" alt="Music visualization">
             </div>
-            <div class="project__content">
-              <img class="project__img" src="./images/musicviz.png" alt="Music visualization" >
-              <div class="project__info text">
-                <p>A music visualization created in <a target="_blank" href="https://d3js.org/">d3.js</a>. Users can manipulate sound and visuals by adjusting filters. I used recursive functions to create live-updating charts.
-                </p>
-                <div class="project__info-tech">
-                  <b>Technologies</b>
-                  <p>JavaScript * d3.js * HTML * CSS</p>
-                </div>
-              </div>
+            <h1 class="project-title">Music visualization</h1>
+            <div class="project-description">
+              <span>alter your songs and learn about the mechanism behind them</span>
+            </div>
             <div class="project__links">
               <span id="blink">
                 <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
-                go to website
+                  go to website
                 </a>
               </span>
               <span>
                 <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
-                see code
+                  see code
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="project__img-wrapper">
+            <img class="project__img" src="./images/musicviz.png" alt="Music visualization">
+          </div>
+          <div class="project__content">
+            <div class="project__info text">
+              <p>A music visualization created in <a target="_blank" href="https://d3js.org/">d3.js</a>. Users can
+                manipulate sound and visuals by adjusting filters. I used recursive functions to create live-updating
+                charts.
+              </p>
+              <div class="project__info-tech">
+                <b>Technologies</b>
+                <p>JavaScript * d3.js * HTML * CSS</p>
+              </div>
+            </div>
+            <div class="project__links">
+              <span id="blink">
+                <a target="_blank" href="https://noamrubin22.github.io/music-visualization/">
+                  go to website
+                </a>
+              </span>
+              <span>
+                <a target="_blank" href="https://github.com/noamrubin22/music-visualization">
+                  see code
                 </a>
               </span>
             </div>
@@ -391,18 +409,23 @@
             <img class="about__img-noam" src="/images/aboutNoam.png" alt="Noam">
             <div class="project__info">
               <p>
-                I am an innovative Berlin-based web developer with a background in neuroscience and am interested in the emerging field of transformative technology. <br>In my work, I seek to enhance mental and emotional wellbeing by combining (interactive) art, neuroscience, technology, and spirituality/self-knowledge. 
+                I am an innovative Berlin-based web developer with a background in neuroscience and am interested in the
+                emerging field of transformative technology. <br>In my work, I seek to enhance mental and emotional
+                wellbeing by combining (interactive) art, neuroscience, technology, and spirituality/self-knowledge.
               </p>
               <div class="project__info">
                 <p>
-                <b>Stack</b>
-                <br>
-                JavaScript * React * Node.js * Express * MongoDB * HTML * CSS * Arduino</p>
+                  <b>Stack</b>
+                  <br>
+                  JavaScript * React * Node.js * Express * MongoDB * HTML * CSS * Arduino
+                </p>
               </div>
               <div class="project__info">
                 <p><b>Further interests</b>
-                <br>
-                the gut-brain connection / neuroaesthetics / emotions / bio & neuro-feedback / meditation / connection / harmony / the flow-state / sound / epigenetics / attention / trauma / psychedelics / sustainability / synergy / consciousness
+                  <br>
+                  the gut-brain connection / neuroaesthetics / emotions / bio & neuro-feedback / meditation / connection
+                  / harmony / the flow-state / sound / epigenetics / attention / trauma / psychedelics / sustainability
+                  / synergy / consciousness
                 </p>
               </div>
             </div>
@@ -504,8 +527,7 @@
           <ul class="start__menu-main-items-list2">
             <li class="start__menu-main-items-item shutdown">
               <div class="start__menu-main-items-item-img-shutdown"></div>
-              <p class="start__menu-main-items-item-title shutdown"><span
-                  class="underline">S</span>hut Down...</p>
+              <p class="start__menu-main-items-item-title shutdown"><span class="underline">S</span>hut Down...</p>
             </li>
           </ul>
         </div>
@@ -539,7 +561,7 @@
       <p class="desktop-icon__text desktop-icon-mariposa__text">
         Mariposa
       </p>
-    </div>    
+    </div>
     <div class="computer desktop-icon spotavibe">
       <img class="spotavibe-img" src="./images/spotavibe_01.png" alt="Spotavibe">
       <p class="desktop-icon__text">
@@ -558,7 +580,7 @@
         Gerrit
       </p>
     </div>
-    </div>
+  </div>
 </body>
 
 </html>

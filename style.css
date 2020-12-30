@@ -106,7 +106,7 @@
     height: 179px;
     margin: auto;
     margin-top: 28px;
-    background: url("./images/desktop.png") no-repeat;
+    background: url("/images/desktop.png") no-repeat;
     overflow: auto;
     margin-left: 94px;
   }
@@ -353,8 +353,9 @@
     height: 93%;
     padding: 2px;
     font-size: 14px;
-    overflow: auto;
+    /* overflow: auto; */
     text-align: center;
+    position: relative;
   }
 
   .text {
@@ -560,21 +561,20 @@
     z-index: 9999;
   }
 
-  .textbox.max {
-    display: flex;
+  .project-window>.content>.textbox.max>.project-header,
+  .project-window>.content>.textbox.max>.project__content {
+    width: calc(100% / 3);
   }
 
-  .project-window>.content>.textbox.max>.project-header.text {
-    width: 400px;
-    height: 200px;
-    margin-left: 3rem;
+  .project-window>.content>.textbox.max>.project__img-wrapper {
+    width: calc(100% / 3 * 2);
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  .project-window>.content>.textbox.max>.project__content>.project__img {
-    width: 90%;
-    align-self: center;
-    margin-right: 2rem;
-  }
+
 
   /* Spotavibe window maximized */
   .spotavibe-window>.content>.textbox.max>.project__content>.project__img {
@@ -599,22 +599,11 @@
     margin-top: 5rem;
   }
 
-  .project-window.max>.content>.textbox.max>.project-header.text {
+  .project-window.max>.content>.textbox.max>.project-header.text,
+  .project-window.max>.content>.textbox.max>.project__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80vw;
-  }
-
-  /* flip over img and content */
-  .project-window>.content>.textbox.max>.project__content {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    justify-content: space-between;
-    align-self: center;
-    margin-bottom: 7rem;
-
   }
 
   /* remove extra project-links */
@@ -629,16 +618,12 @@
   }
 
   .project-window>.content>.textbox.max>.project__content>.project__info.text>p {
-    width: 280px;
     font-size: 1.5rem;
-    width: 40vw;
-    margin-right: 6rem;
   }
 
   .project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
     align-self: center;
     font-size: 1.4rem;
-    margin-right: 6rem;
   }
 
   /* Gerrit window maximized */
@@ -836,6 +821,21 @@
     -ms-flex-align: center;
     align-items: center;
   }
+
+  .start__menu-main-items-item-img-projects {
+    background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
+    width: 35px;
+    height: 35px;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    margin: auto;
+  }
+
+
 
   .start__menu-main-items-item-arrowright {
     width: 0;
@@ -1060,7 +1060,7 @@
     width: 14px;
     height: 14px;
     margin: 6px;
-    background-image: url("./images/contact_01_small.png");
+    background-image: url("/images/contact_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1080,7 +1080,7 @@
   .task_icon-about {
     width: 32px;
     height: 32px;
-    background-image: url("./images/about_01_small.png");
+    background-image: url("/images/about_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1131,7 +1131,7 @@
   .task__icon-gerrit {
     width: 32px;
     height: 32px;
-    background-image: url("./images//Gerrit_01_small.png");
+    background-image: url("/images//Gerrit_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1139,7 +1139,7 @@
   .task__icon-mariposa {
     width: 32px;
     height: 32px;
-    background-image: url("./images//Mariposa_01_small.png");
+    background-image: url("/images//Mariposa_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1147,7 +1147,7 @@
   .task__icon-spotavibe {
     width: 32px;
     height: 32px;
-    background-image: url("./images//Spotavibe_01_small.png");
+    background-image: url("/images//Spotavibe_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1155,7 +1155,7 @@
   .task__icon-musicviz {
     width: 32px;
     height: 32px;
-    background-image: url("./images//Muxisvi_01_small.png");
+    background-image: url("/images//Muxisvi_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }

@@ -114,11 +114,8 @@ function Settings() {
     }
 
     function getCurrentImage() {
-        let storedImage = localStorage.getItem("display__props-background-image");
-        console.log(storedImage);
-        // return { selectedImage: "none" };
-        // gives error sometimes!!
-        return storedImage ? JSON.parse(storedImage) : { selectedImage: "none" }
+        const storedImage = localStorage.getItem("display__props-background-image");
+        return typeof storedImage !== "undefined" ? JSON.parse(storedImage) : { selectedImage: "none" }
     }
 
     function storeImage(image) {
