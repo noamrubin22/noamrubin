@@ -575,7 +575,6 @@
   }
 
 
-
   /* Spotavibe window maximized */
   .spotavibe-window>.content>.textbox.max>.project__content>.project__img {
     width: 80%;
@@ -803,10 +802,11 @@
   }
 
   .start__menu-main-items .icon {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     padding-left: 5px;
     padding-right: 5px;
+    margin: 0.75rem;
   }
 
   .start__menu-main-items-item {
@@ -824,18 +824,42 @@
 
   .start__menu-main-items-item-img-projects {
     background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
-    width: 35px;
-    height: 35px;
+    width: 43px;
+    height: 39px;
     mix-blend-mode: multiply;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-size: contain;
-    margin: auto;
+    margin: 0.75rem;
   }
 
+  .start__menu-main-items-item-img-settings {
+    background: url(/images/settings.png);
+    width: 44px;
+    height: 42px;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    margin: 0.75rem;
+  }
 
+  .start__menu-main-items-item-img-shutdown {
+    background: url(/images/shutdown.png);
+    width: 46px;
+    height: 41px;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    margin: 0.75rem;
+  }
 
   .start__menu-main-items-item-arrowright {
     width: 0;
@@ -1056,7 +1080,7 @@
     align-items: center;
   }
 
-  .task_icon-contact {
+  .task__icon-contact {
     width: 14px;
     height: 14px;
     margin: 6px;
@@ -1077,7 +1101,7 @@
     align-items: center;
   }
 
-  .task_icon-about {
+  .task__icon-about {
     width: 32px;
     height: 32px;
     background-image: url("/images/about_01_small.png");
