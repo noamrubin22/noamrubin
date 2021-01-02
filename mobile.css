@@ -371,7 +371,7 @@
     }
 
     .project-description {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-bottom: 1.6rem;
     }
 
@@ -523,33 +523,39 @@
     }
 
     .about-window.max .text {
-        width: 60%;
+        width: 100%;
         display: inline-block;
     }
 
+    .about-window.max>.content>.textbox.max>.about-text>.project__info,
+    .about-window.max>.content>.textbox.max>.about-text>.project__info>.project__info {
+        margin: 5rem;
+    }
+
+
     .textbox.max>.about-text {
         width: 100%;
-        margin: 2rem;
+        margin: 1rem;
     }
 
     .textbox.max>.about-text>.project__info>p {
-        font-size: 1.2rem;
+        font-size: 0.75rem;
     }
 
     .textbox.max>.about-text>.project__info>.project__info>p {
-        font-size: 1.2rem;
+        font-size: 0.75rem;
     }
 
     .textbox.max>.about-text>h2 {
-        font-size: 2rem;
-        margin: 1.3rem;
+        font-size: 2.5rem;
+        margin: 2rem;
     }
 
     .textbox.max>.about-text>.about__img-noam {
         width: 66%;
     }
 
-    /* Mariposa window maximized */
+    /* other project windows */
     .mariposa-project.max {
         width: 100%;
         height: 93%;
@@ -563,61 +569,25 @@
         z-index: 9999;
     }
 
-    .textbox.max {
-        display: flex;
+    .project-window>.content>.textbox.max>.project-header,
+    .project-window>.content>.textbox.max>.project__content {
+        width: 100%;
     }
 
-    .project-window>.content>.textbox.max>.project-header.text {
-        width: 400px;
-        height: 200px;
-        margin-left: 3rem;
-    }
 
-    .project-window>.content>.textbox.max>.project__content>.project__img {
-        width: 90%;
-        align-self: center;
-        margin-right: 2rem;
-    }
-
-    /* Spotavibe window maximized */
-    .spotavibe-window>.content>.textbox.max>.project__content>.project__img {
-        width: 80%;
-        align-self: center;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .spotavibe-window>.content>.textbox.max>.project__content {
-        margin-top: 10rem;
-    }
-
-    /*  Music visualization maximized */
-    .music-window>.content>.textbox.max>.project__content>.project__info.text {
-        width: 45rem;
-        margin-right: 2.3rem;
-        margin-bottom: 20px;
-    }
-
-    .music-window>.content>.textbox.max>.project-header.text {
-        margin-top: 5rem;
-    }
-
-    .project-window.max>.content>.textbox.max>.project-header.text {
+    .project-window.max>.content>.textbox.max>.project-header.text,
+    .project-window.max>.content>.textbox.max>.project__content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80vw;
     }
 
-    /* flip over img and content */
-    .project-window>.content>.textbox.max>.project__content {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        justify-content: space-between;
-        align-self: center;
-        margin-bottom: 7rem;
+    .project-window.max>.content>.textbox.max>.project-header {
+        padding-top: 6rem;
+    }
 
+    .gerrit-window.max>.content>.textbox.max>.project-header {
+        padding: 0;
     }
 
     /* remove extra project-links */
@@ -625,57 +595,45 @@
         display: none;
     }
 
-    /* adjust size div for content*/
     .project-window>.content>.textbox.max>.project__content>.project__info.text {
         display: flex;
         flex-direction: column;
     }
 
     .project-window>.content>.textbox.max>.project__content>.project__info.text>p {
-        width: 280px;
-        font-size: 1.5rem;
-        width: 40vw;
-        margin-right: 6rem;
+        font-size: 1.25rem;
     }
 
     .project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
         align-self: center;
-        font-size: 1.4rem;
-        margin-right: 6rem;
+        font-size: 1.25rem;
     }
 
-    /* Gerrit window maximized */
-    .gerrit-window.max>.content>.textbox.max>.project__content-gerrit {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    /* gerrit max */
 
-    .gerrit-window.max>.content>.textbox.max>.project-header.text {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__info.text {
-        font-size: 1.4rem;
-        width: 30rem;
+    /* .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper {
+        width: calc(100% / 3 * 2);
         position: absolute;
-        left: 220px;
-        bottom: 100px;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    } */
+
+    /* .gerrit-window.max>.content>.textbox.max>.project-header>.project__links-gerrit {
+        margin: 0;
     }
 
-    .gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__imgs {
+    .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper>img {
+        width: 25%;
         margin: 2rem;
-        width: 1000px;
-    }
+    } */
 
-    .gerrit-window.max>.content>.textbox.max>.project__content-gerrit>.project__imgs>img {
-        width: 400px;
-        margin: 3rem;
-    }
-
-    .gerrit-window.max>.content>.textbox.max>.project__links-gerrit {
+    .project-window.max>.content>.textbox.max>.project__links-gerrit {
         display: none;
+    }
+
+    .gerrit-window.max>.content>.textbox.max>.project-header>.project-header-img {
+        /* display: none; */
     }
 
     /* Start button */
