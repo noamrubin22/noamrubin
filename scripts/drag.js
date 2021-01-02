@@ -7,10 +7,10 @@ function dragMobile() {
         console.log(desktopIcons[i]);
     }
 
-    const windows = document.getElementsByClassName("window");
-    for (let i = 0; i < windows.length; i++) {
-        dragElement(windows[i]);
-    }
+    // const windows = document.getElementsByClassName("window");
+    // for (let i = 0; i < windows.length; i++) {
+    //     dragElement(windows[i]);
+    // }
 
     function dragElement(elmnt) {
         let pos1 = 0,
