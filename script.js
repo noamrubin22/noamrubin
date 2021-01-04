@@ -70,11 +70,9 @@ window.onload = function () {
     }
   }
 
-
   startButton.addEventListener("click", function () {
     menuDisplay(startMenu);
   });
-
 
   projectsItem.addEventListener("click", function () {
     menuDisplay(projectsMenu);

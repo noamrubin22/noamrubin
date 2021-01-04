@@ -10,7 +10,6 @@ function Settings() {
     let currentTheme = document.getElementsByTagName("html")[0].className;
     let currentImage;
 
-    console.log(chosenBackgroundImage);
     /* open settings when clicked on menu */
     clickSettingsMenu.onclick = () => {
         settingsWindow.hidden = false;
@@ -35,6 +34,9 @@ function Settings() {
     }
 
     function storeTheme(themeName) {
+        if (!themeName) {
+            return
+        }
         localStorage.setItem('theme', themeName);
     }
 
@@ -120,10 +122,13 @@ function Settings() {
 
     function getCurrentImage() {
         const storedImage = localStorage.getItem("display__props-background-image");
-        return typeof storedImage !== "undefined" ? JSON.parse(storedImage) : { selectedImage: "none" }
+        return Boolean(storedImage) ? JSON.parse(storedImage) : { selectedImage: "none" }
     }
 
     function storeImage(image) {
+        if (!image) {
+            return
+        }
         localStorage.setItem("display__props-background-image", JSON.stringify(image));
     }
 
@@ -169,7 +174,23 @@ function Settings() {
         previewImage(getCurrentImage());
         settingsWindow.hidden = true;
     }
-
-
 }
+
+// store om variabelen bij te houden
+// class Setting {
+//     currentValue = 'some value'
+//     tempValue = undefined
+//     setCurrentValue(nextValue) {
+//         this.currentValue = nextValue
+//     }
+// }
+
+// const setting = new Setting()
+
+// setting.setCurrentValue('sadasdjasd')
+
+// {
+//     currentValue: 'some value',
+//         tempValue : undefined
+// }
 

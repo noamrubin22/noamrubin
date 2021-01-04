@@ -453,7 +453,7 @@
 
     .contact-window.max {
         width: 100%;
-        height: 93%;
+        height: 91.5%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -512,7 +512,7 @@
     /* About window maximized */
     .about-window.max {
         width: 100%;
-        height: 93%;
+        height: 92%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -539,12 +539,9 @@
         margin: 1rem;
     }
 
-    .textbox.max>.about-text>.project__info>p {
-        font-size: 0.75rem;
-    }
-
+    .textbox.max>.about-text>.project__info>p,
     .textbox.max>.about-text>.project__info>.project__info>p {
-        font-size: 0.75rem;
+        font-size: 1.5rem;
     }
 
     .textbox.max>.about-text>h2 {
@@ -559,7 +556,7 @@
     /* other project windows */
     .mariposa-project.max {
         width: 100%;
-        height: 93%;
+        height: 92%;
         font-size: 3rem;
         top: 0 !important;
         left: 0 !important;
@@ -584,7 +581,7 @@
     }
 
     .project-window.max>.content>.textbox.max>.project-header {
-        padding-top: 6rem;
+        padding-top: 2rem;
     }
 
     .gerrit-window.max>.content>.textbox.max>.project-header {
@@ -602,39 +599,16 @@
     }
 
     .project-window>.content>.textbox.max>.project__content>.project__info.text>p {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
         align-self: center;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
-
-    /* gerrit max */
-
-    /* .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper {
-        width: calc(100% / 3 * 2);
-        position: absolute;
-        right: 0.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
-
-    /* .gerrit-window.max>.content>.textbox.max>.project-header>.project__links-gerrit {
-        margin: 0;
-    }
-
-    .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper>img {
-        width: 25%;
-        margin: 2rem;
-    } */
 
     .project-window.max>.content>.textbox.max>.project__links-gerrit {
         display: none;
-    }
-
-    .gerrit-window.max>.content>.textbox.max>.project-header>.project-header-img {
-        /* display: none; */
     }
 
     /* Start button */
@@ -1005,21 +979,23 @@
     /* Desktop images */
     .mariposa-img {
         display: inline-block;
-        width: 160px;
+        width: 139px;
     }
 
     .spotavibe-img {
         display: inline-block;
-        width: 140px;
+        width: 120px;
     }
 
     .musicviz-img {
         display: inline-block;
-        width: 116px;
+        margin-bottom: 0.5rem;
+        width: 98px;
     }
 
     .gerrit-img {
-        width: 144px;
+        display: inline-block;
+        width: 122px;
         z-index: 2;
     }
 
