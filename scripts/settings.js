@@ -91,7 +91,7 @@ function Settings() {
                     case "shruti":
                         artistInsta.innerHTML = "by @shrooodi";
                         artistInsta.href = "https://www.instagram.com/shrooodi";
-                        chosenBackgroundImage.style.width = "450";
+                        chosenBackgroundImage.style.width = "1200";
                         break;
                     case "djamillia":
                         artistInsta.innerHTML = "by @manush420";
