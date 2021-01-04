@@ -25,7 +25,7 @@ window.onload = function () {
     }, 180000);
   };
 
-  document.ontouchend = function () {
+  document.ontouchmove = function () {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
       screenSaver.hidden = false;
