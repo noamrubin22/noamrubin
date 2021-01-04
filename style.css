@@ -107,7 +107,7 @@
     height: 179px;
     margin: auto;
     margin-top: 28px;
-    background: url("/images/desktop.png") no-repeat;
+    background: url("./images/desktop.png") no-repeat;
     overflow: auto;
     margin-left: 94px;
   }
@@ -814,7 +814,7 @@
   }
 
   .start__menu-main-items-item-img-settings {
-    background: url(/images/settings.png);
+    background: url("./images/settings.png");
     width: 44px;
     height: 42px;
     mix-blend-mode: multiply;
@@ -827,7 +827,7 @@
   }
 
   .start__menu-main-items-item-img-shutdown {
-    background: url(/images/shutdown.png);
+    background: url("./images/shutdown.png");
     width: 46px;
     height: 41px;
     mix-blend-mode: multiply;
@@ -1062,7 +1062,7 @@
     width: 14px;
     height: 14px;
     margin: 6px;
-    background-image: url("/images/contact_01_small.png");
+    background-image: url("./images/contact_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1082,7 +1082,7 @@
   .task__icon-about {
     width: 32px;
     height: 32px;
-    background-image: url("/images/about_01_small.png");
+    background-image: url("./images/about_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1133,7 +1133,7 @@
   .task__icon-gerrit {
     width: 32px;
     height: 32px;
-    background-image: url("/images//Gerrit_01_small.png");
+    background-image: url("./images//Gerrit_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1141,7 +1141,7 @@
   .task__icon-mariposa {
     width: 32px;
     height: 32px;
-    background-image: url("/images//Mariposa_01_small.png");
+    background-image: url("./images//Mariposa_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1149,7 +1149,7 @@
   .task__icon-spotavibe {
     width: 32px;
     height: 32px;
-    background-image: url("/images//Spotavibe_01_small.png");
+    background-image: url("./images//Spotavibe_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1157,7 +1157,7 @@
   .task__icon-musicviz {
     width: 32px;
     height: 32px;
-    background-image: url("/images//Muxisvi_01_small.png");
+    background-image: url("./images//Muxisvi_01_small.png");
 
     background-repeat: no-repeat;
     background-position: center center;

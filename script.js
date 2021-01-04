@@ -102,7 +102,6 @@ window.onload = function () {
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
-  const videoWindow = document.querySelector(".video-window");
 
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
