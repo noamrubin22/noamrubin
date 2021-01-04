@@ -120,7 +120,6 @@ function Settings() {
 
     function getCurrentImage() {
         const storedImage = localStorage.getItem("display__props-background-image");
-        // return storedImage;
         return typeof storedImage !== "undefined" ? JSON.parse(storedImage) : { selectedImage: "none" }
     }
 
