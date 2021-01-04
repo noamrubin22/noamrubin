@@ -53,6 +53,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    background: url(images/ScreenSaver_01.gif);
   }
 
   .container__monitor {

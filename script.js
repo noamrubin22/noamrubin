@@ -2,7 +2,6 @@ window.onload = function () {
 
   // settings function
   Settings();
-  dragMobile();
 
   // set clock
   setInterval(updateTime, 1000);
@@ -20,6 +19,13 @@ window.onload = function () {
   // show screensaver after no mousemove
   let timeout;
   document.onmousemove = function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      screenSaver.hidden = false;
+    }, 180000);
+  };
+
+  document.ontouchend = function () {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
       screenSaver.hidden = false;

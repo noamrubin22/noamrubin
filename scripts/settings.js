@@ -98,6 +98,11 @@ function Settings() {
                         artistInsta.href = "https://www.instagram.com/manush420"
                         chosenBackgroundImage.style.width = "800";
                         break;
+                    case "vika":
+                        artistInsta.innerHTML = "by @uuuuuvika";
+                        artistInsta.href = "https://www.instagram.com/uuuuuvika"
+                        chosenBackgroundImage.style.width = "450";
+                        break;
                 }
             } else {
                 artistInsta.hidden = true;
