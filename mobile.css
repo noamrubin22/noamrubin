@@ -812,7 +812,7 @@
     }
 
     .start__menu-main-items-item-img-settings {
-        background: url(/images/settings.png);
+        background: url("./images/settings.png");
         width: 68px;
         height: 60px;
         mix-blend-mode: multiply;
@@ -826,7 +826,7 @@
     }
 
     .start__menu-main-items-item-img-shutdown {
-        background: url(/images/shutdown.png);
+        background: url("./images/shutdown.png");
         width: 68px;
         height: 60px;
         mix-blend-mode: multiply;
@@ -1147,7 +1147,7 @@
     .task__icon-mariposa {
         width: 42px;
         height: 42px;
-        background-image: url(./images//Mariposa_01_small.png);
+        background-image: url("./images//Mariposa_01_small.png");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
