@@ -54,7 +54,8 @@ window.onload = function () {
     startMenu.classList.remove("menu-open");
   };
 
-  body.onclick = closeStartMenu;
+  body.addEventListener("click", closeStartMenu);
+
   // show/hide menu on click
   function menuDisplay(menu) {
     if (menu.classList.contains("menu-open")) {
