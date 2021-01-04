@@ -75,6 +75,13 @@ window.onload = function () {
     menuDisplay(startMenu);
   });
 
+  startButton.addEventListener("touchstart", function () {
+    menuDisplay(startMenu);
+  });
+
+  projectsItem.addEventListener("touchstart", function () {
+    menuDisplay(projectsMenu);
+  });
   projectsItem.addEventListener("click", function () {
     menuDisplay(projectsMenu);
   });
