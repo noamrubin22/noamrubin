@@ -25,7 +25,7 @@ window.onload = function () {
     }, 180000);
   };
 
-  document.ontouchmove = function () {
+  document.ontouchstart = function () {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
       screenSaver.hidden = false;
@@ -39,9 +39,9 @@ window.onload = function () {
   });
 
   // hide screensaver on touch move
-  screenSaver.addEventListener("touchmove", function () {
-    screenSaver.hidden = true;
-  });
+  // screenSaver.addEventListener("touchmove", function () {
+  //   screenSaver.hidden = true;
+  // });
 
   // show screensaver on when "shutting down" pc
   shutDown.addEventListener("click", function () {
