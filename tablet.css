@@ -966,8 +966,8 @@
     }
 
     .music-vis {
-        top: 2rem;
-        left: 20rem;
+        top: 3.25rem;
+        left: 22rem;
     }
 
     /* Desktop images */
@@ -984,7 +984,7 @@
     .musicviz-img {
         display: inline-block;
         margin-bottom: 0.5rem;
-        width: 10rem;
+        width: 9rem;
     }
 
     .gerrit-img {
