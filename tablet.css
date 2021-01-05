@@ -94,10 +94,10 @@
         border: outset 2px;
         background: #c0c0c0;
         position: relative;
-        left: 200px;
-        top: 200px;
+        left: 10rem;
+        top: 12.5rem;
         z-index: 9991;
-        box-shadow: 3px 3px;
+        box-shadow: 0.25rem 0.25rem;
     }
 
     .pc {
@@ -106,7 +106,6 @@
         overflow: auto;
         width: 20rem;
         height: 16rem;
-        /* align-items: center; */
         margin-top: 4rem;
         margin-left: 14rem;
     }
@@ -125,7 +124,7 @@
         height: 6.5rem;
         margin: auto;
         margin-top: 1.75rem;
-        margin-left: 4.55rem;
+        margin-left: 4.5rem;
     }
 
     .display__props {
@@ -223,7 +222,7 @@
         height: 3.75rem;
         margin: 0.75rem;
         border: 1px solid;
-        box-shadow: 2px 2px;
+        box-shadow: 0.25rem 0.25rem;
         font-size: 1.75rem;
     }
 
