@@ -83,12 +83,12 @@ function Settings() {
                     case "kathi":
                         artistInsta.innerHTML = "by @katharina.michalsky";
                         artistInsta.href = "https://www.instagram.com/katharina.michalsky";
-                        chosenBackgroundImage.style.width = "450";
+                        chosenBackgroundImage.style.width = "46rem";
                         break;
                     case "chris":
                         artistInsta.innerHTML = "by @iti.art";
                         artistInsta.href = "https://www.instagram.com/iti.art";
-                        chosenBackgroundImage.style.width = "450";
+                        chosenBackgroundImage.style.width = "46rem";
                         break;
                     case "shruti":
                         artistInsta.innerHTML = "by @shrooodi";
@@ -98,12 +98,12 @@ function Settings() {
                     case "djamillia":
                         artistInsta.innerHTML = "by @manush420";
                         artistInsta.href = "https://www.instagram.com/manush420"
-                        chosenBackgroundImage.style.width = "800";
+                        chosenBackgroundImage.style.width = "54rem";
                         break;
                     case "vika":
                         artistInsta.innerHTML = "by @uuuuuvika";
                         artistInsta.href = "https://www.instagram.com/uuuuuvika"
-                        chosenBackgroundImage.style.width = "450";
+                        chosenBackgroundImage.style.width = "46rem";
                         break;
                 }
             } else {
