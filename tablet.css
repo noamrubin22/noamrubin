@@ -89,8 +89,8 @@
 
     /* Settings window */
     .settings-window {
-        width: 510px;
-        height: 540px;
+        width: 45rem;
+        height: 45rem;
         border: outset 2px;
         background: #c0c0c0;
         position: relative;
@@ -101,44 +101,46 @@
     }
 
     .pc {
-        width: 206px;
-        height: 179px;
-        margin: auto;
-        margin-top: 65px;
         background: url("./images/desktop.png") no-repeat;
+        background-size: contain;
         overflow: auto;
-        margin-left: 167px;
+        width: 20rem;
+        height: 16rem;
+        /* align-items: center; */
+        margin-top: 4rem;
+        margin-left: 14rem;
     }
 
     .pc__background-color {
-        width: 152px;
-        height: 111px;
+        width: 14.5rem;
+        height: 10.5rem;
         border: inset 2px;
-        margin-left: 14px;
-        margin-top: 15px;
+        margin-left: 1.25rem;
+        margin-top: 1.5rem;
         background-color: var(--color-primary);
     }
 
     .pc__background-img {
-        width: 85px;
-        height: 65px;
+        width: 5.75rem;
+        height: 6.5rem;
         margin: auto;
-        margin-top: 25px;
-        margin-left: 33px;
+        margin-top: 1.75rem;
+        margin-left: 4.55rem;
     }
 
     .display__props {
         display: flex;
         justify-content: center;
-        margin-top: 18px;
+        margin-top: 1.75rem;
+        margin-left: 0.75rem;
     }
 
     .display__props-themes-options {
-        width: 200px;
-        height: 100px;
+        width: 20.25rem;
+        height: 10.5rem;
         border: inset;
         background: white;
-        margin: 6px;
+        margin: 0.5rem;
         color: black;
         overflow: auto;
         white-space: nowrap;
@@ -149,42 +151,35 @@
         margin: 0;
     }
 
-    .display__props-themes>p {
-        color: black;
-        margin: 0;
-        margin-left: 67px;
-        padding: 0;
-        font-size: 23px;
-    }
-
+    .display__props-themes>p,
     .display__props-background>p {
         color: black;
         margin: 0;
-        margin-left: 26px;
         padding: 0;
-        font-size: 23px;
+        font-size: 2.25rem;
+        text-align: center;
     }
 
     .display__props-background-options {
-        width: 200px;
-        height: 100px;
+        width: 20.25rem;
+        height: 10rem;
         border: inset;
         background: white;
-        margin: 6px;
+        margin: 0.75rem;
         color: black;
         overflow: auto;
         white-space: nowrap;
     }
 
     .display__props-background-image {
-        padding-left: 5px;
-        margin-left: 7px;
+        padding-left: 0.25rem;
+        margin-left: 0.5rem;
         margin-top: 0;
         cursor: pointer;
         background-color: white;
         color: black;
-        font-size: 19px;
-        padding: 4px;
+        font-size: 2rem;
+        padding: 0.25rem;
     }
 
     .display__props-background-image.active {
@@ -195,18 +190,18 @@
     .display__props-buttons {
         display: flex;
         justify-content: center;
-        margin-top: 36px;
+        margin-top: 1.5rem;
     }
 
     .theme {
-        padding-left: 5px;
-        margin-left: 7px;
+        padding-left: 0.25rem;
+        margin-left: 0.25rem;
         margin-top: 0;
         cursor: pointer;
         color: black;
-        font-size: 19px;
+        font-size: 2rem;
         background-color: white;
-        padding: 4px;
+        padding: 0.25rem;
     }
 
     .theme.active {
@@ -224,12 +219,12 @@
     }
 
     .classic-btn {
-        width: 109px;
-        height: 37px;
-        margin: 5px;
+        width: 10rem;
+        height: 3.75rem;
+        margin: 0.75rem;
         border: 1px solid;
         box-shadow: 2px 2px;
-        font-size: 20px;
+        font-size: 1.75rem;
     }
 
     .classic-btn:active {
@@ -266,11 +261,11 @@
         top: 0px;
         right: 0px;
         left: 0px;
-        height: 35px;
+        height: 3.25rem;
         border: none;
         color: #fff;
-        font-size: 25px;
-        line-height: 21px;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
         padding-left: 5px;
     }
 
@@ -278,11 +273,11 @@
     .notepad-minimize,
     .notepad-maximize,
     .notepad-exit {
-        height: 60%;
+        height: 69%;
         display: block;
         float: right;
-        padding-top: 3px;
-        padding-bottom: 3px;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
     }
 
     .button-minimize,
@@ -290,7 +285,7 @@
     .button-exit {
         background: #bfbfbf;
         height: 100%;
-        width: 22px;
+        width: 2.5rem;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
         border-left: 1px solid white;
@@ -301,7 +296,7 @@
     .icon-exit {
         position: absolute;
         top: 0;
-        right: 0.35rem;
+        right: 0.5rem;
     }
 
     .icon-maximize {
@@ -616,7 +611,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 110px;
+        height: 10rem;
         background: #c3c6cd;
         border-top: 3px solid #deebf3;
         display: -webkit-box;
@@ -629,7 +624,7 @@
     }
 
     .start__button {
-        width: 29%;
+        width: 37%;
         height: 89%;
         background: #c3c6cd;
         border-top: 2px solid #deebf3;
@@ -657,7 +652,7 @@
     }
 
     .start__logo {
-        width: 70px;
+        width: 5rem;
         height: 41px;
         position: relative;
     }
@@ -678,7 +673,7 @@
     }
 
     .start__text {
-        font-size: 50px;
+        font-size: 4rem;
         font-weight: bold;
         margin: 0px;
     }
@@ -934,7 +929,7 @@
 
     .desktop-icon__text {
         color: white;
-        font-size: 28px;
+        font-size: 2.5rem;
         margin-top: 9px;
         margin-left: 10px;
         margin-bottom: 0;
@@ -942,8 +937,8 @@
     }
 
     .desktop-icon-mariposa__text {
-        margin-top: 100px;
-        margin-left: 80px;
+        margin-top: 10rem;
+        margin-left: 11rem;
     }
 
     .desktop-icon:hover {
@@ -957,45 +952,45 @@
 
     /* Desktop icons */
     .mariposa {
-        top: 20px;
-        left: 0px;
+        top: 2rem;
+        left: 0;
     }
 
     .spotavibe {
-        top: 270px;
-        left: 39px;
+        top: 22rem;
+        left: 5rem;
     }
 
     .gerrit {
-        top: 500px;
-        left: 45px;
+        top: 41rem;
+        left: 5.5rem;
     }
 
     .music-vis {
-        top: 40px;
-        left: 240px;
+        top: 2rem;
+        left: 20rem;
     }
 
     /* Desktop images */
     .mariposa-img {
         display: inline-block;
-        width: 139px;
+        width: 14rem;
     }
 
     .spotavibe-img {
         display: inline-block;
-        width: 120px;
+        width: 12rem;
     }
 
     .musicviz-img {
         display: inline-block;
         margin-bottom: 0.5rem;
-        width: 98px;
+        width: 10rem;
     }
 
     .gerrit-img {
         display: inline-block;
-        width: 122px;
+        width: 14rem;
         z-index: 2;
     }
 

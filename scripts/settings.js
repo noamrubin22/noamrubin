@@ -165,6 +165,7 @@ function Settings() {
     okButton.onclick = () => {
         okButton.active = true;
         storeImage(currentImage);
+        // setting.storeCurrentValue(currentImage, "display__props-background-image")
         storeTheme(currentTheme);
         settingsWindow.hidden = true;
     }
@@ -176,16 +177,39 @@ function Settings() {
     }
 }
 
-// store om variabelen bij te houden
 // class Setting {
-//     currentValue = 'some value'
-//     tempValue = undefined
-//     setCurrentValue(nextValue) {
-//         this.currentValue = nextValue
+//     constructor(props) {
+//         this.props = props;
+//         this.storeCurrentValue(nextValue, className);
+//         this.getCurrentValue(className);
+//         // this.setCurrentValue(nextValue);
+//     }
+
+//     storeCurrentValue(nextValue, className) {
+//         if (!nextValue) {
+//             return
+//         }
+//         localStorage.setItem(className, JSON.stringify(nextValue));
+//     }
+
+//     getCurrentValue(className) {
+//         const storedElement = localStorage.getItem(className);
+//         if (className === "theme") {
+//             return Boolean(storedElement) || "theme-purplelady";
+//         } else {
+//             return Boolean(storedElement) ? JSON.parse(storedElement) : { selectedImage: "none" }
+//         }
 //     }
 // }
 
 // const setting = new Setting()
+
+// currentValue = 'some value'
+// tempValue = undefined
+// setCurrentValue(nextValue) {
+//     this.currentValue = nextValue
+// }
+
 
 // setting.setCurrentValue('sadasdjasd')
 
