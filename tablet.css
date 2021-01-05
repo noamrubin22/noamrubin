@@ -78,7 +78,7 @@
 
     .link__instagram {
         position: absolute;
-        bottom: 21rem;
+        bottom: 15rem;
         background-color: white;
         font-size: 3rem;
         align-self: center;
@@ -235,7 +235,7 @@
 
     .project-window.max {
         width: 100%;
-        height: 93%;
+        height: 91%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -256,7 +256,8 @@
         color: #fff;
         font-size: 2.5rem;
         line-height: 2.5rem;
-        padding-left: 5px;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
     }
 
     /* Buttons project windows */
@@ -275,17 +276,18 @@
     .button-exit {
         background: #bfbfbf;
         height: 100%;
-        width: 2.5rem;
+        width: 3rem;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
         border-left: 1px solid white;
         border-top: 1px solid white;
         color: black;
+        margin: 2px;
     }
 
     .icon-exit {
         position: absolute;
-        top: 0;
+        top: 0.5rem;
         right: 0.5rem;
     }
 
@@ -294,7 +296,7 @@
         border-top: 3px solid black;
         border-left: 1px solid black;
         border-right: 1px solid black;
-        height: 51%;
+        height: 68%;
         width: 78%;
         display: block;
         margin: auto;
@@ -312,20 +314,19 @@
 
     .content {
         position: absolute;
-        top: 22px;
+        top: 4rem;
         bottom: 0px;
         left: 0px;
-        right: 0px;
+        right: 0.5rem;
     }
 
     .textbox {
         border: inset 2px;
         background: white;
         color: var(--color-accent);
-        margin: 5px;
+        margin: 0.25rem;
         height: 90%;
         padding: 2px;
-        font-size: 19px;
         overflow: auto;
         text-align: center;
     }
@@ -352,21 +353,30 @@
     }
 
     #project-title {
-        font-size: 5rem;
+        font-size: 6rem;
         margin: 0;
     }
 
+    .project-header-img-musicviz {
+        width: 10rem;
+    }
+
     .project-description {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 1.6rem;
     }
 
     .project__links {
         display: flex;
         flex-direction: column;
-        line-height: 1.8rem;
-        font-size: 1.2rem;
+        line-height: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 20px;
+        margin: 0.25rem;
+    }
+
+    .project__links>span {
+        margin: 0.5rem;
     }
 
     .project__links-gerrit {
@@ -387,15 +397,10 @@
     }
 
     .project__info-tech {
-        margin: 1rem;
-        margin-bottom: 2rem;
-        margin-top: 3rem;
-        padding: 0;
+        width: 100%;
+        margin-top: 2.25rem;
     }
 
-    .project__info-tech>p {
-        margin: 0.3rem;
-    }
 
     .project__img-gerrit {
         width: 250px;
@@ -643,8 +648,9 @@
 
     .start__logo {
         width: 5rem;
-        height: 41px;
+        height: 3.5rem;
         position: relative;
+        margin: 0.5rem;
     }
 
     .start__logo::after {
@@ -658,8 +664,8 @@
         right: 0;
         position: absolute;
         background-repeat: no-repeat;
-        width: 80px;
-        height: 80px;
+        width: 6rem;
+        height: 6rem;
     }
 
     .start__text {
@@ -670,7 +676,7 @@
 
     .start__time {
         width: 20%;
-        height: 84%;
+        height: 88%;
         background: #c3c6cd;
         border-top: 2px solid #85888f;
         border-left: 2px solid #85888f;
@@ -688,7 +694,7 @@
 
     .start__time-text {
         margin: auto;
-        font-size: 33px;
+        font-size: 2.5rem;
     }
 
     .start__menu-main {
@@ -700,7 +706,7 @@
         width: 38%;
         display: none;
         position: absolute;
-        bottom: 111px;
+        bottom: 10rem;
         z-index: 99999;
     }
 
@@ -711,7 +717,7 @@
 
     .start__menu-main-side-text {
         position: relative;
-        margin-top: 340px;
+        margin-top: 25rem;
     }
 
     .start__menu-main-side-text-windows {
@@ -719,18 +725,18 @@
         color: #c3c6cd;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        font-size: 49px;
+        font-size: 3rem;
         margin-bottom: 0px;
-        margin-left: 5px;
+        margin-left: 0.25rem;
     }
 
     .start__menu-main-side-text-nintyfive {
         color: white;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        margin-bottom: 145px;
-        font-size: 48px;
-        margin-left: 5px;
+        margin-bottom: 9rem;
+        font-size: 3rem;
+        margin-left: 0.5rem;
     }
 
     .start__menu-main-items {
@@ -739,16 +745,16 @@
     }
 
     .start__menu-main-items .icon {
-        width: 72px;
-        height: 72px;
-        padding-left: 24px;
-        padding-right: 24px;
+        width: 4.5rem;
+        height: 4.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .start__menu-main-items-item {
-        font-size: 37px;
-        padding-top: 3px;
-        padding-bottom: 10px;
+        font-size: 2.5rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.75rem;
         width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -927,8 +933,8 @@
     }
 
     .desktop-icon-mariposa__text {
-        margin-top: 10rem;
-        margin-left: 11rem;
+        margin-top: 7rem;
+        margin-left: 8rem;
     }
 
     .desktop-icon:hover {
@@ -942,45 +948,45 @@
 
     /* Desktop icons */
     .mariposa {
-        top: 2rem;
-        left: 0;
+        top: 1.5rem;
+        left: 16rem;
     }
 
     .spotavibe {
-        top: 22rem;
-        left: 5rem;
+        top: 20rem;
+        left: 3rem;
     }
 
     .gerrit {
-        top: 41rem;
-        left: 5.5rem;
+        top: 34rem;
+        left: 3.25rem;
     }
 
     .music-vis {
-        top: 3.25rem;
-        left: 22rem;
+        top: 3rem;
+        left: 4rem;
     }
 
     /* Desktop images */
     .mariposa-img {
         display: inline-block;
-        width: 14rem;
+        width: 10rem;
     }
 
     .spotavibe-img {
         display: inline-block;
-        width: 12rem;
+        width: 8rem;
     }
 
     .musicviz-img {
         display: inline-block;
         margin-bottom: 0.5rem;
-        width: 9rem;
+        width: 7rem;
     }
 
     .gerrit-img {
         display: inline-block;
-        width: 14rem;
+        width: 10rem;
         z-index: 2;
     }
 
