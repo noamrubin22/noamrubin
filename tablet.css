@@ -93,8 +93,8 @@
         border: outset 2px;
         background: #c0c0c0;
         position: relative;
-        left: 10rem;
-        top: 12.5rem;
+        left: 4rem;
+        top: 4rem;
         z-index: 9991;
         box-shadow: 0.25rem 0.25rem;
     }
@@ -105,7 +105,7 @@
         overflow: auto;
         width: 20rem;
         height: 16rem;
-        margin-top: 5.5rem;
+        margin-top: 3.5rem;
         margin-left: 14rem;
     }
 
@@ -251,7 +251,7 @@
         top: 0px;
         right: 0px;
         left: 0px;
-        height: 3.25rem;
+        height: 7rem;
         border: none;
         color: #fff;
         font-size: 2.5rem;
@@ -276,45 +276,48 @@
     .button-exit {
         background: #bfbfbf;
         height: 100%;
-        width: 3rem;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
-        border-left: 1px solid white;
-        border-top: 1px solid white;
+        width: 6rem;
+        border-right: 6px solid black;
+        border-bottom: 6px solid black;
+        border-left: 3px solid white;
+        border-top: 3px solid white;
         color: black;
         margin: 2px;
     }
 
     .icon-exit {
         position: absolute;
-        top: 0.5rem;
-        right: 0.5rem;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 5rem;
     }
 
     .icon-maximize {
-        border-bottom: 1px solid black;
-        border-top: 3px solid black;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        height: 68%;
+        border-bottom: 3.5px solid black;
+        border-top: 7px solid black;
+        border-left: 3.5px solid black;
+        border-right: 3.5px solid black;
+        height: 67%;
         width: 78%;
         display: block;
         margin: auto;
-        margin-top: 1.2px;
+        margin-top: 3.2px;
+        font-weight: bold;
     }
 
     .icon-minimize {
-        border-bottom: 2px solid black;
+        border-bottom: 4px solid black;
         width: 80%;
         height: 73%;
         display: block;
         margin: auto;
-        margin-left: 1.5px;
+        margin-left: 0.5rem;
+        font-weight: bold;
     }
 
     .content {
         position: absolute;
-        top: 4rem;
+        top: 8rem;
         bottom: 0px;
         left: 0px;
         right: 0.5rem;
@@ -608,7 +611,7 @@
         width: 100%;
         height: 10rem;
         background: #c3c6cd;
-        border-top: 3px solid #deebf3;
+        border-top: 4.5px solid #deebf3;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -622,11 +625,11 @@
         width: 37%;
         height: 89%;
         background: #c3c6cd;
-        border-top: 2px solid #deebf3;
-        border-left: 2px solid #deebf3;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
-        margin: 3px;
+        border-top: 3px solid #deebf3;
+        border-left: 3px solid #deebf3;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+        margin: 4.5px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -636,10 +639,10 @@
     }
 
     .start__button:active {
-        border-top: 2px solid black;
-        border-left: 2px solid black;
-        border-right: 2px solid #deebf3;
-        border-bottom: 2px solid #deebf3;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid #deebf3;
+        border-bottom: 3px solid #deebf3;
     }
 
     .start__button:hover {
@@ -669,21 +672,20 @@
     }
 
     .start__text {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: bold;
-        margin: 0px;
     }
 
     .start__time {
         width: 20%;
         height: 88%;
         background: #c3c6cd;
-        border-top: 2px solid #85888f;
-        border-left: 2px solid #85888f;
-        border-right: 2px solid #deebf3;
-        border-bottom: 2px solid #deebf3;
-        margin: 4px;
-        margin-right: 6px;
+        border-top: 6px solid #85888f;
+        border-left: 6px solid #85888f;
+        border-right: 6px solid #deebf3;
+        border-bottom: 6px solid #deebf3;
+        margin: 12px;
+        margin-right: 18px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
