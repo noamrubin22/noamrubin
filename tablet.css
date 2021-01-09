@@ -470,23 +470,23 @@
         bottom: 25%;
         left: 45%;
         z-index: 999;
-        width: 6%;
+        width: 12%;
     }
 
     .contact__img-mail {
         position: absolute;
-        bottom: 57%;
-        left: 60%;
+        bottom: 77%;
+        left: 73%;
         z-index: 999;
-        width: 6%;
+        width: 12%;
     }
 
     .contact__img-linkedin {
         position: absolute;
-        bottom: 66%;
+        bottom: 55%;
         left: 20%;
         z-index: 99;
-        width: 5%;
+        width: 12%;
     }
 
     /* About window */

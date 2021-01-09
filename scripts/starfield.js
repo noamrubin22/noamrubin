@@ -51,7 +51,7 @@ function starField() {
 
   // how bright is the pixel?
   const putPixel = (x, y, brightness) => {
-    const intensity = brightness * 255;
+    const intensity = brightness * 350;
     const rgb = "rgb(" + intensity + "," + intensity + "," + intensity + ")";
     c.fillStyle = rgb;
     c.fillRect(x, y, 1, 1);
@@ -81,18 +81,19 @@ function starField() {
     moveStars(elapsed * 0.3);
 
     clear();
-    c.font = "22px Serif";
+    c.font = "30px Serif";
     c.textAlign = "center";
     c.fillStyle = "purple";
     c.fillText(
       `I believe evolution is about cooperation instead of competition.`,
       w / 2,
-      h / 1.1
+      h / 2
     );
-    c.fillText(`Get in touch`, w / 2, h / 8);
+    c.fillText(`Open for a collaboration?`, w / 2, h / 8);
+    c.fillText(`Feel free to contact me`, w / 2, h / 1.2);
 
     let img = new Image();
-    img.addEventListener("load", function () {});
+    img.addEventListener("load", function () { });
     const cx = w / 2;
     const cy = h / 2;
 
