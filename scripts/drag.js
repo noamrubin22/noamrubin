@@ -6,11 +6,11 @@ function dragMobile() {
     //     dragElement(desktopIcons[i]);
     // }
 
-    let dragActive = false;
-    const windows = document.getElementsByClassName("window");
-    for (let i = 0; i < windows.length; i++) {
-        dragElement(windows[i]);
-    }
+    // let dragActive = false;
+    // const windows = document.getElementsByClassName("window");
+    // for (let i = 0; i < windows.length; i++) {
+    //     dragElement(windows[i]);
+    // }
 
     function dragElement(elmnt) {
         let pos1 = 0,
