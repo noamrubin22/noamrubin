@@ -518,7 +518,6 @@
     background: #c0c0c0;
     position: relative;
     z-index: 9999;
-    text-align: center;
   }
 
   .about-window.max .text {
@@ -527,12 +526,13 @@
   }
 
   .textbox.max>.about-text {
-    width: 100%;
-    margin: 2rem;
+    width: 50%;
+    margin: 1rem;
   }
 
   .textbox.max>.about-text>.project__info>p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    margin: 2.25rem;
   }
 
   .textbox.max>.about-text>.project__info>.project__info>p {
@@ -540,8 +540,12 @@
   }
 
   .textbox.max>.about-text>h2 {
-    font-size: 2rem;
+    font-size: 2.75rem;
     margin: 1.3rem;
+  }
+
+  .textbox.max>.about-text>p {
+    font-size: 1rem;
   }
 
   .textbox.max>.about-text>.about__img-noam {

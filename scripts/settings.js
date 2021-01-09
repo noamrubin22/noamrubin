@@ -98,7 +98,7 @@ function Settings() {
                 case "djamillia":
                     artistInsta.innerHTML = "artwork by @manush420";
                     artistInsta.href = "https://www.instagram.com/manush420"
-                    chosenBackgroundImage.style.width = "54rem";
+                    chosenBackgroundImage.style.width = "100vw";
                     break;
                 case "vika":
                     artistInsta.innerHTML = "artwork by @uuuuuvika";
@@ -108,7 +108,7 @@ function Settings() {
                 case "yossi":
                     artistInsta.innerHTML = "artwork by @yoshikame_";
                     artistInsta.href = "https://www.instagram.com/yoshikame_"
-                    chosenBackgroundImage.style.width = "54rem";
+                    chosenBackgroundImage.style.width = "100vw";
                     break;
             }
         } else {
