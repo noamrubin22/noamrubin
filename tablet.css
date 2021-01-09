@@ -38,7 +38,7 @@
     /*  Monitor */
     body {
         background: var(--color-primary);
-        font-family: "minion-pro", times, serif;
+        font-family: "minion-pro", times, sans-serif;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -51,7 +51,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        /* background: url("./images/ScreenSaver_mobile.gif"); */
+        background: url("./images/ScreenSaver_mobile.gif");
     }
 
     .container__monitor {
@@ -78,7 +78,7 @@
 
     .link__instagram {
         position: absolute;
-        bottom: 15rem;
+        bottom: 30rem;
         background-color: white;
         font-size: 3rem;
         align-self: center;
@@ -88,13 +88,13 @@
 
     /* Settings window */
     .settings-window {
-        width: 46rem;
-        height: 52rem;
+        width: 50rem;
+        height: 59rem;
         border: outset 2px;
         background: #c0c0c0;
         position: relative;
-        left: 4rem;
-        top: 4rem;
+        left: 10%;
+        top: 20%;
         z-index: 9991;
         box-shadow: 0.25rem 0.25rem;
     }
@@ -155,7 +155,7 @@
         color: black;
         margin: 0;
         padding: 0;
-        font-size: 2.25rem;
+        font-size: 2.75rem;
         text-align: center;
         text-decoration: underline;
     }
@@ -168,7 +168,7 @@
         cursor: pointer;
         background-color: white;
         color: black;
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding: 0.25rem;
     }
 
@@ -189,7 +189,7 @@
         margin-top: 0;
         cursor: pointer;
         color: black;
-        font-size: 2rem;
+        font-size: 2.5rem;
         background-color: white;
         padding: 0.25rem;
     }
@@ -209,12 +209,12 @@
     }
 
     .classic-btn {
-        width: 10rem;
-        height: 3.75rem;
+        width: 14rem;
+        height: 4.75rem;
         margin: 0.75rem;
         border: 1px solid;
         box-shadow: 0.25rem 0.25rem;
-        font-size: 1.75rem;
+        font-size: 2.25rem;
     }
 
     .classic-btn:active {
@@ -222,18 +222,18 @@
     }
 
     /*  Project windows */
-    .project-window {
+    .project-window.max {
         width: 600px;
         height: 600px;
         border: outset 2px;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 20%;
+        left: 20%;
         background: #c0c0c0;
         z-index: 9999;
     }
 
-    .project-window.max {
+    .project-window {
         width: 100%;
         height: 91%;
         top: 0 !important;
@@ -323,7 +323,7 @@
         right: 0.5rem;
     }
 
-    .textbox {
+    .textbox.max {
         border: inset 2px;
         background: white;
         color: var(--color-accent);
@@ -334,12 +334,7 @@
         text-align: center;
     }
 
-    .textbox:focus {
-        border: inset 2px;
-        outline: none;
-    }
-
-    .textbox.max {
+    .textbox {
         border: inset 2px;
         background: #fff;
         margin: 5px;
@@ -349,6 +344,12 @@
         overflow: auto;
         text-align: center;
     }
+
+    .textbox:focus {
+        border: inset 2px;
+        outline: none;
+    }
+
 
     .text {
         width: 80%;
@@ -424,7 +425,7 @@
     }
 
     /* Mariposa project window */
-    .mariposa-project {
+    .mariposa-project.max {
         width: 600px;
         height: 400px;
         border: outset 2px;
@@ -435,16 +436,17 @@
 
 
     /* Contact window */
-    .contact-window {
-        width: 850px;
-        height: 400px;
+    .contact-window.max {
+        width: 58rem;
+        ;
+        height: 34rem;
         border: outset 2px;
         position: absolute;
         background: #c0c0c0;
-        z-index: 9999;
+        z-index: 9999999;
     }
 
-    .contact-window.max {
+    .contact-window {
         width: 100%;
         height: 91.5%;
         top: 0 !important;
@@ -452,7 +454,7 @@
         bottom: auto !important;
         border: outset 2px;
         background: #c0c0c0;
-        z-index: 9999;
+        z-index: 9999999;
     }
 
     .contact__img-github {
@@ -480,13 +482,13 @@
     }
 
     /* About window */
-    .about-window {
-        width: 600px;
+    .about-window.max {
+        width: 57rem;
         height: 700px;
         border: outset 2px;
         position: absolute;
-        left: 10;
-        top: 10;
+        left: 20%;
+        top: 20%;
         background: #c0c0c0;
         z-index: 9999;
     }
@@ -503,7 +505,7 @@
 
     /* Windows Maximized */
     /* About window maximized */
-    .about-window.max {
+    .about-window {
         width: 100%;
         height: 92%;
         top: 0 !important;
@@ -516,47 +518,47 @@
         text-align: center;
     }
 
-    .about-window.max .text {
+    .about-window .text {
         width: 100%;
         display: inline-block;
     }
 
-    .about-window.max>.content>.textbox.max>.about-text>.project__info,
-    .about-window.max>.content>.textbox.max>.about-text>.project__info>.project__info {
+    .about-window>.content>.textbox>.about-text>.project__info,
+    .about-window>.content>.textbox>.about-text>.project__info>.project__info {
         margin: 5rem;
     }
 
 
-    .textbox.max>.about-text {
+    .textbox>.about-text {
         width: 100%;
         margin: 1rem;
     }
 
-    .textbox.max>.about-text>.project__info>p,
-    .textbox.max>.about-text>.project__info>.project__info>p {
+    .textbox>.about-text>.project__info>p,
+    .textbox>.about-text>.project__info>.project__info>p {
         font-size: 1.5rem;
     }
 
-    .textbox.max>.about-text>h2 {
+    .textbox>.about-text>h2 {
         font-size: 2.5rem;
         margin: 2rem;
     }
 
-    .textbox.max>.about-text>.about__img-noam {
-        width: 66%;
+    .textbox>.about-text>.about__img-noam {
+        width: 100%;
     }
 
     /* other project windows */
-    .project-window.max>.content>.textbox>.project-header>#project-title {
+    .project-window>.content>.textbox>.project-header>#project-title {
         font-size: 11rem;
     }
 
-    .project-window.max>.content>.textbox>.project-header>.project-description {
+    .project-window>.content>.textbox>.project-header>.project-description {
         font-size: 3rem;
     }
 
 
-    .mariposa-project.max {
+    .mariposa-project {
         width: 100%;
         height: 92%;
         font-size: 3rem;
@@ -569,58 +571,58 @@
         z-index: 9999;
     }
 
-    .project-window>.content>.textbox.max>.project-header,
-    .project-window>.content>.textbox.max>.project__content {
+    .project-window>.content>.textbox>.project-header,
+    .project-window>.content>.textbox>.project__content {
         width: 100%;
     }
 
 
-    .project-window.max>.content>.textbox.max>.project-header.text,
-    .project-window.max>.content>.textbox.max>.project__content {
+    .project-window>.content>.textbox>.project-header.text,
+    .project-window>.content>.textbox>.project__content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .project-window.max>.content>.textbox.max>.project-header {
+    .project-window>.content>.textbox>.project-header {
         padding-top: 2rem;
     }
 
-    .gerrit-window.max>.content>.textbox.max>.project-header {
+    .gerrit-window>.content>.textbox>.project-header {
         padding: 0;
     }
 
     /* remove extra project-links */
-    /* .project-window>.content>.textbox.max>.project__content>.project__links {
+    /* .project-window>.content>.textbox>.project__content>.project__links {
         display: none;
     } */
 
-    .project-window.max>.content>.textbox.max>.project-header>.project__links {
+    .project-window>.content>.textbox>.project-header>.project__links {
         display: none;
     }
 
-    .project-window>.content>.textbox.max>.project__content>.project__info.text {
+    .project-window>.content>.textbox>.project__content>.project__info.text {
         display: flex;
         flex-direction: column;
     }
 
-    .project-window>.content>.textbox.max>.project__content>.project__info.text>p {
+    .project-window>.content>.textbox>.project__content>.project__info.text>p {
         font-size: 3rem;
     }
 
-    .project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
+    .project-window>.content>.textbox>.project__content>.project__info.text>.project__info-tech {
         align-self: center;
         font-size: 3rem;
     }
 
-    .project-window.max>.content>.textbox.max>.project__links-gerrit {
+    .project-window>.content>.textbox>.project__links-gerrit {
         display: none;
     }
 
     /* Start button */
     .start {
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
         width: 100vw;
         height: 10rem;
@@ -698,8 +700,8 @@
         border-left: 6px solid #85888f;
         border-right: 6px solid #deebf3;
         border-bottom: 6px solid #deebf3;
-        margin: 12px;
-        margin-right: 18px;
+        margin: 1rem;
+        margin-right: 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -719,10 +721,10 @@
         border-left: 2px solid #deebf3;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
-        width: 38%;
+        width: 44%;
         display: none;
         position: absolute;
-        bottom: -54.5rem;
+        bottom: 10rem;
         z-index: 99999;
     }
 
@@ -733,7 +735,7 @@
 
     .start__menu-main-side-text {
         position: relative;
-        margin-top: 25rem;
+        top: 30rem;
     }
 
     .start__menu-main-side-text-windows {
@@ -741,7 +743,7 @@
         color: #c3c6cd;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 0px;
         margin-left: 0.25rem;
     }
@@ -750,8 +752,8 @@
         color: white;
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
-        margin-bottom: 9rem;
-        font-size: 3rem;
+        margin-bottom: 10.25rem;
+        font-size: 3.5rem;
         margin-left: 0.5rem;
     }
 
@@ -761,9 +763,9 @@
     }
 
     .start__menu-main-items .icon {
-        width: 4.5rem;
-        height: 4.5rem;
-        padding-left: 1.5rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        padding-left: 1rem;
         padding-right: 1.5rem;
     }
 
@@ -782,8 +784,8 @@
 
     .start__menu-main-items-item-img-projects {
         background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
-        width: 61px;
-        height: 60px;
+        width: 5rem;
+        height: 5rem;
         mix-blend-mode: multiply;
         top: 0;
         left: 0;
@@ -795,40 +797,40 @@
 
     .start__menu-main-items-item-img-settings {
         background: url("./images/settings.png");
-        width: 68px;
-        height: 60px;
+        width: 6rem;
+        height: 6rem;
         mix-blend-mode: multiply;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         background-size: contain;
-        margin-right: 23px;
-        margin-left: 29px;
+        margin-right: 1.5rem;
+        margin-left: 0.75rem;
     }
 
     .start__menu-main-items-item-img-shutdown {
-        background: url("./images/shutdown.png");
-        width: 68px;
-        height: 60px;
+        background: url("./images/shutdown.png") no-repeat;
+        width: 9rem;
+        height: 9rem;
         mix-blend-mode: multiply;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
         background-size: contain;
-        margin-right: 23px;
-        margin-left: 29px;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     .start__menu-main-items-item-arrowright {
-        width: 4px;
-        height: 4px;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-left: 6px solid black;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-top: 0.75rem solid transparent;
+        border-bottom: 0.75rem solid transparent;
+        border-left: 0.75rem solid black;
         margin-left: auto;
-        margin-right: 25px;
+        margin-right: 1.5rem
     }
 
     .start__menu-main-items-item:hover {
@@ -840,9 +842,9 @@
     }
 
     .start__menu-main-items-item:hover .start__menu-main-items-item-arrowright {
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-        border-left: 4px solid white;
+        border-top: 0.25rem solid transparent;
+        border-bottom: 0.25rem solid transparent;
+        border-left: 0.25rem solid white;
     }
 
     .start__menu-main-items-list1 {
@@ -867,7 +869,7 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        width: 85%;
+        width: 98%;
         left: 100%;
         padding: 0;
         display: none;
@@ -875,9 +877,9 @@
     }
 
     .start__menu-sub .icon {
-        width: 48px;
-        height: 48px;
-        margin-right: 10px;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 1.5rem;
     }
 
     .start__menu-sub-items-item {
@@ -887,7 +889,7 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        padding: 10px 10px 12px 8px;
+        padding: 1.5rem 1.5rem 1rem 0.5rem;
     }
 
     .start__menu-sub-items-item:hover {
@@ -899,13 +901,13 @@
     }
 
     .start__menu-sub-items-item:hover .start__menu-sub-items-item-arrowright {
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-        border-left: 4px solid white;
+        border-top: 0.25rem solid transparent;
+        border-bottom: 0.25rem solid transparent;
+        border-left: 0.25rem solid white;
     }
 
     .start__menu-sub-items-item-title {
-        margin: 7px 0;
+        margin: 0.5rem 0;
     }
 
     .tasks {
@@ -916,13 +918,13 @@
     }
 
     .sub__projects {
-        bottom: 52%;
+        bottom: 43%;
     }
 
     .desktop-icon {
         position: absolute;
-        height: 150px;
-        width: 150px;
+        height: 9.25rem;
+        width: 9.25rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -936,51 +938,46 @@
     }
 
     .desktop-icon__icon {
-        height: 50px;
+        height: 3rem;
     }
 
     .desktop-icon__text {
         color: white;
         font-size: 2.5rem;
-        margin-top: 9px;
-        margin-left: 10px;
+        margin-top: 0.5rem;
+        margin-left: 0.75rem;
         margin-bottom: 0;
         text-align: center;
     }
 
     .desktop-icon-mariposa__text {
-        margin-top: 7rem;
-        margin-left: 8rem;
+        margin-top: 8rem;
+        margin-left: 2rem;
     }
 
     .desktop-icon:hover {
         cursor: pointer;
     }
 
-    .computer__icon {
-        width: 55px;
-        margin: 9px;
-    }
-
     /* Desktop icons */
     .mariposa {
-        top: 70.5rem;
-        left: 16rem;
+        top: 9.5rem;
+        left: 30rem;
     }
 
     .spotavibe {
-        top: 60rem;
+        top: 10rem;
         left: 45rem;
     }
 
     .gerrit {
-        top: 74rem;
-        left: 45rem;
+        top: 24rem;
+        left: 50rem;
     }
 
     .music-vis {
-        top: 90rem;
-        left: 45rem;
+        top: 40rem;
+        left: 50rem;
     }
 
     /* Desktop images */
@@ -991,7 +988,7 @@
 
     .spotavibe-img {
         display: inline-block;
-        width: 8rem;
+        width: 9.5rem;
     }
 
     .musicviz-img {
@@ -1019,37 +1016,11 @@
     }
 
     .volume-img {
-        width: 59px;
-        margin-top: 0px;
-    }
-
-    .bg-img {
-        background-image: url(https://i.pinimg.com/originals/96/17/c0/9617c03faeb0986659acd2fa7ff87a26.png);
-        -o-object-fit: cover;
-        object-fit: cover;
-        width: 200px;
-        height: 200px;
-        mix-blend-mode: multiply;
-    }
-
-    .settings-img {
-        background-position: 88% 21%;
-    }
-
-    .shutdown-img {
-        background-position: 75% 79%;
-        padding-left: 0px;
-        padding-right: 0px;
+        width: 3.5rem;
     }
 
     .shutdown {
-        margin-top: 11px;
-    }
-
-    .settings {
-        background-position: 75% 79%;
-        padding-left: 0px;
-        padding-right: 0px;
+        margin-top: 1rem;
     }
 
     .task {
@@ -1171,8 +1142,8 @@
     #github-icon,
     #linkedin-icon,
     #email-icon {
-        width: 60px;
-        height: 60px;
+        width: 5rem;
+        height: 5rem;
     }
 
     #github-icon:hover,

@@ -1,16 +1,16 @@
 function dragMobile() {
     /* DRAGGABLE */
     // Make the desktop icons draggable
-    const desktopIcons = document.getElementsByClassName("desktop-icon");
-    for (let i = 0; i < desktopIcons.length; i++) {
-        dragElement(desktopIcons[i]);
-    }
+    // const desktopIcons = document.getElementsByClassName("desktop-icon");
+    // for (let i = 0; i < desktopIcons.length; i++) {
+    //     dragElement(desktopIcons[i]);
+    // }
 
     let dragActive = false;
-    // const windows = document.getElementsByClassName("window");
-    // for (let i = 0; i < windows.length; i++) {
-    //     dragElement(windows[i]);
-    // }
+    const windows = document.getElementsByClassName("window");
+    for (let i = 0; i < windows.length; i++) {
+        dragElement(windows[i]);
+    }
 
     function dragElement(elmnt) {
         let pos1 = 0,
@@ -75,8 +75,8 @@ function dragMobile() {
         }
         function closeDragElement() {
             // stop moving when mouse button is released:
-            document.ontouchend = null
-            document.ontouchmove = null;
+            document.ontouchend = () => { return }
+            document.ontouchmove = () => { return }
         }
     }
 }

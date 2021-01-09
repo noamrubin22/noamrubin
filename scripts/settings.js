@@ -72,52 +72,56 @@ function Settings() {
     function previewImage({ selectedImage, title, artist }) {
         const artistInsta = document.querySelector(".link__instagram");
 
-        if (selectedImage === "none") {
-            chosenBackgroundImage.hidden = true;
-            backgroundImagePc.hidden = true;
-            artistInsta.hidden = true;
-        } else {
-            if (artist) {
-                artistInsta.hidden = false;
-                switch (artist) {
-                    case "kathi":
-                        artistInsta.innerHTML = "by @katharina.michalsky";
-                        artistInsta.href = "https://www.instagram.com/katharina.michalsky";
-                        chosenBackgroundImage.style.width = "32rem";
-                        break;
-                    case "chris":
-                        artistInsta.innerHTML = "by @iti.art";
-                        artistInsta.href = "https://www.instagram.com/iti.art";
-                        chosenBackgroundImage.style.width = "32rem";
-                        break;
-                    case "shruti":
-                        artistInsta.innerHTML = "by @shrooodi";
-                        artistInsta.href = "https://www.instagram.com/shrooodi";
-                        chosenBackgroundImage.style.width = "32rem";
-                        break;
-                    case "djamillia":
-                        artistInsta.innerHTML = "by @manush420";
-                        artistInsta.href = "https://www.instagram.com/manush420"
-                        chosenBackgroundImage.style.width = "54rem";
-                        break;
-                    case "vika":
-                        artistInsta.innerHTML = "by @uuuuuvika";
-                        artistInsta.href = "https://www.instagram.com/uuuuuvika"
-                        chosenBackgroundImage.style.width = "32rem";
-                        break;
-                }
-            } else {
-                artistInsta.hidden = true;
-                chosenBackgroundImage.style.width = "450";
+        // if (selectedImage === "none") {
+        //     chosenBackgroundImage.hidden = true;
+        //     backgroundImagePc.hidden = true;
+        //     artistInsta.hidden = true;
+        // } else {
+        if (artist) {
+            artistInsta.hidden = false;
+            switch (artist) {
+                case "kathi":
+                    artistInsta.innerHTML = "artwork by @katharina.michalsky";
+                    artistInsta.href = "https://www.instagram.com/katharina.michalsky";
+                    chosenBackgroundImage.style.width = "32rem";
+                    break;
+                case "chris":
+                    artistInsta.innerHTML = "artwork by @iti.art";
+                    artistInsta.href = "https://www.instagram.com/iti.art";
+                    chosenBackgroundImage.style.width = "32rem";
+                    break;
+                case "shruti":
+                    artistInsta.innerHTML = "artwork by @shrooodi";
+                    artistInsta.href = "https://www.instagram.com/shrooodi";
+                    chosenBackgroundImage.style.width = "32rem";
+                    break;
+                case "djamillia":
+                    artistInsta.innerHTML = "artwork by @manush420";
+                    artistInsta.href = "https://www.instagram.com/manush420"
+                    chosenBackgroundImage.style.width = "54rem";
+                    break;
+                case "vika":
+                    artistInsta.innerHTML = "artwork by @uuuuuvika";
+                    artistInsta.href = "https://www.instagram.com/uuuuuvika"
+                    chosenBackgroundImage.style.width = "32rem";
+                    break;
+                case "yossi":
+                    artistInsta.innerHTML = "artwork by @yoshikame_";
+                    artistInsta.href = "https://www.instagram.com/yoshikame_"
+                    chosenBackgroundImage.style.width = "54rem";
+                    break;
             }
-
-            // add image to both backgrounds (pc and real display)
-            chosenBackgroundImage.src = selectedImage;
-            chosenBackgroundImage.alt = title;
-            backgroundImagePc.hidden = false;
-            backgroundImagePc.src = selectedImage;
-            backgroundImagePc.alt = title;
+        } else {
+            artistInsta.hidden = true;
+            chosenBackgroundImage.style.width = "450";
         }
+
+        // add image to both backgrounds (pc and real display)
+        chosenBackgroundImage.src = selectedImage;
+        chosenBackgroundImage.alt = title;
+        backgroundImagePc.hidden = false;
+        backgroundImagePc.src = selectedImage;
+        backgroundImagePc.alt = title;
     }
 
     function getCurrentImage() {

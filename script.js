@@ -2,6 +2,7 @@ window.onload = function () {
 
   // settings function
   Settings();
+  dragMobile();
 
   // set clock
   setInterval(updateTime, 1000);
