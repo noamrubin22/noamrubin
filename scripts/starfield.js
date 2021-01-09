@@ -89,7 +89,7 @@ function starField() {
       w / 2,
       h / 2
     );
-    c.fillText(`Open for a collaboration?`, w / 2, h / 8);
+    c.fillText(`Want to collaborate?`, w / 2, h / 8);
     c.fillText(`Feel free to contact me`, w / 2, h / 1.2);
 
     let img = new Image();
