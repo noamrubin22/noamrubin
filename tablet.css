@@ -78,7 +78,7 @@
 
     .link__instagram {
         position: absolute;
-        bottom: 30rem;
+        bottom: 20rem;
         background-color: white;
         font-size: 3rem;
         align-self: center;
@@ -1032,6 +1032,7 @@
     }
 
     .task {
+        display: none;
         top: 1px;
         width: 156px;
         bottom: 1px;

@@ -24,7 +24,8 @@ function dragMobile() {
             e.stopPropagation();
 
             const clickedElement = e.target;
-            clickedElement.parentNode.classList.add("draggable")
+            clickedElement.parentNode.classList.add("draggable");
+            console.log(clickedElement.parentNode);
 
             // get the touch position at start
             pos3 = e.touches[0].clientX;
