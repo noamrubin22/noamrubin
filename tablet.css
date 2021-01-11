@@ -235,7 +235,7 @@
 
     .project-window {
         width: 100%;
-        height: 91%;
+        height: 90.5%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -342,7 +342,7 @@
         height: 93%;
         padding: 2px;
         color: var(--color-accent);
-        font-size: 14px;
+        font-size: 1.25rem;
         overflow: auto;
         text-align: center;
     }
@@ -455,7 +455,7 @@
 
     .contact-window {
         width: 100%;
-        height: 91.5%;
+        height: 90.5%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -499,6 +499,7 @@
         top: 20%;
         background: #c0c0c0;
         z-index: 9999;
+
     }
 
     .about-window .text {
@@ -543,11 +544,11 @@
 
     .textbox>.about-text>.project__info>p,
     .textbox>.about-text>.project__info>.project__info>p {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .textbox>.about-text>h2 {
-        font-size: 2.5rem;
+        font-size: 4.5rem;
         margin: 2rem;
     }
 
