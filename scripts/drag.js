@@ -24,10 +24,8 @@ function dragMobile() {
             e.stopPropagation();
 
             const clickedElement = e.target;
+            clickedElement.parentNode.classList.add("draggable")
 
-            clickedElement.classList.add("draggable")
-            console.log(e.srcElement);
-            // const element = document.getElementByClassName(e.target);
             // get the touch position at start
             pos3 = e.touches[0].clientX;
             pos4 = e.touches[0].clientY;
@@ -51,7 +49,9 @@ function dragMobile() {
                 if (e.touches[0].clientX > innerWidth || e.touches[0].clientY > innerHeight) {
                     return;
                 }
-                if (clickedElement.classList.contains("draggable")) {
+
+                // only clicked elements should be dragged
+                if (clickedElement.parentNode.classList.contains("draggable")) {
                     // set the element's new position:
                     elmnt.style.top = elmnt.offsetTop - pos2 + "px";
                     elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
@@ -82,7 +82,7 @@ function dragMobile() {
         }
         function closeDragElement(e) {
             // stop moving when mouse button is released:
-            e.target.classList.remove("draggable");
+            e.target.parentNode.classList.remove("draggable");
         }
     }
 }
