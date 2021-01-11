@@ -40,7 +40,7 @@
   /*  Monitor */
   body {
     background: var(--color-primary);
-    font-family: "minion-pro", times, sans-serif;
+    font-family: "minion-pro", times, Sans-Serif;
     height: 100%;
     margin: 0;
     padding: 0;

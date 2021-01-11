@@ -81,7 +81,7 @@ function starField() {
     moveStars(elapsed * 0.3);
 
     clear();
-    c.font = "30px Serif";
+    c.font = "24px Sans-Serif";
     c.textAlign = "center";
     c.fillStyle = "purple";
     c.fillText(

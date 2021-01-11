@@ -1,16 +1,16 @@
 function dragMobile() {
     /* DRAGGABLE */
     // Make the desktop icons draggable
-    // const desktopIcons = document.getElementsByClassName("desktop-icon");
-    // for (let i = 0; i < desktopIcons.length; i++) {
-    //     dragElement(desktopIcons[i]);
-    // }
+    const desktopIcons = document.getElementsByClassName("desktop-icon");
+    for (let i = 0; i < desktopIcons.length; i++) {
+        dragElement(desktopIcons[i]);
+    }
 
     // let dragActive = false;
-    // const windows = document.getElementsByClassName("window");
-    // for (let i = 0; i < windows.length; i++) {
-    //     dragElement(windows[i]);
-    // }
+    const windows = document.getElementsByClassName("window");
+    for (let i = 0; i < windows.length; i++) {
+        dragElement(windows[i]);
+    }
 
     function dragElement(elmnt) {
         let pos1 = 0,
@@ -21,21 +21,26 @@ function dragMobile() {
 
         function dragMouseDown(e) {
             e = e || window.event;
-            // e.preventDefault();
-            dragActive = true;
+            e.stopPropagation();
+
+            const clickedElement = e.target;
+
+            clickedElement.classList.add("draggable")
+            console.log(e.srcElement);
+            // const element = document.getElementByClassName(e.target);
             // get the touch position at start
             pos3 = e.touches[0].clientX;
-            console.log(e.touches[0]);
             pos4 = e.touches[0].clientY;
+
             document.addEventListener("touchmove", elementDrag, { capture: "false", passive: "false" });
             document.addEventListener("touchend", closeDragElement, { capture: "false", passive: "false" });
+
             // call a function whenever the cursor moves:
 
             function elementDrag(e) {
                 e = e || window.event;
-                // e.preventDefault();
-
                 const { innerWidth, innerHeight } = window;
+
                 // calculate the new cursor position:
                 pos1 = pos3 - e.touches[0].clientX;
                 pos2 = pos4 - e.touches[0].clientY;
@@ -46,9 +51,11 @@ function dragMobile() {
                 if (e.touches[0].clientX > innerWidth || e.touches[0].clientY > innerHeight) {
                     return;
                 }
-                // set the element's new position:
-                elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-                elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+                if (clickedElement.classList.contains("draggable")) {
+                    // set the element's new position:
+                    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+                    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+                }
                 limitDrag(elmnt, innerWidth, innerHeight);
             }
 
@@ -73,10 +80,9 @@ function dragMobile() {
                 }
             }
         }
-        function closeDragElement() {
+        function closeDragElement(e) {
             // stop moving when mouse button is released:
-            document.ontouchend = () => { return }
-            document.ontouchmove = () => { return }
+            e.target.classList.remove("draggable");
         }
     }
 }
