@@ -72,11 +72,6 @@ function Settings() {
     function previewImage({ selectedImage, title, artist }) {
         const artistInsta = document.querySelector(".link__instagram");
 
-        // if (selectedImage === "none") {
-        //     chosenBackgroundImage.hidden = true;
-        //     backgroundImagePc.hidden = true;
-        //     artistInsta.hidden = true;
-        // } else {
         if (artist) {
             artistInsta.hidden = false;
             switch (artist) {

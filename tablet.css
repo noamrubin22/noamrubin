@@ -199,15 +199,6 @@
         color: white;
     }
 
-    .artist {
-        position: absolute;
-        bottom: 77px;
-        background-color: white;
-        font-size: 20px;
-        margin-top: 3px;
-        left: 50%;
-    }
-
     .classic-btn {
         width: 14rem;
         height: 4.75rem;
@@ -218,7 +209,7 @@
     }
 
     .classic-btn:active {
-        outline: var(--color-primary) auto 5px;
+        outline: var(--color-primary) auto 1.25rem;
     }
 
     /*  Project windows  MAX is small*/
@@ -338,7 +329,7 @@
     .textbox {
         border: inset 2px;
         background: #fff;
-        margin: 5px;
+        margin: 0.25;
         height: 93%;
         padding: 2px;
         color: var(--color-accent);
@@ -377,7 +368,7 @@
         flex-direction: column;
         line-height: 2rem;
         font-size: 3.25rem;
-        margin-bottom: 20px;
+        margin-bottom: 1.5rem;
         margin: 1rem;
     }
 
@@ -413,7 +404,7 @@
 
 
     .project__img-gerrit {
-        width: 250px;
+        width: 40rem;
         margin: 10px;
         border: 2px solid #fff;
         -moz-box-shadow: 10px 10px 5px #ccc;
