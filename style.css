@@ -36,7 +36,6 @@
     --font-color: rgb(65, 5, 5);
   }
 
-
   /*  Monitor */
   body {
     background: var(--color-primary);
@@ -53,7 +52,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: url(images/ScreenSaver_01.gif);
+    background: url("images/ScreenSaver_01.gif");
   }
 
   .container__monitor {
@@ -75,15 +74,15 @@
     left: 50%;
     top: 46%;
     transform: translate(-50%, -50%);
-    width: 900px;
+    width: 56.25rem;
   }
 
   .link__instagram {
     position: absolute;
-    bottom: 77px;
+    bottom: 4.75rem;
     background-color: white;
-    font-size: 20px;
-    margin-top: 3px;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
     align-self: center;
     text-decoration: none;
     color: black;
@@ -91,56 +90,56 @@
 
   /* Settings window */
   .settings-window {
-    width: 385px;
-    height: 430px;
+    width: 26rem;
+    height: 27rem;
     border: outset 2px;
     background: #c0c0c0;
     position: relative;
-    left: 200px;
-    top: 200px;
+    left: 12.5rem;
+    top: 12.5rem;
     z-index: 9991;
     box-shadow: 3px 3px;
   }
 
   .pc {
-    width: 206px;
-    height: 179px;
+    width: 13rem;
+    height: 11.25rem;
     margin: auto;
-    margin-top: 28px;
+    margin-top: 2rem;
     background: url("./images/desktop.png") no-repeat;
     overflow: auto;
-    margin-left: 94px;
+    margin-left: 7rem;
   }
 
   .pc__background-color {
-    width: 152px;
-    height: 111px;
+    width: 9.5rem;
+    height: 7rem;
     border: inset 2px;
-    margin-left: 14px;
-    margin-top: 15px;
+    margin-left: 0.8rem;
+    margin-top: 0.9rem;
     background-color: var(--color-primary);
   }
 
   .pc__background-img {
-    width: 85px;
-    height: 65px;
+    width: 5.5rem;
+    height: 4rem;
     margin: auto;
-    margin-top: 25px;
-    margin-left: 33px;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
   }
 
   .display__props {
     display: flex;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 1rem;
   }
 
   .display__props-themes-options {
-    width: 140px;
-    height: 80px;
+    width: 8.75rem;
+    height: 5rem;
     border: inset;
     background: white;
-    margin: 6px;
+    margin: 0.25rem;
     color: black;
     overflow: auto;
     white-space: nowrap;
@@ -149,28 +148,29 @@
   .display__props-options {
     padding: 0;
     margin: 0;
+    align-self: center;
   }
 
   .display__props-themes>p {
     color: black;
     margin: 0;
-    margin-left: 52px;
+    margin-left: 3.25rem;
     padding: 0;
   }
 
   .display__props-background>p {
     color: black;
     margin: 0;
-    margin-left: 41px;
+    margin-left: 2.5rem;
     padding: 0;
   }
 
   .display__props-background-options {
-    width: 160px;
-    height: 80px;
+    width: 10rem;
+    height: 5rem;
     border: inset;
     background: white;
-    margin: 6px;
+    margin: 0.25rem;
     color: black;
     overflow: auto;
     white-space: nowrap;
@@ -178,8 +178,8 @@
 
   .display__props-background-image {
     padding: 0;
-    padding-left: 5px;
-    margin-left: 7px;
+    padding-left: 0.25rem;
+    margin-left: 0.5rem;
     margin-top: 0;
     cursor: pointer;
     background-color: white;
@@ -194,13 +194,13 @@
   .display__props-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 19px;
+    margin-top: 1rem;
   }
 
   .theme {
     padding: 0;
-    padding-left: 5px;
-    margin-left: 7px;
+    padding-left: 0.25rem;
+    margin-left: 0.5rem;
     margin-top: 0;
     cursor: pointer;
     color: black;
@@ -212,31 +212,22 @@
     color: white;
   }
 
-  .artist {
-    position: absolute;
-    bottom: 77px;
-    background-color: white;
-    font-size: 20px;
-    margin-top: 3px;
-    left: 50%;
-  }
-
   .classic-btn {
-    width: 87px;
-    height: 23px;
-    margin: 5px;
+    width: 5.5rem;
+    height: 1.5rem;
+    margin: 0.25rem;
     border: 1px solid;
     box-shadow: 2px 2px;
   }
 
   .classic-btn:active {
-    outline: var(--color-primary) auto 5px;
+    outline: var(--color-primary) auto 0.25rem;
   }
 
   /*  Project windows */
   .project-window {
-    width: 600px;
-    height: 600px;
+    width: 37.5rem;
+    height: 37.5rem;
     border: outset 2px;
     position: absolute;
     top: 0;
@@ -247,7 +238,7 @@
 
   .project-window.max {
     width: 100%;
-    height: 93%;
+    height: 94.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -263,12 +254,12 @@
     top: 0px;
     right: 0px;
     left: 0px;
-    height: 22px;
+    height: 1.5rem;
     border: none;
     color: #fff;
-    font-size: 14px;
-    line-height: 21px;
-    padding-left: 5px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-left: 0.5rem;
   }
 
   /* Buttons project windows */
@@ -278,8 +269,8 @@
     height: 60%;
     display: block;
     float: right;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 
   .button-minimize,
@@ -287,7 +278,7 @@
   .button-exit {
     background: #bfbfbf;
     height: 100%;
-    width: 17px;
+    width: 1rem;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 1px solid white;
@@ -324,7 +315,7 @@
 
   .content {
     position: absolute;
-    top: 22px;
+    top: 1.5rem;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -334,10 +325,10 @@
     border: inset 2px;
     background: white;
     color: var(--color-accent);
-    margin: 5px;
+    margin: 0.25rem;
     height: 90%;
     padding: 2px;
-    font-size: 19px;
+    font-size: 1.5rem;
     overflow: auto;
     text-align: center;
   }
@@ -350,11 +341,10 @@
   .textbox.max {
     border: inset 2px;
     background: #fff;
-    margin: 5px;
+    margin: 0.25rem;
     height: 93%;
     padding: 2px;
-    font-size: 14px;
-    /* overflow: auto; */
+    font-size: 1rem;
     text-align: center;
     position: relative;
   }
@@ -379,7 +369,7 @@
     flex-direction: column;
     line-height: 1.8rem;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .project__links-gerrit {
@@ -411,8 +401,8 @@
   }
 
   .project__img-gerrit {
-    width: 250px;
-    margin: 10px;
+    width: 16.5rem;
+    margin: 1.5rem;
     border: 2px solid #fff;
     -moz-box-shadow: 10px 10px 5px #ccc;
     -webkit-box-shadow: 10px 10px 5px #ccc;
@@ -430,8 +420,8 @@
 
   /* Mariposa project window */
   .mariposa-project {
-    width: 600px;
-    height: 400px;
+    width: 37.5rem;
+    height: 25rem;
     border: outset 2px;
     position: relative;
     background: #c0c0c0;
@@ -441,8 +431,8 @@
 
   /* Contact window */
   .contact-window {
-    width: 850px;
-    height: 400px;
+    width: 58rem;
+    height: 36rem;
     border: outset 2px;
     position: absolute;
     background: #c0c0c0;
@@ -451,7 +441,7 @@
 
   .contact-window.max {
     width: 100%;
-    height: 95%;
+    height: 94.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -463,15 +453,15 @@
   .contact__img-github {
     position: absolute;
     bottom: 25%;
-    left: 45%;
+    left: 48%;
     z-index: 999;
     width: 6%;
   }
 
   .contact__img-mail {
     position: absolute;
-    bottom: 57%;
-    left: 60%;
+    bottom: 64%;
+    left: 69%;
     z-index: 999;
     width: 6%;
   }
@@ -479,19 +469,19 @@
   .contact__img-linkedin {
     position: absolute;
     bottom: 66%;
-    left: 20%;
+    left: 25%;
     z-index: 99;
     width: 5%;
   }
 
   /* About window */
   .about-window {
-    width: 600px;
-    height: 700px;
+    width: 37.5rem;
+    height: 43.75rem;
     border: outset 2px;
     position: absolute;
-    left: 10;
-    top: 10;
+    left: 0.75rem;
+    top: 0.75rem;
     background: #c0c0c0;
     z-index: 9999;
   }
@@ -510,7 +500,7 @@
   /* About window maximized */
   .about-window.max {
     width: 100%;
-    height: 93%;
+    height: 94.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -530,22 +520,20 @@
     margin: 1rem;
   }
 
-  .textbox.max>.about-text>.project__info>p {
+  .textbox.max>.about-text>.project__info>p,
+  .textbox.max>.about-text>.project__info>.project__info>p {
     font-size: 1.25rem;
-    margin: 2.25rem;
+    margin: 3.75rem;
   }
 
-  .textbox.max>.about-text>.project__info>.project__info>p {
-    font-size: 1.2rem;
-  }
 
   .textbox.max>.about-text>h2 {
-    font-size: 2.75rem;
+    font-size: 3.25rem;
     margin: 1.3rem;
   }
 
   .textbox.max>.about-text>p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .textbox.max>.about-text>.about__img-noam {
@@ -555,7 +543,7 @@
   /* other project windows */
   .mariposa-project.max {
     width: 100%;
-    height: 93%;
+    height: 94.5%;
     font-size: 3rem;
     top: 0 !important;
     left: 0 !important;
@@ -564,6 +552,36 @@
     background: #c0c0c0;
     position: relative;
     z-index: 9999;
+  }
+
+  .project-header-img-musicviz {
+    width: 6rem;
+    margin-top: 2.75rem;
+  }
+
+  .project-header-img-mariposa {
+    margin-top: 1.5rem;
+  }
+
+  .project-header-spotavibe-img1 {
+    width: 4rem;
+  }
+
+  .project-header-spotavibe-img2 {
+    width: 6rem;
+    margin-top: 2.5rem;
+  }
+
+  .project-header-gerrit-img {
+    width: 3.5rem;
+  }
+
+  .gerrit-img2 {
+    height: 27.5rem;
+  }
+
+  .project-window.max>.content>.textbox.max>.project__content>.project__img-wrapper>.gerrit-img2 {
+    height: 35.5rem;
   }
 
   .project-window>.content>.textbox.max>.project-header,
@@ -638,7 +656,7 @@
   }
 
   .gerrit-window.max>.content>.textbox.max>.project-header>.project-header-img {
-    display: none;
+    margin-top: 0rem;
   }
 
   /* Start button */
@@ -646,7 +664,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 48px;
+    height: 3rem;
     background: #c3c6cd;
     border-top: 3px solid #deebf3;
     display: -webkit-box;
@@ -666,7 +684,7 @@
     border-left: 2px solid #deebf3;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    margin: 3px;
+    margin: 0.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -687,8 +705,8 @@
   }
 
   .start__logo {
-    width: 36px;
-    height: 21px;
+    width: 2.25rem;
+    height: 1.25rem;
     position: relative;
   }
 
@@ -703,26 +721,26 @@
     right: 0;
     position: absolute;
     background-repeat: no-repeat;
-    width: 36px;
-    height: 21px;
+    width: 2.25rem;
+    height: 1.25rem;
   }
 
   .start__text {
-    font-size: 21px;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0px;
   }
 
   .start__time {
-    width: 95px;
+    width: 6rem;
     height: 72%;
     background: #c3c6cd;
     border-top: 2px solid #85888f;
     border-left: 2px solid #85888f;
     border-right: 2px solid #deebf3;
     border-bottom: 2px solid #deebf3;
-    margin: 4px;
-    margin-right: 6px;
+    margin: 0.25rem;
+    margin-right: 0.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -733,7 +751,7 @@
 
   .start__time-text {
     margin: auto;
-    font-size: 15px;
+    font-size: 1rem;
   }
 
   .start__menu-main {
@@ -745,7 +763,7 @@
     width: 13%;
     display: none;
     position: absolute;
-    bottom: 51px;
+    bottom: 3.25rem;
     z-index: 99999;
   }
 
@@ -756,7 +774,7 @@
 
   .start__menu-main-side-text {
     position: relative;
-    margin-top: 151px;
+    margin-top: 13rem;
   }
 
   .start__menu-main-side-text-windows {
@@ -764,18 +782,18 @@
     color: #c3c6cd;
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
-    font-size: 29px;
+    font-size: 1.75rem;
     margin-bottom: 0px;
-    margin-left: 5px;
+    margin-left: 0.25rem;
   }
 
   .start__menu-main-side-text-nintyfive {
     color: white;
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
-    margin-bottom: 88px;
-    font-size: 25px;
-    margin-left: 5px;
+    margin-bottom: 5.5rem;
+    font-size: 1.5rem;
+    margin-left: 0.25rem;
   }
 
   .start__menu-main-items {
@@ -784,17 +802,17 @@
   }
 
   .start__menu-main-items .icon {
-    width: 38px;
-    height: 38px;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
     margin: 0.75rem;
   }
 
   .start__menu-main-items-item {
-    font-size: 16px;
-    padding-top: 3px;
-    padding-bottom: 10px;
+    font-size: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -806,8 +824,8 @@
 
   .start__menu-main-items-item-img-projects {
     background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
-    width: 43px;
-    height: 39px;
+    width: 2.8rem;
+    height: 2.8rem;
     mix-blend-mode: multiply;
     top: 0;
     left: 0;
@@ -819,8 +837,8 @@
 
   .start__menu-main-items-item-img-settings {
     background: url("./images/settings.png");
-    width: 44px;
-    height: 42px;
+    width: 2.75rem;
+    height: 2.75rem;
     mix-blend-mode: multiply;
     top: 0;
     left: 0;
@@ -832,8 +850,8 @@
 
   .start__menu-main-items-item-img-shutdown {
     background: url("./images/shutdown.png");
-    width: 46px;
-    height: 41px;
+    width: 2.75rem;
+    height: 2.5rem;
     mix-blend-mode: multiply;
     top: 0;
     left: 0;
@@ -850,7 +868,7 @@
     border-bottom: 4px solid transparent;
     border-left: 4px solid black;
     margin-left: auto;
-    margin-right: 7px;
+    margin-right: 0.5rem;
   }
 
   .start__menu-main-items-item:hover {
@@ -889,7 +907,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 187px;
+    width: 11.75rem;
     left: 100%;
     padding: 0;
     display: none;
@@ -897,8 +915,8 @@
   }
 
   .start__menu-sub .icon {
-    width: 23px;
-    height: 23px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .start__menu-sub-items-item {
@@ -926,7 +944,7 @@
   }
 
   .start__menu-sub-items-item-title {
-    margin: 7px 0;
+    margin: 0.5rem 0;
   }
 
   .tasks {
@@ -942,8 +960,8 @@
 
   .desktop-icon {
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -957,51 +975,46 @@
   }
 
   .desktop-icon__icon {
-    height: 50px;
+    height: 3.25rem;
   }
 
   .desktop-icon__text {
     color: white;
-    font-size: 13px;
-    margin-top: 9px;
-    margin-left: 10px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
     margin-bottom: 0;
     text-align: center;
   }
 
   .desktop-icon-mariposa__text {
-    margin-top: 30px;
-    margin-left: 38px;
+    margin-top: 2rem;
+    margin-left: 1rem;
   }
 
   .desktop-icon:hover {
     cursor: pointer;
   }
 
-  .computer__icon {
-    width: 55px;
-    margin: 9px;
-  }
-
   /* Desktop icons */
   .mariposa {
-    top: 10px;
-    left: 0px;
+    top: 0.75rem;
+    left: 0.5rem;
   }
 
   .spotavibe {
-    top: 150px;
-    left: 14px;
+    top: 9rem;
+    left: 0.75rem;
   }
 
   .gerrit {
-    top: 280px;
-    left: 14px;
+    top: 17.5rem;
+    left: 0.75rem;
   }
 
   .music-vis {
-    top: 22px;
-    left: 140px;
+    top: 1.25rem;
+    left: 8.5rem;
   }
 
   /*  Menubar */
@@ -1017,17 +1030,8 @@
   }
 
   .volume-img {
-    width: 27px;
-    margin-top: 0px;
-  }
-
-  .bg-img {
-    background-image: url(https://i.pinimg.com/originals/96/17/c0/9617c03faeb0986659acd2fa7ff87a26.png);
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    mix-blend-mode: multiply;
+    width: 1.75rem;
+    margin-top: 0;
   }
 
   .settings-img {
@@ -1041,7 +1045,7 @@
   }
 
   .shutdown {
-    margin-top: 11px;
+    margin-top: 0.5rem;
   }
 
   .settings {
@@ -1052,40 +1056,40 @@
 
   .task {
     top: 1px;
-    width: 157px;
+    width: 10rem;
     bottom: 1px;
     border: outset 2px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.25rem;
     display: flex;
     align-content: flex-start;
     align-items: center;
   }
 
   .task__icon-contact {
-    width: 14px;
-    height: 14px;
-    margin: 6px;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0.5rem;
     background-image: url("./images/contact_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   .about-task {
-    width: 157px;
+    width: 10rem;
     top: 1px;
     bottom: 1px;
     border: outset 2px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.75rem;
     display: flex;
     align-content: flex-start;
     align-items: center;
   }
 
   .task__icon-about {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("./images/about_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -1097,21 +1101,21 @@
 
   .mariposa-img {
     display: inline-block;
-    width: 80px;
+    width: 5rem;
   }
 
   .spotavibe-img {
     display: inline-block;
-    width: 70px;
+    width: 4.5rem;
   }
 
   .musicviz-img {
     display: inline-block;
-    width: 58px;
+    width: 3.5rem;
   }
 
   .gerrit-img {
-    width: 72px;
+    width: 4.5rem;
     z-index: 2;
   }
 
@@ -1122,7 +1126,7 @@
   }
 
   .tasks__sidebar {
-    height: 34px;
+    height: 2.5rem;
     margin: 2px;
     align-self: center;
     border: outset 2px;
@@ -1135,32 +1139,32 @@
   }
 
   .task__icon-gerrit {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("./images//Gerrit_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   .task__icon-mariposa {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("./images//Mariposa_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   .task__icon-spotavibe {
-    width: 32px;
-    height: 32px;
-    background-image: url("./images//Spotavibe_01_small.png");
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./images//spotavibe_01_small.png");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   .task__icon-musicviz {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("./images//Muxisvi_01_small.png");
 
     background-repeat: no-repeat;
@@ -1168,12 +1172,12 @@
   }
 
   img {
-    width: 34px;
+    width: 2.25rem;
     background: transparent;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
     zoom: 1;
-    margin-top: 7px;
+    margin-top: 0.5rem;
   }
 
   #github-icon:hover,
@@ -1185,21 +1189,10 @@
 
   .linkedin-icon,
   .email-icon {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 32 32'%3E%3Cpath d='M7 23L23 7M23 23L7 7M15 26V4M26 15H4' stroke='black' stroke-width='2'/%3E%3Ccircle cx='15' cy='15' r='7'/%3E%3Ccircle cx='13' cy='13' r='2' fill='white'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center center;
-  }
-
-  #blink {
-    /* animation: blinker 1s linear infinite; */
-  }
-
-  @keyframes blinker {
-    50% {
-      /* opacity: 0; */
-      color: yellow;
-    }
   }
 }

@@ -121,7 +121,7 @@ function Settings() {
 
     function getCurrentImage() {
         const storedImage = localStorage.getItem("display__props-background-image");
-        return Boolean(storedImage) ? JSON.parse(storedImage) : { selectedImage: "none" }
+        return Boolean(storedImage) ? JSON.parse(storedImage) : { selectedImage: "../images/90ieskid.png" }
     }
 
     function storeImage(image) {

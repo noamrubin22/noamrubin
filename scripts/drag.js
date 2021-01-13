@@ -6,12 +6,6 @@ function dragMobile() {
         dragElement(desktopIcons[i]);
     }
 
-    // let dragActive = false;
-    const windows = document.getElementsByClassName("window");
-    for (let i = 0; i < windows.length; i++) {
-        dragElement(windows[i]);
-    }
-
     function dragElement(elmnt) {
         let pos1 = 0,
             pos2 = 0,
@@ -25,7 +19,6 @@ function dragMobile() {
 
             const clickedElement = e.target;
             clickedElement.parentNode.classList.add("draggable");
-            console.log(clickedElement.parentNode);
 
             // get the touch position at start
             pos3 = e.touches[0].clientX;
@@ -35,7 +28,6 @@ function dragMobile() {
             document.addEventListener("touchend", closeDragElement, { capture: "false", passive: "false" });
 
             // call a function whenever the cursor moves:
-
             function elementDrag(e) {
                 e = e || window.event;
                 const { innerWidth, innerHeight } = window;
