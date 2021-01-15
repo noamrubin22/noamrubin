@@ -80,10 +80,6 @@
         background-size: contain;
     }
 
-    #yossi2 {
-        display: none;
-    }
-
     .link__instagram {
         position: absolute;
         top: 20%;
@@ -104,8 +100,8 @@
         border: outset 2px;
         background: #c0c0c0;
         position: absolute;
-        right: 5%;
-        top: 5%;
+        right: 8%;
+        bottom: 19%;
         z-index: 9991;
         box-shadow: 0.25rem 0.25rem;
     }
@@ -114,27 +110,24 @@
         background: url("./images/90_smartphone_01.png") no-repeat;
         background-size: contain;
         overflow: auto;
-        /* width: 25rem; */
         height: 20rem;
         align-self: center;
         margin-left: 18rem;
     }
 
     .pc__background-color {
-        width: 4rem;
-        height: 10.5rem;
+        width: 8rem;
+        height: 14.5rem;
         border: inset 2px;
-        margin-left: 1.25rem;
-        margin-top: 1.5rem;
+        margin-left: 3.00rem;
+        margin-top: 2.25rem;
         background-color: var(--color-primary);
+        border-radius: 5%;
     }
 
     .pc__background-img {
-        width: 5.75rem;
-        height: 6.5rem;
-        margin: auto;
-        margin-top: 1.75rem;
-        margin-left: 4.5rem;
+        width: 100%;
+        height: 100%;
     }
 
     .display__props {
@@ -222,6 +215,28 @@
     .classic-btn:active {
         outline: var(--color-primary) auto 1.25rem;
     }
+
+    #yossi2 {
+        display: none;
+    }
+
+    .djamillia {
+        height: 40%;
+    }
+
+    .yossi1,
+    .chris,
+    .vika,
+    .shruti,
+    .kathi {
+        height: 100%;
+    }
+
+    .since95 {
+        width: 20vw;
+        height: 20vh;
+    }
+
 
     /*  Project windows  MAX is small*/
     .project-window.max {
@@ -328,7 +343,7 @@
     .textbox.max {
         border: inset 2px;
         background: white;
-        color: var(--color-accent);
+        color: black;
         margin: 0.25rem;
         height: 92%;
         padding: 2px;
@@ -342,7 +357,7 @@
         margin: 0.25;
         height: 93%;
         padding: 2px;
-        color: var(--color-accent);
+        color: black;
         font-size: 1.25rem;
         overflow: auto;
         text-align: center;

@@ -122,9 +122,9 @@ function Settings() {
             }
         } else {
             artistInsta.hidden = true;
+            console.log("nintyess");
+            chosenBackgroundImage.classList.add("since95");
             chosenBackgroundImage.classList.remove(...classes);
-            chosenBackgroundImage.style.width = "20vw";
-            chosenBackgroundImage.style.height = "20vw";
         }
 
         // add image to both backgrounds (pc and real display)
