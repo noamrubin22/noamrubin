@@ -66,24 +66,39 @@
         display: flex;
         flex-direction: column;
         margin: auto;
+        width: 100%;
+        height: 100%;
     }
 
     .monitor__background-img {
         position: absolute;
         left: 50%;
-        top: 46%;
+        top: 43%;
+        width: 100vw;
+        height: 100%;
         transform: translate(-50%, -50%);
         background-size: contain;
+        /* bottom: 0px; */
+        /* background-color: transparent; */
+
     }
+
+    .artwork-yossi {
+        background: url("./images/pasha_01_mobile.png") no-repeat contain;
+    }
+
 
     .link__instagram {
         position: absolute;
-        bottom: 20rem;
+        top: 20%;
+        left: 71%;
+        width: 50%;
         background-color: white;
-        font-size: 3rem;
+        font-size: 2.5rem;
         align-self: center;
         text-decoration: none;
         color: black;
+        transform: rotate(-90deg);
     }
 
     /* Settings window */
@@ -100,17 +115,17 @@
     }
 
     .pc {
-        background: url("./images/desktop.png") no-repeat;
+        background: url("./images/90_smartphone_01.png") no-repeat;
         background-size: contain;
         overflow: auto;
-        width: 20rem;
-        height: 16rem;
-        margin-top: 3.5rem;
-        margin-left: 14rem;
+        /* width: 25rem; */
+        height: 20rem;
+        align-self: center;
+        margin-left: 18rem;
     }
 
     .pc__background-color {
-        width: 14.5rem;
+        width: 4rem;
         height: 10.5rem;
         border: inset 2px;
         margin-left: 1.25rem;
@@ -232,10 +247,9 @@
         bottom: auto !important;
         border: outset 2px;
         background: #c0c0c0;
-        position: relative;
-        z-index: 9999;
+        position: absolute;
+        z-index: 999999;
     }
-
 
     .window__titlebar {
         background: var(--color-secondary);
@@ -358,6 +372,18 @@
         width: 10rem;
     }
 
+    .project-header-spotavibe-img1 {
+        width: 7rem;
+    }
+
+    .project-header-spotavibe-img2 {
+        width: 10rem;
+    }
+
+    .project-header-gerrit-img {
+        width: 7rem;
+    }
+
     .project-description {
         font-size: 2rem;
         margin-bottom: 1.6rem;
@@ -405,7 +431,7 @@
 
     .project__img-gerrit {
         width: 40rem;
-        margin: 10px;
+        margin: 3rem;
         border: 2px solid #fff;
         -moz-box-shadow: 10px 10px 5px #ccc;
         -webkit-box-shadow: 10px 10px 5px #ccc;
@@ -451,7 +477,7 @@
         left: 0 !important;
         bottom: auto !important;
         border: outset 2px;
-        position: relative;
+        position: absolute;
         background: #c0c0c0;
         z-index: 9999999;
     }
@@ -513,7 +539,7 @@
         bottom: auto !important;
         border: outset 2px;
         background: #c0c0c0;
-        position: relative;
+        position: absolute;
         z-index: 9999;
     }
 

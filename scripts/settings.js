@@ -7,6 +7,7 @@ function Settings() {
     const chosenBackgroundImage = document.querySelector(".monitor__background-img");
     const backgroundImagePc = document.getElementsByClassName("pc__background-img")[0];
     const closeSettings = document.getElementsByClassName("settings-exit")[0];
+    const desktopIconsText = document.getElementsByClassName("desktop-icon__text")[1];
     let currentTheme = document.getElementsByTagName("html")[0].className;
     let currentImage;
 
@@ -78,37 +79,32 @@ function Settings() {
                 case "kathi":
                     artistInsta.innerHTML = "artwork by @katharina.michalsky";
                     artistInsta.href = "https://www.instagram.com/katharina.michalsky";
-                    chosenBackgroundImage.style.width = "32rem";
                     break;
                 case "chris":
                     artistInsta.innerHTML = "artwork by @iti.art";
                     artistInsta.href = "https://www.instagram.com/iti.art";
-                    chosenBackgroundImage.style.width = "32rem";
                     break;
                 case "shruti":
                     artistInsta.innerHTML = "artwork by @shrooodi";
                     artistInsta.href = "https://www.instagram.com/shrooodi";
-                    chosenBackgroundImage.style.width = "32rem";
                     break;
                 case "djamillia":
                     artistInsta.innerHTML = "artwork by @manush420";
                     artistInsta.href = "https://www.instagram.com/manush420"
-                    chosenBackgroundImage.style.width = "100vw";
                     break;
                 case "vika":
                     artistInsta.innerHTML = "artwork by @uuuuuvika";
-                    artistInsta.href = "https://www.instagram.com/uuuuuvika"
-                    chosenBackgroundImage.style.width = "32rem";
+                    artistInsta.href = "https://www.instagram.com/uuuuuvika";
                     break;
                 case "yossi":
                     artistInsta.innerHTML = "artwork by @yoshikame_";
-                    artistInsta.href = "https://www.instagram.com/yoshikame_"
-                    chosenBackgroundImage.style.width = "100vw";
+                    artistInsta.href = "https://www.instagram.com/yoshikame_";
                     break;
             }
         } else {
             artistInsta.hidden = true;
-            chosenBackgroundImage.style.width = "450";
+            chosenBackgroundImage.style.width = "20vw";
+            chosenBackgroundImage.style.height = "20vw";
         }
 
         // add image to both backgrounds (pc and real display)

@@ -74,7 +74,7 @@
     left: 50%;
     top: 46%;
     transform: translate(-50%, -50%);
-    width: 56.25rem;
+    width: 100vw;
   }
 
   .link__instagram {
@@ -86,6 +86,10 @@
     align-self: center;
     text-decoration: none;
     color: black;
+  }
+
+  .artwork-yossi {
+    background: url("./images/pasha_01.png") no-repeat contain;
   }
 
   /* Settings window */
