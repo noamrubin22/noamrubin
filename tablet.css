@@ -78,15 +78,11 @@
         height: 100%;
         transform: translate(-50%, -50%);
         background-size: contain;
-        /* bottom: 0px; */
-        /* background-color: transparent; */
-
     }
 
-    .artwork-yossi {
-        background: url("./images/pasha_01_mobile.png") no-repeat contain;
+    #yossi2 {
+        display: none;
     }
-
 
     .link__instagram {
         position: absolute;

@@ -88,9 +88,10 @@
     color: black;
   }
 
-  .artwork-yossi {
+  /* .artwork-yossi {
     background: url("./images/pasha_01.png") no-repeat contain;
-  }
+  } */
+
 
   /* Settings window */
   .settings-window {
@@ -226,6 +227,34 @@
 
   .classic-btn:active {
     outline: var(--color-primary) auto 0.25rem;
+  }
+
+  #yossi1 {
+    display: none;
+  }
+
+  .vika {
+    width: 30vw;
+  }
+
+  .djamillia {
+    width: 100vw;
+  }
+
+  .chris {
+    width: 30vw;
+  }
+
+  .shruti {
+    width: 30vw;
+  }
+
+  .yossi2 {
+    width: 100vw;
+  }
+
+  .kathi {
+    width: 30vw;
   }
 
   /*  Project windows */

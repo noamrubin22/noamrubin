@@ -72,6 +72,7 @@ function Settings() {
     /* sets the selected image as background */
     function previewImage({ selectedImage, title, artist }) {
         const artistInsta = document.querySelector(".link__instagram");
+        const classes = ["vika", "djamillia", "kathi", "chris", "shruti", "yossi1", "yossi2"];
 
         if (artist) {
             artistInsta.hidden = false;
@@ -79,30 +80,49 @@ function Settings() {
                 case "kathi":
                     artistInsta.innerHTML = "artwork by @katharina.michalsky";
                     artistInsta.href = "https://www.instagram.com/katharina.michalsky";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
                 case "chris":
                     artistInsta.innerHTML = "artwork by @iti.art";
                     artistInsta.href = "https://www.instagram.com/iti.art";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
                 case "shruti":
                     artistInsta.innerHTML = "artwork by @shrooodi";
                     artistInsta.href = "https://www.instagram.com/shrooodi";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
                 case "djamillia":
                     artistInsta.innerHTML = "artwork by @manush420";
                     artistInsta.href = "https://www.instagram.com/manush420"
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
                 case "vika":
                     artistInsta.innerHTML = "artwork by @uuuuuvika";
                     artistInsta.href = "https://www.instagram.com/uuuuuvika";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
-                case "yossi":
+                case "yossi1":
                     artistInsta.innerHTML = "artwork by @yoshikame_";
                     artistInsta.href = "https://www.instagram.com/yoshikame_";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
                     break;
+                case "yossi2":
+                    artistInsta.innerHTML = "artwork by @yoshikame_";
+                    artistInsta.href = "https://www.instagram.com/yoshikame_";
+                    chosenBackgroundImage.classList.remove(...classes);
+                    chosenBackgroundImage.classList.add(artist);
+                    break
             }
         } else {
             artistInsta.hidden = true;
+            chosenBackgroundImage.classList.remove(...classes);
             chosenBackgroundImage.style.width = "20vw";
             chosenBackgroundImage.style.height = "20vw";
         }
@@ -110,6 +130,7 @@ function Settings() {
         // add image to both backgrounds (pc and real display)
         chosenBackgroundImage.src = selectedImage;
         chosenBackgroundImage.alt = title;
+        chosenBackgroundImage.id = artist;
         backgroundImagePc.hidden = false;
         backgroundImagePc.src = selectedImage;
         backgroundImagePc.alt = title;
