@@ -96,7 +96,7 @@
     /* Settings window */
     .settings-window {
         width: 50rem;
-        height: 59rem;
+        height: 64rem;
         border: outset 2px;
         background: #c0c0c0;
         position: absolute;
@@ -110,29 +110,37 @@
         background: url("./images/90_smartphone_01.png") no-repeat;
         background-size: contain;
         overflow: auto;
-        height: 20rem;
+        height: 22rem;
         align-self: center;
         margin-left: 18rem;
+        margin-top: 3.5rem;
+        /* box-shadow: 10px 10px 10px 10px; */
     }
 
     .pc__background-color {
-        width: 8rem;
-        height: 14.5rem;
+        width: 9.25rem;
+        height: 17rem;
         border: inset 2px;
-        margin-left: 3.00rem;
+        margin-left: 3rem;
         margin-top: 2.25rem;
         background-color: var(--color-primary);
         border-radius: 5%;
+        display: flex;
+        justify-content: center;
     }
+
 
     .pc__background-img {
         width: 100%;
         height: 100%;
+        margin: 0;
+        border-radius: 5%;
     }
 
     .display__props {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 1.75rem;
         margin-left: 0.75rem;
     }
@@ -161,7 +169,6 @@
         padding: 0;
         font-size: 2.75rem;
         text-align: center;
-        text-decoration: underline;
     }
 
 
@@ -224,19 +231,34 @@
         height: 40%;
     }
 
-    .yossi1,
-    .chris,
     .vika,
+    .yossi1,
     .shruti,
     .kathi {
         height: 100%;
     }
 
-    .since95 {
-        width: 20vw;
-        height: 20vh;
+
+    .chris {
+        width: 120%;
     }
 
+    .since95 {
+        width: 80%;
+        height: 40%;
+    }
+
+
+    .pc__background-img.djamillia,
+    .pc__background-img.since95 {
+        align-self: center;
+    }
+
+    .pc__background-img.chris,
+    .pc__background-img.vika {
+        height: 100%;
+        width: 100%;
+    }
 
     /*  Project windows  MAX is small*/
     .project-window.max {
@@ -252,7 +274,7 @@
 
     .project-window {
         width: 100%;
-        height: 90.5%;
+        height: 90.25%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -483,7 +505,7 @@
 
     .contact-window {
         width: 100%;
-        height: 90.5%;
+        height: 90.25%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -544,7 +566,7 @@
     /* About window maximized */
     .about-window {
         width: 100%;
-        height: 92%;
+        height: 90.25%;
         top: 0 !important;
         left: 0 !important;
         bottom: auto !important;
@@ -985,6 +1007,7 @@
         margin-left: 0.75rem;
         margin-bottom: 0;
         text-align: center;
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     }
 
     .desktop-icon-mariposa__text {
