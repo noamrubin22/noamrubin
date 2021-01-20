@@ -38,10 +38,12 @@
     /*  Monitor */
     body {
         background: var(--color-primary);
-        font-family: "minion-pro", times, Sans-Serif;
+        font-family: verdana, Sans-Serif;
         height: 100%;
         margin: 0;
         padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: grayscale;
     }
 
     .screensaver {

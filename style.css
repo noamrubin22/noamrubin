@@ -39,10 +39,12 @@
   /*  Monitor */
   body {
     background: var(--color-primary);
-    font-family: "minion-pro", times, Sans-Serif;
+    font-family: verdana, Sans-Serif;
     height: 100%;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
   }
 
   .screensaver {
@@ -95,7 +97,7 @@
 
   /* Settings window */
   .settings-window {
-    width: 26rem;
+    width: 28rem;
     height: 27rem;
     border: outset 2px;
     background: #c0c0c0;
@@ -109,11 +111,11 @@
   .pc {
     width: 13rem;
     height: 11.25rem;
-    margin: auto;
-    margin-top: 2rem;
     background: url("./images/desktop.png") no-repeat;
     overflow: auto;
-    margin-left: 7rem;
+    align-self: center;
+    margin: auto;
+    margin-top: 2rem;
   }
 
   .pc__background-color {
@@ -142,8 +144,9 @@
     margin-top: 1rem;
   }
 
-  .display__props-themes-options {
-    width: 8.75rem;
+  .display__props-themes-options, 
+  .display__props-background-options  {
+    width: 10.5rem;
     height: 5rem;
     border: inset;
     background: white;
@@ -156,34 +159,15 @@
   .display__props-options {
     padding: 0;
     margin: 0;
-    align-self: center;
   }
 
-  .display__props-themes>p {
+  .display__props-themes>p, .display__props-background>p {
     color: black;
     margin: 0;
-    margin-left: 3.25rem;
     padding: 0;
+    text-align: center;
   }
-
-  .display__props-background>p {
-    color: black;
-    margin: 0;
-    margin-left: 2.5rem;
-    padding: 0;
-  }
-
-  .display__props-background-options {
-    width: 10rem;
-    height: 5rem;
-    border: inset;
-    background: white;
-    margin: 0.25rem;
-    color: black;
-    overflow: auto;
-    white-space: nowrap;
-  }
-
+ 
   .display__props-background-image {
     padding: 0;
     padding-left: 0.25rem;
@@ -295,7 +279,7 @@
     bottom: auto !important;
     border: outset 2px;
     background: #c0c0c0;
-    position: relative;
+    position: absolute;
     z-index: 9999;
   }
 
@@ -320,8 +304,8 @@
     height: 60%;
     display: block;
     float: right;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
   }
 
   .button-minimize,
@@ -340,7 +324,7 @@
   .icon-exit {
     position: absolute;
     top: 0;
-    right: 0.35rem;
+    right: 0.25rem;
   }
 
   .icon-maximize {
@@ -380,7 +364,7 @@
     margin: 0.25rem;
     height: 90%;
     padding: 2px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     overflow: auto;
     text-align: center;
   }
@@ -407,12 +391,12 @@
   }
 
   #project-title {
-    font-size: 5rem;
+    font-size: 4.25rem;
     margin: 0;
   }
 
   .project-description {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 1.6rem;
   }
 
@@ -439,6 +423,7 @@
     -webkit-box-shadow: 10px 10px 5px #ccc;
     box-shadow: 10px 10px 5px #ccc;
     margin: 1.4rem;
+    border-radius: 2%;
   }
 
   .project__info-tech {
@@ -716,7 +701,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     background: #c3c6cd;
     border-top: 3px solid #deebf3;
     display: -webkit-box;
@@ -729,8 +714,8 @@
   }
 
   .start__button {
-    width: 7%;
-    height: 72%;
+    width: 8%;
+    height: 78%;
     background: #c3c6cd;
     border-top: 2px solid #deebf3;
     border-left: 2px solid #deebf3;
@@ -757,9 +742,11 @@
   }
 
   .start__logo {
-    width: 2.25rem;
-    height: 1.25rem;
+    width: 3.25rem;
+    height: 2.5rem;
     position: relative;
+    margin-top: 0.75rem;
+    background: transparent;
   }
 
   .start__logo::after {
@@ -773,18 +760,17 @@
     right: 0;
     position: absolute;
     background-repeat: no-repeat;
-    width: 2.25rem;
-    height: 1.25rem;
+    width: 100%;
+    height: 100%;
   }
 
   .start__text {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0px;
+    font-weight: 600;
   }
 
   .start__time {
-    width: 6rem;
+    width: 6.5rem;
     height: 72%;
     background: #c3c6cd;
     border-top: 2px solid #85888f;
@@ -812,21 +798,21 @@
     border-left: 2px solid #deebf3;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    width: 13%;
+    width: 15%;
     display: none;
     position: absolute;
-    bottom: 3.25rem;
+    bottom: 3.5rem;
     z-index: 99999;
   }
 
   .start__menu-main-side {
     background: #85888f;
-    width: 15%;
+    width: 11%;
   }
 
   .start__menu-main-side-text {
     position: relative;
-    margin-top: 13rem;
+    margin-top: 5rem;
   }
 
   .start__menu-main-side-text-windows {
@@ -835,7 +821,6 @@
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
     font-size: 1.75rem;
-    margin-bottom: 0px;
     margin-left: 0.25rem;
   }
 
@@ -843,7 +828,7 @@
     color: white;
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
-    margin-bottom: 5.5rem;
+    margin-bottom: 7rem;
     font-size: 1.5rem;
     margin-left: 0.25rem;
   }
@@ -854,17 +839,13 @@
   }
 
   .start__menu-main-items .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    width: 3rem;
+    height: 3rem;
     margin: 0.75rem;
   }
 
   .start__menu-main-items-item {
-    font-size: 1.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.5rem;
+    font-size: 1rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -874,8 +855,19 @@
     align-items: center;
   }
 
-  .start__menu-main-items-item-img-projects {
-    background: url(https://i.ya-webdesign.com/images/windows-95-icons-png-7.png);
+
+  .programs-img.icon,  .settings-img.icon, .about-img.icon, .contact-img.icon, .shutdown-img.icon{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+
+  .start__menu-main-items-item-img-projects,
+  .start__menu-main-items-item-img-settings, 
+  .start__menu-main-items-item-img-about, 
+  .start__menu-main-items-item-img-contact, 
+  .start__menu-main-items-item-img-shutdown {
     width: 2.8rem;
     height: 2.8rem;
     mix-blend-mode: multiply;
@@ -884,41 +876,15 @@
     bottom: 0;
     right: 0;
     background-size: contain;
-    margin: 0.75rem;
-  }
-
-  .start__menu-main-items-item-img-settings {
-    background: url("./images/settings.png");
-    width: 2.75rem;
-    height: 2.75rem;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-size: contain;
-    margin: 0.75rem;
-  }
-
-  .start__menu-main-items-item-img-shutdown {
-    background: url("./images/shutdown.png") no-repeat;
-    width: 2.75rem;
-    height: 2.5rem;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-size: contain;
-    margin: 0.75rem;
+    margin: 0.5rem;
   }
 
   .start__menu-main-items-item-arrowright {
     width: 0;
     height: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid black;
     margin-left: auto;
     margin-right: 0.5rem;
   }
@@ -959,7 +925,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 11.75rem;
+    width: 10rem;
     left: 100%;
     padding: 0;
     display: none;
@@ -969,6 +935,7 @@
   .start__menu-sub .icon {
     width: 1.5rem;
     height: 1.5rem;
+    margin: 0.5rem;
   }
 
   .start__menu-sub-items-item {
@@ -978,7 +945,6 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 4px 5px 6px 4px;
   }
 
   .start__menu-sub-items-item:hover {
@@ -1007,7 +973,7 @@
   }
 
   .sub__projects {
-    bottom: 52%;
+    bottom: 65%;
   }
 
   .desktop-icon {
@@ -1108,7 +1074,7 @@
 
   .task {
     top: 1px;
-    width: 10rem;
+    width: 12.5rem;
     bottom: 1px;
     border: outset 2px;
     font-weight: 400;
@@ -1175,6 +1141,7 @@
   .tasks__social {
     display: flex;
     flex-direction: row;
+    align-self: center;
   }
 
   .tasks__sidebar {
