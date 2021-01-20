@@ -144,8 +144,8 @@
     margin-top: 1rem;
   }
 
-  .display__props-themes-options, 
-  .display__props-background-options  {
+  .display__props-themes-options,
+  .display__props-background-options {
     width: 10.5rem;
     height: 5rem;
     border: inset;
@@ -161,13 +161,14 @@
     margin: 0;
   }
 
-  .display__props-themes>p, .display__props-background>p {
+  .display__props-themes>p,
+  .display__props-background>p {
     color: black;
     margin: 0;
     padding: 0;
     text-align: center;
   }
- 
+
   .display__props-background-image {
     padding: 0;
     padding-left: 0.25rem;
@@ -273,7 +274,7 @@
 
   .project-window.max {
     width: 100%;
-    height: 94.5%;
+    height: 93.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -468,7 +469,7 @@
 
   /* Contact window */
   .contact-window {
-    width: 58rem;
+    width: 70rem;
     height: 36rem;
     border: outset 2px;
     position: absolute;
@@ -478,7 +479,7 @@
 
   .contact-window.max {
     width: 100%;
-    height: 94.5%;
+    height: 93.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -537,7 +538,7 @@
   /* About window maximized */
   .about-window.max {
     width: 100%;
-    height: 94.5%;
+    height: 93.5%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -812,7 +813,7 @@
 
   .start__menu-main-side-text {
     position: relative;
-    margin-top: 5rem;
+    top: 5.75rem;
   }
 
   .start__menu-main-side-text-windows {
@@ -856,7 +857,11 @@
   }
 
 
-  .programs-img.icon,  .settings-img.icon, .about-img.icon, .contact-img.icon, .shutdown-img.icon{
+  .programs-img.icon,
+  .settings-img.icon,
+  .about-img.icon,
+  .contact-img.icon,
+  .shutdown-img.icon {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -864,12 +869,12 @@
 
 
   .start__menu-main-items-item-img-projects,
-  .start__menu-main-items-item-img-settings, 
-  .start__menu-main-items-item-img-about, 
-  .start__menu-main-items-item-img-contact, 
+  .start__menu-main-items-item-img-settings,
+  .start__menu-main-items-item-img-about,
+  .start__menu-main-items-item-img-contact,
   .start__menu-main-items-item-img-shutdown {
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 2.5rem;
+    height: 2.5rem;
     mix-blend-mode: multiply;
     top: 0;
     left: 0;
