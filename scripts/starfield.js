@@ -85,7 +85,7 @@ function starField() {
     c.textAlign = "center";
     c.fillStyle = "purple";
     c.fillText(`Do you think I could fit in your team?`, w / 2, h / 9);
-    c.fillText(`I am currently looking for a company where I can grow as a developer so I can reach my dreams.`, w / 2, h / 2.2, w);
+    c.fillText(`I am currently looking for a company where I can grow as a developer so I can envision my dreams.`, w / 2, h / 2.2, w);
     // c.fillText(`Or, do you want to collaborate?`, w / 2, h / 6);
     c.fillText(
       `I believe evolution is about cooperation instead of competition.`,
