@@ -1,6 +1,4 @@
 window.onload = function () {
-
-  // settings function
   Settings();
   dragMobile();
 
@@ -40,9 +38,9 @@ window.onload = function () {
   });
 
   // hide screensaver on touch move
-  // screenSaver.addEventListener("touchmove", function () {
-  //   screenSaver.hidden = true;
-  // });
+  screenSaver.addEventListener("touchmove", function () {
+    screenSaver.hidden = true;
+  });
 
   // show screensaver on when "shutting down" pc
   shutDown.addEventListener("click", function () {
