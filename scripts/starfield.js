@@ -84,15 +84,13 @@ function starField() {
     c.font = "24px Sans-Serif";
     c.textAlign = "center";
     c.fillStyle = "purple";
-    c.fillText(`Do you think I could fit in your team?`, w / 2, h / 9);
-    c.fillText(`I am currently looking for a company where I can grow as a developer so I can envision my dreams.`, w / 2, h / 2.2, w);
-    // c.fillText(`Or, do you want to collaborate?`, w / 2, h / 6);
+    c.fillText(`Currently available for jobs and projects.`, w / 2, h / 2.6, w);
     c.fillText(
       `I believe evolution is about cooperation instead of competition.`,
       w / 2,
-      h / 1.2
+      h / 2.2
     );
-    c.fillText(`Also, feel free to get in touch with me if you want to collaborate!`, w / 2, h / 1.3);
+    c.fillText(`Feel free to get in touch`, w / 2, h / 1.9);
 
     let img = new Image();
     img.addEventListener("load", function () { });

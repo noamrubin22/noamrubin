@@ -269,7 +269,7 @@
 
   .project-window.max {
     width: 100%;
-    height: 93.5%;
+    height: 92%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -387,7 +387,7 @@
   }
 
   #project-title {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0;
   }
 
@@ -433,15 +433,14 @@
   }
 
   .project__img-gerrit {
-    width: 16.5rem;
-    margin: 1.5rem;
-    border: 2px solid #fff;
-    -moz-box-shadow: 10px 10px 5px #ccc;
-    -webkit-box-shadow: 10px 10px 5px #ccc;
-    box-shadow: 10px 10px 5px #ccc;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    border-radius: 25px;
+    height: 35rem;
+    margin: 2rem;
+  }
+
+  .project__img-gerrit>img {
+    width: auto;
+    height: 100%;
+    margin: 0rem;
   }
 
   .project__imgs {
@@ -473,7 +472,7 @@
 
   .contact-window.max {
     width: 100%;
-    height: 93.5%;
+    height: 92%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -532,7 +531,7 @@
   /* About window maximized */
   .about-window.max {
     width: 100%;
-    height: 93.5%;
+    height: 92%;
     top: 0 !important;
     left: 0 !important;
     bottom: auto !important;
@@ -568,7 +567,7 @@
   /* other project windows */
   .mariposa-project.max {
     width: 100%;
-    height: 94.5%;
+    height: 92%;
     font-size: 3rem;
     top: 0 !important;
     left: 0 !important;
@@ -599,14 +598,6 @@
 
   .project-header-gerrit-img {
     width: 3.5rem;
-  }
-
-  .gerrit-img2 {
-    height: 27.5rem;
-  }
-
-  .project-window.max>.content>.textbox.max>.project__content>.project__img-wrapper>.gerrit-img2 {
-    height: 35.5rem;
   }
 
   .project-window>.content>.textbox.max>.project-header,
@@ -663,18 +654,15 @@
   .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper {
     width: calc(100% / 3 * 2);
     position: absolute;
-    right: 0.5rem;
+    left: 46%;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+
   }
 
   .gerrit-window.max>.content>.textbox.max>.project-header>.project__links-gerrit {
     margin: 0;
-  }
-
-  .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper>img {
-    width: 25%;
-    margin: 2rem;
   }
 
   .project-window.max>.content>.textbox.max>.project__links-gerrit,
@@ -802,7 +790,7 @@
 
   .start__menu-main-side-text {
     position: relative;
-    top: 5.75rem;
+    top: 4.5rem;
   }
 
   .start__menu-main-side-text-windows {
@@ -819,7 +807,7 @@
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
     margin-bottom: 7rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-left: 0.25rem;
   }
 
