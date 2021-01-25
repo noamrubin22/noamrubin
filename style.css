@@ -103,12 +103,20 @@
     box-shadow: 3px 3px;
   }
 
+
+  .settings-window>.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
   .pc {
     width: 13rem;
     height: 11.25rem;
     background: url("./images/desktop.png") no-repeat;
     overflow: auto;
-    align-self: center;
     margin: auto;
     margin-top: 2rem;
   }
