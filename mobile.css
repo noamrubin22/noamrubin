@@ -108,26 +108,37 @@
         box-shadow: 0.25rem 0.25rem;
     }
 
+    .settings-window>.content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .pc {
-        background: url("./images/90_smartphone_01.png") no-repeat;
+        background: url("./images/90_smartphone_01.png") no-repeat center;
         background-size: contain;
         overflow: auto;
         height: 22rem;
-        align-self: center;
-        margin-left: 18rem;
-        margin-top: 3.5rem;
+        margin: auto;
+        width: 20rem;
+        height: 22rem;
+        margin-top: 2rem;
     }
 
     .pc__background-color {
-        width: 9.25rem;
-        height: 17rem;
+        width: 47%;
+        height: 72%;
         border: inset 2px;
-        margin-left: 3rem;
+        margin-left: 5.25rem;
         margin-top: 2.25rem;
         background-color: var(--color-primary);
         border-radius: 5%;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        align-content: center;
     }
 
 
@@ -136,6 +147,8 @@
         height: 100%;
         margin: 0;
         border-radius: 5%;
+        align-self: center;
+        z-index: 1;
     }
 
     .display__props {
