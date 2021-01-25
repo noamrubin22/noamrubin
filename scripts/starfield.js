@@ -84,13 +84,12 @@ function starField() {
     c.font = "24px Sans-Serif";
     c.textAlign = "center";
     c.fillStyle = "purple";
-    c.fillText(`Currently available for jobs and projects.`, w / 2, h / 2.6, w);
-    c.fillText(
-      `I believe evolution is about cooperation instead of competition.`,
+    c.fillText(`Currently looking for new opportunities`, w / 2, h / 2.6, w);
+    c.fillText(`Feel free to get in touch `,
       w / 2,
       h / 2.2
     );
-    c.fillText(`Feel free to get in touch`, w / 2, h / 1.9);
+    c.fillText(`I believe evolution is about cooperation instead of competition. `, w / 2, h / 1.2);
 
     let img = new Image();
     img.addEventListener("load", function () { });
