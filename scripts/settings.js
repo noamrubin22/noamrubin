@@ -1,5 +1,4 @@
 function Settings() {
-
     class MySettings {
         constructor() {
             this.wallpapers = [
@@ -85,37 +84,10 @@ function Settings() {
                 this.previewWallpaper(this.loadSettings("wallpapers"));
                 this.previewTheme(this.loadSettings("themes"));
             }
-            // background imageListeners
-            const wallpaperList = document.getElementsByClassName("display__props-background-image");
-            for (let i = 0; i < wallpaperList.length; i++) {
-                wallpaperList[i].onclick = () => {
-                    let selected = wallpaperList[i];
-                    // change styling according to selection in themelist
-                    let activeWallpaper = document.querySelector(".display__props-background-image.active");
-                    if (activeWallpaper) {
-                        activeWallpaper.classList.remove("active");
-                    }
-                    selected.classList.add("active");
-                    this.previewWallpaper(i);
-                }
-            }
-            // theme list listeners 
-            const themeList = document.getElementsByClassName("theme");
-            for (let i = 0; i < themeList.length; i++) {
-                themeList[i].onclick = () => {
-                    let selected = themeList[i];
 
-                    const activeTheme = document.querySelector(".theme.active");
-                    if (activeTheme) {
-                        activeTheme.classList.remove("active");
-                    }
-                    selected.classList.add("active");
-                    let selectedTheme = themeList[i].innerHTML.toLowerCase().split(" ").join("");
-                    this.previewTheme(i);
-                }
-            }
+            this.highlightSelectedItem("theme");
+            this.highlightSelectedItem("display__props-background-image");
 
-            // buttons
             const okButton = document.querySelector("[data-ok]");
             const cancelButton = document.querySelector("[data-cancel]");
 
@@ -137,11 +109,31 @@ function Settings() {
             this.previewTheme(this.loadSettings("themes"));
         }
 
+        highlightSelectedItem(item) {
+            const itemList = document.getElementsByClassName(item);
+
+            for (let i = 0; i < itemList.length; i++) {
+                itemList[i].onclick = () => {
+                    let selected = itemList[i];
+                    const activeItem = document.querySelector("." + item + ".active");
+                    if (activeItem) {
+                        console.log(activeItem);
+                        activeItem.classList.remove("active");
+                    }
+                    selected.classList.add("active");
+                    if (item === "theme") {
+                        this.previewTheme(i);
+                    } else {
+                        this.previewWallpaper(i)
+                    }
+                }
+            }
+        }
+
         previewWallpaper(wallpaperIndex) {
             const wallpaper = this.wallpapers[wallpaperIndex];
-            const chosenWallpaper = document.querySelector(".monitor__background-img");
-            const wallpaperPc = document.getElementsByClassName("pc__background-img")[0];
-            const removeClasses = this.wallpapers.map((t) => t.artist);
+            const monitorWallpaper = document.querySelector(".monitor__background-img");
+            const settingsMonitorWallpaper = document.getElementsByClassName("pc__background-img")[0];
             const artistInsta = document.querySelector(".link__instagram");
 
             artistInsta.innerHTML = wallpaper.artistText;
@@ -153,15 +145,18 @@ function Settings() {
                 artistInsta.hidden = false;
             }
 
-            chosenWallpaper.classList.remove(...removeClasses);
-            chosenWallpaper.classList.add(wallpaper.artist);
-            chosenWallpaper.src = wallpaper.url;
-            wallpaperPc.hidden = false;
-            wallpaperPc.classList.remove(...removeClasses);
-            wallpaperPc.classList.add(wallpaper.artist);
-            wallpaperPc.src = wallpaper.url;
+            this.addWallpaper(monitorWallpaper, wallpaper);
+            this.addWallpaper(settingsMonitorWallpaper, wallpaper);
 
+            settingsMonitorWallpaper.hidden = false;
             this.nextWallpaperValue = wallpaperIndex;
+        }
+
+        addWallpaper(location, wallpaper) {
+            const removeClasses = this.wallpapers.map((t) => t.artist);
+            location.classList.remove(...removeClasses);
+            location.classList.add(wallpaper.artist);
+            location.src = wallpaper.url;
         }
 
         previewTheme(themeIndex) {
@@ -204,15 +199,15 @@ function Settings() {
                 return Boolean(storedImage) ? wallpaperIndex : ninteesKid;
             } else {
                 const storedTheme = localStorage.getItem("theme");
-                let index;
+                let themeIndex;
                 if (storedTheme) {
                     this.themes.filter((t, i) => {
                         if (t === storedTheme) {
-                            index = i;
+                            themeIndex = i;
                         }
                     })
                 }
-                return Boolean(storedTheme) ? index : purpleLady;
+                return Boolean(storedTheme) ? themeIndex : purpleLady;
             }
         }
     }
