@@ -1,6 +1,4 @@
 function dragMobile() {
-    /* DRAGGABLE */
-    // Make the desktop icons draggable
     const desktopIcons = document.getElementsByClassName("desktop-icon");
     for (let i = 0; i < desktopIcons.length; i++) {
         dragElement(desktopIcons[i]);

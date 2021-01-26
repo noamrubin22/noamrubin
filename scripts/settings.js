@@ -1,378 +1,220 @@
 function Settings() {
-    // global variables
-    const clickSettingsMenu = document.querySelector(".settings");
-    const themes = document.getElementsByClassName("theme");
-    const settingsWindow = document.getElementsByClassName("settings-window ")[0];
-    const images = document.getElementsByClassName("display__props-background-image");
-    const chosenBackgroundImage = document.querySelector(".monitor__background-img");
-    const backgroundImagePc = document.getElementsByClassName("pc__background-img")[0];
-    const closeSettings = document.getElementsByClassName("settings-exit")[0];
-    const desktopIconsText = document.getElementsByClassName("desktop-icon__text")[1];
-    let currentTheme = document.getElementsByTagName("html")[0].className;
-    let currentImage;
-    let selectedImage;
 
-    console.log(images);
-    console.log(document.getElementById("djamillia"));
-    /* open settings when clicked on menu */
-    clickSettingsMenu.onclick = () => {
-        settingsWindow.hidden = false;
-    }
-
-    /* close settings when clicked on x*/
-    closeSettings.onclick = () => {
-        settingsWindow.hidden = true;
-        previewTheme(getCurrentTheme());
-        previewImage(getCurrentImage());
-        settingsWindow.hidden = true;
-    };
-
-    chooseTheme();
-    previewTheme(getCurrentTheme());
-    chooseImage();
-    getCurrentImage();
-    previewImage(getCurrentImage());
-
-    /* set a given theme/color-scheme */
-    function previewTheme(themeName) {
-        document.documentElement.className = themeName;
-    }
-
-    function storeTheme(themeName) {
-        if (!themeName) {
-            return
-        }
-        localStorage.setItem('theme', themeName);
-    }
-
-    function getCurrentTheme() {
-        return localStorage.getItem('theme') || "theme-purplelady";
-    }
-
-    /* changes chosen theme */
-    function chooseTheme() {
-
-        for (let i = 0; i < themes.length; i++) {
-            themes[i].onclick = () => {
-                selected = themes[i];
-                // change styling according to selection in themelist
-                let activeTheme = document.querySelector(".theme.active");
-
-                if (activeTheme) {
-                    activeTheme.classList.remove("active");
+    class MySettings {
+        constructor() {
+            this.wallpapers = [
+                {
+                    artist: "since95",
+                    hasInstagram: false,
+                    title: "90iesKid",
+                    url: "./images/90ieskid.png",
+                },
+                {
+                    artist: "kathi",
+                    artistText: "artwork by @katharina.michalsky",
+                    artistInstaLink: "https://www.instagram.com/katharina.michalsky",
+                    hasInstagram: true,
+                    title: "Landscape",
+                    url: "./images/landscape.jpg",
+                },
+                {
+                    artist: "djamillia",
+                    artistText: "artwork by @manush420",
+                    artistInstaLink: "https://www.instagram.com/manush420",
+                    hasInstagram: true,
+                    title: "Ich Gebäre dich",
+                    url: "./images/ichgebäredich.png",
+                },
+                {
+                    artist: "chris",
+                    artistText: "artwork by @iti.art",
+                    artistInstaLink: "https://www.instagram.com/iti.art",
+                    hasInstagram: true,
+                    title: "Inner Floating",
+                    url: "./images/innerfloating.png",
+                },
+                {
+                    artist: "shruti",
+                    artistText: "artwork by @shrooodi",
+                    artistInstaLink: "https://www.instagram.com/shrooodi",
+                    hasInstagram: true,
+                    title: "High_Rise",
+                    url: "./images/shruti.png",
+                },
+                {
+                    artist: "vika",
+                    artistText: "artwork by @uuuuuvika",
+                    artistInstaLink: "https://www.instagram.com/uuuuuvika",
+                    hasInstagram: true,
+                    title: "Peaceful Warrior",
+                    url: "./images/peacefulwarrior.jpg",
+                },
+                {
+                    artist: "yossi1",
+                    artistText: "artwork by @yoshikame_",
+                    artistInstaLink: "https://www.instagram.com/yoshikame_",
+                    hasInstagram: true,
+                    title: "Pasha",
+                    url: "./images/pasha_01_mobile.png",
+                },
+                {
+                    artist: "yossi2",
+                    artistText: "artwork by @yoshikame_",
+                    artistInstaLink: "https://www.instagram.com/yoshikame_",
+                    hasInstagram: true,
+                    title: "Pasha",
+                    url: "./images/pasha_01.png",
                 }
-                selected.classList.add("active");
+            ]
+            this.themes = ["theme-purplelady", "theme-windowsclassic", "theme-oceanview", "theme-eatyourgreens", "theme-burnbabyburn"];
+            this.currentTheme = null;
+            this.currentWallpaper = null;
+            this.nextThemeValue;
+            this.nextWallpaperValue;
 
-                // change to selected color on pc display
-                let selectedTheme = themes[i].innerHTML.toLowerCase().split(" ").join("");
+            const settingsWindow = document.getElementsByClassName("settings-window ")[0];
+            const clickSettingsWindow = document.querySelector(".settings");
+            const closeSettingsWindow = document.getElementsByClassName("settings-exit")[0];
 
-                previewTheme('theme-' + selectedTheme);
-                currentTheme = 'theme-' + selectedTheme;
+            clickSettingsWindow.onclick = () => {
+                settingsWindow.hidden = false;
             }
-        }
 
-    }
-
-    /* sets the selected image as background */
-    function previewImage({ selectedImage, title, artist }) {
-        const artistInsta = document.querySelector(".link__instagram");
-        const classes = ["vika", "djamillia", "kathi", "chris", "shruti", "yossi1", "yossi2", "since95"];
-
-        if (artist) {
-            console.log(artist);
-            artistInsta.hidden = false;
-            switch (artist) {
-                case "kathi":
-                    artistInsta.innerHTML = "artwork by @katharina.michalsky";
-                    artistInsta.href = "https://www.instagram.com/katharina.michalsky";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "chris":
-                    artistInsta.innerHTML = "artwork by @iti.art";
-                    artistInsta.href = "https://www.instagram.com/iti.art";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "shruti":
-                    artistInsta.innerHTML = "artwork by @shrooodi";
-                    artistInsta.href = "https://www.instagram.com/shrooodi";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "djamillia":
-                    artistInsta.innerHTML = "artwork by @manush420";
-                    artistInsta.href = "https://www.instagram.com/manush420"
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "vika":
-                    artistInsta.innerHTML = "artwork by @uuuuuvika";
-                    artistInsta.href = "https://www.instagram.com/uuuuuvika";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "yossi1":
-                    artistInsta.innerHTML = "artwork by @yoshikame_";
-                    artistInsta.href = "https://www.instagram.com/yoshikame_";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break;
-                case "yossi2":
-                    artistInsta.innerHTML = "artwork by @yoshikame_";
-                    artistInsta.href = "https://www.instagram.com/yoshikame_";
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break
-                case "since95":
-                    artistInsta.hidden = true;
-                    chosenBackgroundImage.classList.remove(...classes);
-                    chosenBackgroundImage.classList.add(artist);
-                    backgroundImagePc.classList.remove(...classes);
-                    backgroundImagePc.classList.add(artist);
-                    break
+            closeSettingsWindow.onclick = () => {
+                settingsWindow.hidden = true;
+                this.previewWallpaper(this.loadSettings("wallpapers"));
+                this.previewTheme(this.loadSettings("themes"));
             }
-        } else {
-            console.log("no");
+            // background imageListeners
+            const wallpaperList = document.getElementsByClassName("display__props-background-image");
+            for (let i = 0; i < wallpaperList.length; i++) {
+                wallpaperList[i].onclick = () => {
+                    let selected = wallpaperList[i];
+                    // change styling according to selection in themelist
+                    let activeWallpaper = document.querySelector(".display__props-background-image.active");
+                    if (activeWallpaper) {
+                        activeWallpaper.classList.remove("active");
+                    }
+                    selected.classList.add("active");
+                    this.previewWallpaper(i);
+                }
+            }
+            // theme list listeners 
+            const themeList = document.getElementsByClassName("theme");
+            for (let i = 0; i < themeList.length; i++) {
+                themeList[i].onclick = () => {
+                    let selected = themeList[i];
+
+                    const activeTheme = document.querySelector(".theme.active");
+                    if (activeTheme) {
+                        activeTheme.classList.remove("active");
+                    }
+                    selected.classList.add("active");
+                    let selectedTheme = themeList[i].innerHTML.toLowerCase().split(" ").join("");
+                    this.previewTheme(i);
+                }
+            }
+
+            // buttons
+            const okButton = document.querySelector("[data-ok]");
+            const cancelButton = document.querySelector("[data-cancel]");
+
+            okButton.onclick = () => {
+                okButton.active = true;
+                this.storeSettings(this.nextWallpaperValue, "wallpapers");
+                this.storeSettings(this.nextThemeValue, "themes");
+                settingsWindow.hidden = true;
+            }
+
+            cancelButton.onclick = () => {
+                this.previewWallpaper(this.loadSettings("wallpapers"));
+                this.previewTheme(this.loadSettings("themes"));
+                settingsWindow.hidden = true;
+            }
+
+            // load chosen settings
+            this.previewWallpaper(this.loadSettings("wallpapers"));
+            this.previewTheme(this.loadSettings("themes"));
         }
 
-        // props 
-        // artistText
-        // artistInstaLink
-        // hasInstagram = true or false
+        previewWallpaper(wallpaperIndex) {
+            const wallpaper = this.wallpapers[wallpaperIndex];
+            const chosenWallpaper = document.querySelector(".monitor__background-img");
+            const wallpaperPc = document.getElementsByClassName("pc__background-img")[0];
+            const removeClasses = this.wallpapers.map((t) => t.artist);
+            const artistInsta = document.querySelector(".link__instagram");
 
-        // spefifyArtworkStyling() shuuld 
-        // remove all classnames
-        // add artist name as classname
-        // add text and link
+            artistInsta.innerHTML = wallpaper.artistText;
+            artistInsta.href = wallpaper.artistInstaLink;
 
-        // previewBackground() 
-        // add image to both backgrounds (pc and real display)
-        chosenBackgroundImage.src = selectedImage;
-        chosenBackgroundImage.alt = title;
-        chosenBackgroundImage.id = artist;
-        backgroundImagePc.hidden = false;
-        backgroundImagePc.src = selectedImage;
-        backgroundImagePc.alt = title;
-    }
-
-
-    const kathiProps = {
-        artist: "kathi",
-        artistText: "artwork by @katharina.michalsky",
-        artistInstaLink: "https://www.instagram.com/katharina.michalsky",
-        hasInstagram: true,
-        title: "Landscape",
-    }
-
-    const yossiDesktopProps = {
-        artist: "yossi1",
-        artistText: "artwork by @yoshikame_",
-        artistInstaLink: "https://www.instagram.com/yoshikame_",
-        hasInstagram: true,
-        title: "Pasha",
-    }
-
-    const yossiMobileProps = {
-        artist: "yossi2",
-        artistText: "artwork by @yoshikame_",
-        artistInstaLink: "https://www.instagram.com/yoshikame_",
-        hasInstagram: true,
-        title: "Pasha",
-    }
-
-    const djamilliaProps = {
-        artist: "djamillia",
-        artistText: "artwork by @manush420",
-        artistInstaLink: "https://www.instagram.com/manush420",
-        hasInstagram: true,
-        title: "Ich Gebäre dich",
-    }
-
-    const shrutiProps = {
-        artist: "shruti",
-        artistText: "artwork by @shrooodi",
-        artistInstaLink: "https://www.instagram.com/shrooodi",
-        hasInstagram: true,
-        title: "High_Rise",
-    }
-
-    const chrisProps = {
-        artist: "chris",
-        artistText: "artwork by @iti.art",
-        artistInstaLink: "https://www.instagram.com/iti.art",
-        hasInstagram: true,
-        title: "Inner Floating",
-    }
-
-    const vikaProps = {
-        artist: "vika",
-        artistText: "artwork by @uuuuuvika",
-        artistInstaLink: "https://www.instagram.com/uuuuuvika",
-        hasInstagram: true,
-        title: "Peaceful Warrior",
-    }
-
-    const since95Props = {
-        artist: "since95",
-        hasInstagram: false,
-        title: "90iesKid",
-    }
-
-    class Artwork {
-        constructor(props) {
-            this.props = props;
-            this.specifyStyling();
-            this.previewArtwork();
-        }
-
-        specifyStyling() {
-            const instagramLink = document.querySelector(".link__instagram");
-            const chosenBackgroundImage = document.querySelector(".monitor__background-img");
-            const artists = ["vika", "djamillia", "kathi", "chris", "shruti", "yossi1", "yossi2", "since95"];
-
-            chosenBackgroundImage.classList.remove(...artists);
-            chosenBackgroundImage.classList.add(this.props.artist);
-
-            if (this.props.hasInstagram) {
-                instagramLink.hidden = false;
-                instagramLink.innerHTML = this.props.artistText;
-                instagramLink.href = this.props.artistInstaLink;
+            if (!wallpaper.artistText) {
+                artistInsta.hidden = true;
             } else {
-                instagramLink.hidden = true;
+                artistInsta.hidden = false;
+            }
+
+            chosenWallpaper.classList.remove(...removeClasses);
+            chosenWallpaper.classList.add(wallpaper.artist);
+            chosenWallpaper.src = wallpaper.url;
+            wallpaperPc.hidden = false;
+            wallpaperPc.classList.remove(...removeClasses);
+            wallpaperPc.classList.add(wallpaper.artist);
+            wallpaperPc.src = wallpaper.url;
+
+            this.nextWallpaperValue = wallpaperIndex;
+        }
+
+        previewTheme(themeIndex) {
+            const theme = this.themes[themeIndex];
+            document.documentElement.className = theme;
+            this.nextThemeValue = themeIndex;
+        }
+
+        storeSettings(elementIndex, property) {
+            if (property == "wallpapers") {
+                if (!elementIndex) {
+                    return
+                }
+                this.currentWallpaper = elementIndex;
+                localStorage.setItem("display__props-background-image", JSON.stringify(this.wallpapers[elementIndex]));
+            } else {
+                if (!elementIndex) {
+                    return
+                }
+                this.currentTheme = elementIndex;
+                localStorage.setItem('theme', this.themes[elementIndex]);
             }
         }
 
-        previewArtwork() {
-            const backgroundImagePc = document.getElementsByClassName("pc__background-img")[0];
-            chosenBackgroundImage.src = selectedImage;
-            chosenBackgroundImage.alt = this.title;
-            chosenBackgroundImage.id = this.artist;
-            backgroundImagePc.hidden = false;
-            backgroundImagePc.src = selectedImage;
-            backgroundImagePc.alt = this.title;
-        }
-    }
+        loadSettings(property) {
+            // initiale values
+            const purpleLady = 0;
+            const ninteesKid = 0;
 
-
-    // new Artwork(kathiProps);
-    // new Artwork(djamilliaProps);
-    // new Artwork(yossiDesktopProps);
-    // new Artwork(yossiMobileProps);
-    // new Artwork(shrutiProps);
-    // new Artwork(chrisProps);
-    // new Artwork(since95Props);
-    // new Artwork(vikaProps);
-
-    function getCurrentImage() {
-        const storedImage = localStorage.getItem("display__props-background-image");
-        return Boolean(storedImage) ? JSON.parse(storedImage) : { selectedImage: "../images/90ieskid.png" }
-    }
-
-    function storeImage(image) {
-        if (!image) {
-            return
-        }
-        localStorage.setItem("display__props-background-image", JSON.stringify(image));
-    }
-
-    function chooseImage() {
-        for (let i = 0; i < images.length; i++) {
-            // if image is selected
-            images[i].onclick = () => {
-                selected = images[i];
-                // change styling according to selection in themelist
-                let activeImage = document.querySelector(".display__props-background-image.active");
-                if (activeImage) {
-                    activeImage.classList.remove("active");
+            if (property === "wallpapers") {
+                const storedImage = localStorage.getItem("display__props-background-image");
+                let wallpaperIndex;
+                if (storedImage) {
+                    this.wallpapers.filter((t, i) => {
+                        if (t.artist === JSON.parse(storedImage).artist) {
+                            wallpaperIndex = i;
+                        }
+                    })
                 }
-                selected.classList.add("active");
-
-                let title = images[i].innerHTML;
-                selectedImage = images[i].dataset.url;
-                currentImage = {
-                    title: title,
-                    selectedImage: selectedImage,
-                    artist: images[i].id
+                return Boolean(storedImage) ? wallpaperIndex : ninteesKid;
+            } else {
+                const storedTheme = localStorage.getItem("theme");
+                let index;
+                if (storedTheme) {
+                    this.themes.filter((t, i) => {
+                        if (t === storedTheme) {
+                            index = i;
+                        }
+                    })
                 }
-
-                // change to selected image on pc display
-                previewImage(currentImage);
+                return Boolean(storedTheme) ? index : purpleLady;
             }
         }
     }
-
-    /* Buttons  */
-    const okButton = document.querySelector("[data-ok]");
-    const cancelButton = document.querySelector("[data-cancel]");
-
-    okButton.onclick = () => {
-        okButton.active = true;
-        storeImage(currentImage);
-        // setting.storeCurrentValue(currentImage, "display__props-background-image")
-        storeTheme(currentTheme);
-        settingsWindow.hidden = true;
-    }
-
-    cancelButton.onclick = () => {
-        previewTheme(getCurrentTheme());
-        previewImage(getCurrentImage());
-        settingsWindow.hidden = true;
-    }
+    new MySettings();
 }
-
-// class Setting {
-//     constructor(props) {
-//         this.props = props;
-//         this.storeCurrentValue(nextValue, className);
-//         this.getCurrentValue(className);
-//         // this.setCurrentValue(nextValue);
-//     }
-
-//     storeCurrentValue(nextValue, className) {
-//         if (!nextValue) {
-//             return
-//         }
-//         localStorage.setItem(className, JSON.stringify(nextValue));
-//     }
-
-//     getCurrentValue(className) {
-//         const storedElement = localStorage.getItem(className);
-//         if (className === "theme") {
-//             return Boolean(storedElement) || "theme-purplelady";
-//         } else {
-//             return Boolean(storedElement) ? JSON.parse(storedElement) : { selectedImage: "none" }
-//         }
-//     }
-// }
-
-// const setting = new Setting()
-
-// currentValue = 'some value'
-// tempValue = undefined
-// setCurrentValue(nextValue) {
-//     this.currentValue = nextValue
-// }
-
-
-// setting.setCurrentValue('sadasdjasd')
-
-// {
-//     currentValue: 'some value',
-//         tempValue : undefined
-// }
-

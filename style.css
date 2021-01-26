@@ -103,7 +103,6 @@
     box-shadow: 3px 3px;
   }
 
-
   .settings-window>.content {
     display: flex;
     flex-direction: column;
@@ -240,7 +239,6 @@
     width: 30vw;
     height: 50vh;
   }
-
 
   .pc__background-img.djamillia,
   .pc__background-img.yossi2 {
@@ -467,7 +465,6 @@
     z-index: 9999;
   }
 
-
   /* Contact window */
   .contact-window {
     width: 70rem;
@@ -658,7 +655,6 @@
   }
 
   /* gerrit max */
-
   .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper {
     width: calc(100% / 3 * 2);
     position: absolute;
@@ -841,7 +837,6 @@
     align-items: center;
   }
 
-
   .programs-img.icon,
   .settings-img.icon,
   .about-img.icon,
@@ -851,7 +846,6 @@
     height: 100%;
     margin: 0px;
   }
-
 
   .start__menu-main-items-item-img-projects,
   .start__menu-main-items-item-img-settings,
