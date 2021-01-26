@@ -144,14 +144,14 @@ function Settings() {
                 artistInsta.hidden = false;
             }
 
-            this.addWallpaper(monitorWallpaper, wallpaper);
-            this.addWallpaper(settingsMonitorWallpaper, wallpaper);
+            this.addWallpaperTo(monitorWallpaper, wallpaper);
+            this.addWallpaperTo(settingsMonitorWallpaper, wallpaper);
 
             settingsMonitorWallpaper.hidden = false;
             this.nextWallpaperValue = wallpaperIndex;
         }
 
-        addWallpaper(location, wallpaper) {
+        addWallpaperTo(location, wallpaper) {
             const removeClasses = this.wallpapers.map((t) => t.artist);
             location.classList.remove(...removeClasses);
             location.classList.add(wallpaper.artist);
