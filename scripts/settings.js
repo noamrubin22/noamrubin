@@ -1,5 +1,5 @@
 function Settings() {
-    class MySettings {
+    class Settings {
         constructor() {
             this.wallpapers = [
                 {
@@ -64,7 +64,7 @@ function Settings() {
                     title: "Pasha",
                     url: "./images/pasha_01.png",
                 }
-            ]
+            ];
             this.themes = ["theme-purplelady", "theme-windowsclassic", "theme-oceanview", "theme-eatyourgreens", "theme-burnbabyburn"];
             this.currentTheme = null;
             this.currentWallpaper = null;
@@ -117,14 +117,13 @@ function Settings() {
                     let selected = itemList[i];
                     const activeItem = document.querySelector("." + item + ".active");
                     if (activeItem) {
-                        console.log(activeItem);
                         activeItem.classList.remove("active");
                     }
                     selected.classList.add("active");
                     if (item === "theme") {
                         this.previewTheme(i);
                     } else {
-                        this.previewWallpaper(i)
+                        this.previewWallpaper(i);
                     }
                 }
             }
@@ -182,7 +181,7 @@ function Settings() {
         }
 
         loadSettings(property) {
-            // initiale values
+            // initial values
             const purpleLady = 0;
             const ninteesKid = 0;
 
@@ -211,5 +210,5 @@ function Settings() {
             }
         }
     }
-    new MySettings();
+    new Settings();
 }
