@@ -83,7 +83,7 @@ function starField() {
     clear();
     c.font = "24px Sans-Serif";
     c.textAlign = "center";
-    c.fillStyle = "white";
+    c.fillStyle = "grey";
     c.fillText(`Currently looking for new opportunities`, w / 2, h / 2.6, w);
     c.fillText(`Feel free to get in touch `,
       w / 2,
