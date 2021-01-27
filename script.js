@@ -1,5 +1,5 @@
 window.onload = function () {
-  Settings();
+  new Settings();
   dragMobile();
 
   // set clock
@@ -234,7 +234,6 @@ window.onload = function () {
   new Window(musicProps);
   new Window(mariposaProps);
 
-  /* DRAGGABLE */
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");
   for (let i = 0; i < desktopIcons.length; i++) {

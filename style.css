@@ -767,6 +767,8 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: absolute;
+    right: 0;
   }
 
   .start__time-text {
@@ -1058,7 +1060,7 @@
 
   .task {
     top: 1px;
-    width: 12.5rem;
+    width: 12rem;
     bottom: 1px;
     border: outset 2px;
     font-weight: 400;
