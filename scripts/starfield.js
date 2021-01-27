@@ -83,12 +83,14 @@ function starField() {
     clear();
     c.font = "24px Sans-Serif";
     c.textAlign = "center";
-    c.fillStyle = "purple";
+    c.fillStyle = "white";
     c.fillText(`Currently looking for new opportunities`, w / 2, h / 2.6, w);
     c.fillText(`Feel free to get in touch `,
       w / 2,
       h / 2.2
     );
+    c.font = "20px Sans-Serif";
+    c.fillText(`nrubin222@gmail.com`, w / 2, h / 1.9);
 
     let img = new Image();
     img.addEventListener("load", function () { });

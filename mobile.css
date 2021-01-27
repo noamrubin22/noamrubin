@@ -293,7 +293,7 @@
          border: outset 2px;
          background: #c0c0c0;
          position: absolute;
-         z-index: 999;
+         z-index: 9999;
      }
 
      .window__titlebar {
