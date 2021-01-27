@@ -293,7 +293,7 @@
          border: outset 2px;
          background: #c0c0c0;
          position: absolute;
-         z-index: 9999;
+         z-index: 10;
      }
 
      .window__titlebar {
@@ -695,7 +695,7 @@
      }
 
      .start__button {
-         width: 44%;
+         width: 37%;
          height: 89%;
          background: #c3c6cd;
          border-top: 3px solid #deebf3;

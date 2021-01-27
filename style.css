@@ -270,7 +270,7 @@
     top: 0;
     left: 0;
     background: #c0c0c0;
-    z-index: 9999;
+    z-index: 10;
   }
 
   .project-window.max {
@@ -282,7 +282,7 @@
     border: outset 2px;
     background: #c0c0c0;
     position: absolute;
-    z-index: 9999;
+    z-index: 10;
   }
 
   .window__titlebar {
