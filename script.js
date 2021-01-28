@@ -31,8 +31,6 @@ window.onload = function () {
     }, 180000);
   };
 
-  screenSaver.hidden = true;
-
   // hide screensaver on mouse move
   screenSaver.addEventListener("mousemove", function () {
     screenSaver.hidden = true;
