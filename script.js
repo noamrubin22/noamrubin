@@ -38,11 +38,6 @@ window.onload = function () {
     screenSaver.hidden = true;
   });
 
-  // hide screensaver on touch move
-  screenSaver.addEventListener("touchmove", function () {
-    screenSaver.hidden = true;
-  });
-
   // show screensaver on when "shutting down" pc
   shutDown.addEventListener("click", function () {
     screenSaver.hidden = false;
