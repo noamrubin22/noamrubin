@@ -223,7 +223,14 @@
     display: none;
   }
 
-  .djamillia,
+  #djamillia {
+    display: none;
+  }
+
+  .djamillia {
+    display: none;
+  }
+
   .yossi2 {
     width: 100vw;
   }

@@ -255,6 +255,10 @@
          height: 40%;
      }
 
+     #djamillia {
+         display: none;
+     }
+
      .pc__background-img.djamillia,
      .pc__background-img.since95 {
          align-self: center;
