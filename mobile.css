@@ -1054,16 +1054,6 @@
 
      .task {
          display: none;
-         top: 1px;
-         width: 156px;
-         bottom: 1px;
-         border: outset 2px;
-         font-weight: 400;
-         font-size: 23px;
-         display: flex;
-         align-content: flex-start;
-         align-items: center;
-         flex-direction: column;
      }
 
      .task.active {

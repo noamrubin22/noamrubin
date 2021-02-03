@@ -14,21 +14,35 @@ window.onload = function () {
   const screenSaver = document.querySelector(".screensaver");
   const shutDown = document.querySelector(".shutdown");
 
+  const SCREENSAVER_ACTIVATION_TIME = 1000 * 60 * 3; // ms * s * m
+
+  const screenConfig = {
+    isMobile: false,
+    screenSaverTimeOut: 0
+  };
+
+  const onWindowResize = () => {
+    screenConfig.isMobile = document.body.clientWidth < 1000;
+  }
+
+  onWindowResize();
+
+  window.addEventListener('resize', onWindowResize);
+
   /* SCREENSAVER */
   // show screensaver after no mousemove
-  let timeout;
   document.onmousemove = function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
+    clearTimeout(screenConfig.screenSaverTimeOut);
+    screenConfig.screenSaverTimeOut = setTimeout(function () {
       screenSaver.hidden = false;
-    }, 180000);
+    }, SCREENSAVER_ACTIVATION_TIME);
   };
 
   document.ontouchstart = function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
+    clearTimeout(screenConfig.screenSaverTimeOut);
+    screenConfig.screenSaverTimeOut = setTimeout(function () {
       screenSaver.hidden = false;
-    }, 180000);
+    }, SCREENSAVER_ACTIVATION_TIME);
   };
 
   // hide screensaver on mouse move
@@ -141,7 +155,8 @@ window.onload = function () {
   };
 
   class Window {
-    constructor(props) {
+    constructor(props, windowsList) {
+      this.windowsList = windowsList;
       this.props = props;
       this.isOpen = false;
       this.getWindowButtons();
@@ -205,9 +220,23 @@ window.onload = function () {
     }
 
     toggleWindow() {
+      this.closeOpenWindows();
       this.isOpen = !this.isOpen;
       this.props.windowElement.hidden = !this.isOpen;
       this.task.classList.toggle("active");
+    }
+
+    closeOpenWindows() {
+      if (screenConfig.isMobile && !this.isOpen) {
+        // loop over alle windows
+        windowsList.forEach(window => {
+          // check if window.isOpen
+          if (window.isOpen) {
+            // call window.close()
+            window.toggleWindow();
+          }
+        })
+      }
     }
 
     getWindowButtons() {
@@ -219,13 +248,14 @@ window.onload = function () {
     }
   }
 
+  const windowsList = [];
   // create windows
-  new Window(aboutProps);
-  new Window(contactProps);
-  new Window(gerritProps);
-  new Window(spotavibeProps);
-  new Window(musicProps);
-  new Window(mariposaProps);
+  windowsList.push(new Window(aboutProps, windowsList));
+  windowsList.push(new Window(contactProps, windowsList));
+  windowsList.push(new Window(gerritProps, windowsList));
+  windowsList.push(new Window(spotavibeProps, windowsList));
+  windowsList.push(new Window(musicProps, windowsList));
+  windowsList.push(new Window(mariposaProps, windowsList));
 
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");

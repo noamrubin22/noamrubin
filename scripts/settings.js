@@ -70,6 +70,8 @@ class Settings {
         this.nextThemeValue;
         this.nextWallpaperValue;
         this.createEventHandler();
+        this.highlightSelectedItem("theme");
+        this.highlightSelectedItem("display__props-background-image");
         this.previewWallpaper(this.loadSettings("wallpapers"));
         this.previewTheme(this.loadSettings("themes"));
     }
@@ -103,9 +105,6 @@ class Settings {
             this.previewTheme(this.loadSettings("themes"));
             settingsWindow.hidden = true;
         }
-
-        this.highlightSelectedItem("theme");
-        this.highlightSelectedItem("display__props-background-image");
     }
 
     highlightSelectedItem(item) {
@@ -130,6 +129,7 @@ class Settings {
 
     previewWallpaper(wallpaperIndex) {
         const wallpaper = this.wallpapers[wallpaperIndex];
+        // sla op in constructor en call via this. DOM interactive is duur voor performance
         const monitorWallpaper = document.querySelector("[data-wallpaper-monitor]");
         const settingsMonitorWallpaper = document.querySelector("[data-wallpaper-pc]");
         const artistInsta = document.querySelector("[data-link-insta]");
@@ -186,25 +186,27 @@ class Settings {
 
         if (property === "wallpapers") {
             const storedImage = localStorage.getItem("display__props-background-image");
-            let wallpaperIndex;
-            if (storedImage) {
-                this.wallpapers.filter((t, i) => {
-                    if (t.artist === JSON.parse(storedImage).artist) {
-                        wallpaperIndex = i;
-                    }
-                })
+            if (!storedImage) {
+                return ninteesKid;
             }
-            return Boolean(storedImage) ? wallpaperIndex : ninteesKid;
+            const wallpaperIndex = this.wallpapers.reduce((acc, current, index) => {
+                if (current.artist === JSON.parse(storedImage).artist) {
+                    return index
+                }
+                return acc
+            }, undefined)
+            return Boolean(wallpaperIndex) ? wallpaperIndex : ninteesKid;
         } else {
             const storedTheme = localStorage.getItem("theme");
-            let themeIndex;
-            if (storedTheme) {
-                this.themes.filter((t, i) => {
-                    if (t === storedTheme) {
-                        themeIndex = i;
-                    }
-                })
+            if (!storedTheme) {
+                return purpleLady;
             }
+            const themeIndex = this.themes.reduce((acc, current, index) => {
+                if (current === storedTheme) {
+                    return index
+                }
+                return acc
+            }, undefined)
             return Boolean(storedTheme) ? themeIndex : purpleLady;
         }
     }
