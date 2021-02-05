@@ -1,25 +1,24 @@
 @media only screen and (min-width: 992px) {
-
   /* Themes */
   .theme-purplelady {
     --color-primary: rgb(77, 37, 77);
     --color-secondary: #3f1d44;
     --color-accent: #44193e;
-    --font-color: white
+    --font-color: white;
   }
 
   .theme-oceanview {
     --color-primary: #1c4375;
     --color-secondary: #131352;
     --color-accent: #0a127c;
-    --font-color: white
+    --font-color: white;
   }
 
   .theme-windowsclassic {
     --color-primary: rgb(0, 131, 130);
     --color-secondary: #131352;
     --color-accent: #0a127c;
-    --font-color: white
+    --font-color: white;
   }
 
   .theme-eatyourgreens {
@@ -103,7 +102,7 @@
     box-shadow: 3px 3px;
   }
 
-  .settings-window>.content {
+  .settings-window > .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,8 +162,8 @@
     margin: 0;
   }
 
-  .display__props-themes>p,
-  .display__props-background>p {
+  .display__props-themes > p,
+  .display__props-background > p {
     color: black;
     margin: 0;
     padding: 0;
@@ -283,8 +282,8 @@
   .project-window.max {
     width: 100%;
     height: auto;
-    top: 0;
-    left: 0;
+    top: 0 !important;
+    left: 0 !important;
     bottom: 3.5rem;
     border: outset 2px;
     background: #c0c0c0;
@@ -369,7 +368,6 @@
     border: inset 2px;
     background: white;
     color: black;
-    ;
     margin: 0.25rem;
     height: 90%;
     padding: 2px;
@@ -441,7 +439,7 @@
     padding: 0;
   }
 
-  .project__info-tech>p {
+  .project__info-tech > p {
     margin: 0.3rem;
   }
 
@@ -450,7 +448,7 @@
     margin: 2rem;
   }
 
-  .project__img-gerrit>img {
+  .project__img-gerrit > img {
     width: auto;
     height: 100%;
     margin: 0rem;
@@ -558,21 +556,21 @@
     display: inline-block;
   }
 
-  .textbox.max>.about-text {
+  .textbox.max > .about-text {
     width: 50%;
     margin: 1rem;
   }
 
-  .textbox.max>.about-text>h2 {
+  .textbox.max > .about-text > h2 {
     font-size: 3.25rem;
     margin: 1.3rem;
   }
 
-  .textbox.max>.about-text>p {
+  .textbox.max > .about-text > p {
     font-size: 1rem;
   }
 
-  .textbox.max>.about-text>.about__img-noam {
+  .textbox.max > .about-text > .about__img-noam {
     width: 66%;
   }
 
@@ -598,21 +596,21 @@
     width: 3.5rem;
   }
 
-  .project-window>.content>.textbox.max>.project-header,
-  .project-window>.content>.textbox.max>.project__content {
+  .project-window > .content > .textbox.max > .project-header,
+  .project-window > .content > .textbox.max > .project__content {
     width: calc(100% / 3);
   }
 
-  .gerrit-window.max>.content>.textbox.max>.project-header {
+  .gerrit-window.max > .content > .textbox.max > .project-header {
     margin-top: 3%;
   }
 
-  .gerrit-window.max>.content>.textbox.max>.project-header,
-  .gerrit-window.max>.content>.textbox.max>.project__content {
+  .gerrit-window.max > .content > .textbox.max > .project-header,
+  .gerrit-window.max > .content > .textbox.max > .project__content {
     margin-left: 3%;
   }
 
-  .project-window>.content>.textbox.max>.project__img-wrapper {
+  .project-window > .content > .textbox.max > .project__img-wrapper {
     width: calc(100% / 3 * 2);
     position: absolute;
     right: 0.5rem;
@@ -620,54 +618,87 @@
     transform: translateY(-50%);
   }
 
-  .project-window.max>.content>.textbox.max>.project-header.text,
-  .project-window.max>.content>.textbox.max>.project__content {
+  .project-window.max > .content > .textbox.max > .project-header.text,
+  .project-window.max > .content > .textbox.max > .project__content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   /* remove extra project-links */
-  .project-window>.content>.textbox.max>.project__content>.project__links {
+  .project-window
+    > .content
+    > .textbox.max
+    > .project__content
+    > .project__links {
     display: none;
   }
 
-  .project-window>.content>.textbox.max>.project__content>.project__info.text {
+  .project-window
+    > .content
+    > .textbox.max
+    > .project__content
+    > .project__info.text {
     display: flex;
     flex-direction: column;
   }
 
-  .project-window>.content>.textbox.max>.project__content>.project__info.text>p {
+  .project-window
+    > .content
+    > .textbox.max
+    > .project__content
+    > .project__info.text
+    > p {
     font-size: 1rem;
   }
 
-  .project-window>.content>.textbox.max>.project__content>.project__info.text>.project__info-tech {
+  .project-window
+    > .content
+    > .textbox.max
+    > .project__content
+    > .project__info.text
+    > .project__info-tech {
     align-self: center;
     font-size: 1rem;
     margin: 1rem;
   }
 
   /* gerrit max */
-  .gerrit-window.max>.content>.textbox.max>.project__content>.project__img-wrapper {
+  .gerrit-window.max
+    > .content
+    > .textbox.max
+    > .project__content
+    > .project__img-wrapper {
     width: calc(100% / 3 * 2);
     position: absolute;
     left: 46%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
-
   }
 
-  .gerrit-window.max>.content>.textbox.max>.project-header>.project__links-gerrit {
+  .gerrit-window.max
+    > .content
+    > .textbox.max
+    > .project-header
+    > .project__links-gerrit {
     margin: 0;
   }
 
-  .project-window.max>.content>.textbox.max>.project__links-gerrit,
-  .project-window.max>.content>.textbox.max>.project-header>.project-header-img2 {
+  .project-window.max > .content > .textbox.max > .project__links-gerrit,
+  .project-window.max
+    > .content
+    > .textbox.max
+    > .project-header
+    > .project-header-img2 {
     display: none;
   }
 
-  .gerrit-window.max>.content>.textbox.max>.project-header>.project-header-img {
+  .gerrit-window.max
+    > .content
+    > .textbox.max
+    > .project-header
+    > .project-header-img {
     margin-top: 0rem;
   }
 
@@ -726,7 +757,8 @@
 
   .start__logo::after {
     content: "";
-    background: url(https://banner2.kisspng.com/20180821/hrt/kisspng-windows-95-windows-98-microsoft-windows-transparen-windows-95-telegram-stickers-directory-5b7c3cffc178a8.4526616315348687357925.jpg) transparent;
+    background: url(https://banner2.kisspng.com/20180821/hrt/kisspng-windows-95-windows-98-microsoft-windows-transparen-windows-95-telegram-stickers-directory-5b7c3cffc178a8.4526616315348687357925.jpg)
+      transparent;
     background-size: contain;
     mix-blend-mode: multiply;
     top: 0;
