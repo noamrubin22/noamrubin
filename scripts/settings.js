@@ -20,8 +20,8 @@ class Settings {
                 artistText: "artwork by @manush420",
                 artistInstaLink: "https://www.instagram.com/manush420",
                 hasInstagram: true,
-                title: "Ich Gebäre dich",
-                url: "./images/ichgebäredich.png",
+                title: "The Garden",
+                url: "./images/thegarden.jpg",
             },
             {
                 artist: "chris",
