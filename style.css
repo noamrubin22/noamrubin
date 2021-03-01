@@ -571,6 +571,11 @@
     margin-top: 2.75rem;
   }
 
+  .project-header-bingo {
+    width: 2.3rem;
+    margin-top: 4rem;
+  }
+
   .project-header-img-mariposa {
     margin-top: 1.5rem;
   }
@@ -1038,6 +1043,11 @@
     left: 8.5rem;
   }
 
+  .bingo {
+    top: 9.8rem;
+    left: 8.5rem;
+  }
+
   /*  Menubar */
   .underline {
     text-decoration: underline;
@@ -1116,6 +1126,7 @@
     background-position: center center;
   }
 
+
   .active {
     border: inset 2px;
   }
@@ -1130,6 +1141,11 @@
     width: 4.5rem;
   }
 
+  .bingo-img {
+    display: inline-block;
+    width: 4rem;
+  }
+  
   .musicviz-img {
     display: inline-block;
     width: 3.5rem;
@@ -1188,7 +1204,14 @@
     width: 2rem;
     height: 2rem;
     background-image: url("./images//Muxisvi_01_small.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
+  .task__icon-bingo {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./images//Bingo_icon_01_mo.png");
     background-repeat: no-repeat;
     background-position: center center;
   }

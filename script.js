@@ -14,7 +14,7 @@ window.onload = function () {
   const screenSaver = document.querySelector(".screensaver");
   const shutDown = document.querySelector(".shutdown");
 
-  const SCREENSAVER_ACTIVATION_TIME = 1000 * 60 * 3; // ms * s * m
+  const SCREENSAVER_ACTIVATION_TIME = 1000 * 60 * 1; // ms * s * m
 
   const screenConfig = {
     isMobile: false,
@@ -93,6 +93,7 @@ window.onload = function () {
   const clickGerritMenu = document.querySelector(".sub__projects-gerrit");
   const clickMusicMenu = document.querySelector(".sub__projects-musicvis");
   const clickSpotavibeMenu = document.querySelector(".sub__projects-spotavibe");
+  const clickBingoMenu = document.querySelector(".sub__projects-bingo");
 
   // windows
   const gerritWindow = document.querySelector(".gerrit-window");
@@ -101,12 +102,14 @@ window.onload = function () {
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
+  const bingoWindow = document.querySelector(".bingo-window");
 
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
   const gerritDesktop = document.querySelector(".gerrit");
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
+  const bingoDesktop = document.querySelector(".bingo");
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -152,6 +155,14 @@ window.onload = function () {
     windowElement: mariposaWindow,
     iconClassName: "task__icon-mariposa",
     taskText: "mariposa.txt",
+  };
+
+  const bingoProps = {
+    desktopButton: bingoDesktop,
+    menuButton: clickBingoMenu,
+    windowElement: bingoWindow,
+    iconClassName: "task__icon-bingo",
+    taskText: "bingo.txt",
   };
 
   class Window {
@@ -256,6 +267,7 @@ window.onload = function () {
   windowsList.push(new Window(spotavibeProps, windowsList));
   windowsList.push(new Window(musicProps, windowsList));
   windowsList.push(new Window(mariposaProps, windowsList));
+  windowsList.push(new Window(bingoProps, windowsList));
 
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");
