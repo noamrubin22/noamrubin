@@ -18,16 +18,16 @@ window.onload = function () {
 
   const screenConfig = {
     isMobile: false,
-    screenSaverTimeOut: 0
+    screenSaverTimeOut: 0,
   };
 
   const onWindowResize = () => {
     screenConfig.isMobile = document.body.clientWidth < 1000;
-  }
+  };
 
   onWindowResize();
 
-  window.addEventListener('resize', onWindowResize);
+  window.addEventListener("resize", onWindowResize);
 
   /* SCREENSAVER */
   // show screensaver after no mousemove
@@ -59,12 +59,16 @@ window.onload = function () {
   // start menu appears on click, dissapears on click somewhere else
   function closeStartMenu(e) {
     const { classList } = e.target;
-    const shouldNotClose = classList.contains('start__button') || classList.contains('start__text') || classList.contains('start__logo') || classList.contains('projects');
+    const shouldNotClose =
+      classList.contains("start__button") ||
+      classList.contains("start__text") ||
+      classList.contains("start__logo") ||
+      classList.contains("projects");
     if (shouldNotClose) {
-      return
+      return;
     }
     startMenu.classList.remove("menu-open");
-  };
+  }
 
   body.addEventListener("click", closeStartMenu);
 
@@ -94,6 +98,9 @@ window.onload = function () {
   const clickMusicMenu = document.querySelector(".sub__projects-musicvis");
   const clickSpotavibeMenu = document.querySelector(".sub__projects-spotavibe");
   const clickBingoMenu = document.querySelector(".sub__projects-bingo");
+  const clickTibetanRobotMenu = document.querySelector(
+    ".sub__projects-tibetan-robot"
+  );
 
   // windows
   const gerritWindow = document.querySelector(".gerrit-window");
@@ -103,6 +110,7 @@ window.onload = function () {
   const contactWindow = document.querySelector(".contact-window");
   const aboutWindow = document.querySelector(".about-window");
   const bingoWindow = document.querySelector(".bingo-window");
+  const tibetanRobotWindow = document.querySelector(".tibetan-robot-window");
 
   // desktop items
   const spotavibeDesktop = document.querySelector(".spotavibe");
@@ -110,6 +118,7 @@ window.onload = function () {
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
   const bingoDesktop = document.querySelector(".bingo");
+  const tibetanRobotDesktop = document.querySelector(".tibetan-robot");
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -163,6 +172,14 @@ window.onload = function () {
     windowElement: bingoWindow,
     iconClassName: "task__icon-bingo",
     taskText: "bingo.txt",
+  };
+
+  const tibetanRobotProps = {
+    desktopButton: tibetanRobotDesktop,
+    menuButton: clickTibetanRobotMenu,
+    windowElement: tibetanRobotWindow,
+    iconClassName: "task__icon-tibetan-robot",
+    taskText: "tibetan-singing-robot.txt",
   };
 
   class Window {
@@ -240,13 +257,13 @@ window.onload = function () {
     closeOpenWindows() {
       if (screenConfig.isMobile && !this.isOpen) {
         // loop over alle windows
-        windowsList.forEach(window => {
+        windowsList.forEach((window) => {
           // check if window.isOpen
           if (window.isOpen) {
             // call window.close()
             window.toggleWindow();
           }
-        })
+        });
       }
     }
 
@@ -268,6 +285,7 @@ window.onload = function () {
   windowsList.push(new Window(musicProps, windowsList));
   windowsList.push(new Window(mariposaProps, windowsList));
   windowsList.push(new Window(bingoProps, windowsList));
+  windowsList.push(new Window(tibetanRobotProps, windowsList));
 
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");
@@ -346,5 +364,4 @@ window.onload = function () {
       document.onmousemove = null;
     }
   }
-}
-
+};
