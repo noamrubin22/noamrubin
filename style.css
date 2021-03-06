@@ -597,6 +597,10 @@
     width: 3.5rem;
   }
 
+  .project-header-tibetan-robot-img{
+    width:5rem;
+  }
+
   .project-window > .content > .textbox.max > .project-header,
   .project-window > .content > .textbox.max > .project__content {
     width: calc(100% / 3);
@@ -985,7 +989,7 @@
   }
 
   .sub__projects {
-    bottom: 65%;
+    bottom: 40%;
   }
 
   .desktop-icon {
