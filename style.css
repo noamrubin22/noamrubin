@@ -399,6 +399,15 @@
     margin-bottom: 1.6rem;
   }
 
+  .project-description_collaboration {
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+  }
+
+  .project-description_collaboration > i > a {
+    color: black;
+  }
+
   .project__links {
     display: flex;
     flex-direction: column;
@@ -424,8 +433,11 @@
     border-radius: 2%;
   }
 
-  .tibetan-robot__project-img {
-    width: 80%;
+  .textbox.max
+    > .project-header
+    > .project__img-wrapper
+    > .tibetan-robot__project-img {
+    width: 60%;
   }
 
   .project__info-tech {
@@ -597,13 +609,27 @@
     width: 3.5rem;
   }
 
-  .project-header-tibetan-robot-img{
-    width:5rem;
+  .project-header-tibetan-robot-img {
+    width: 5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  .textbox.max
+    > .project-header
+    > .project-header-img
+    > .project-header-tibetan-robot-img {
+    margin-top: 2rem;
   }
 
   .project-window > .content > .textbox.max > .project-header,
   .project-window > .content > .textbox.max > .project__content {
     width: calc(100% / 3);
+  }
+
+  .tibetan-robot-window.max > .content > .textbox.max > .project-header,
+  .project-window > .content > .textbox.max > .project__content {
+    width: calc(100% / 2.5);
   }
 
   .gerrit-window.max > .content > .textbox.max > .project-header {
@@ -628,6 +654,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /* tibetan singing robot */
+  .tibetan-robot-window.max > .content > .textbox.max > .project__content {
+    width: 40%;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    margin: auto;
   }
 
   /* remove extra project-links */
@@ -1139,7 +1174,6 @@
     background-position: center center;
   }
 
-
   .active {
     border: inset 2px;
   }
@@ -1163,7 +1197,7 @@
     display: inline-block;
     width: 4rem;
   }
-  
+
   .musicviz-img {
     display: inline-block;
     width: 3.5rem;
@@ -1194,20 +1228,20 @@
     border: inset 1px;
   }
 
-  .task__icon-gerrit, 
-  .task__icon-mariposa, 
-  .task__icon-spotavibe, 
-  .task__icon-musicviz, 
-  .task__icon-bingo, 
-  .task__icon-tibetan-robot { 
+  .task__icon-gerrit,
+  .task__icon-mariposa,
+  .task__icon-spotavibe,
+  .task__icon-musicviz,
+  .task__icon-bingo,
+  .task__icon-tibetan-robot {
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  .task__icon-gerrit{
-  background-image: url("./images//Gerrit_01_small.png");
+  .task__icon-gerrit {
+    background-image: url("./images//Gerrit_01_small.png");
   }
 
   .task__icon-mariposa {
