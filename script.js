@@ -53,6 +53,7 @@ window.onload = function () {
   // show screensaver on when "shutting down" pc
   shutDown.addEventListener("click", function () {
     screenSaver.hidden = false;
+    console.log("screensaver should work");
   });
 
   /* START MENU */
