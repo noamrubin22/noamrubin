@@ -501,16 +501,16 @@
 
   .contact__img-github {
     position: absolute;
-    bottom: 25%;
-    left: 48%;
+    bottom: 65%;
+    left: 69%;
     z-index: 999;
     width: 6%;
   }
 
   .contact__img-mail {
     position: absolute;
-    bottom: 64%;
-    left: 69%;
+    bottom: 34%;
+    left: 48%;
     z-index: 999;
     width: 6%;
   }
@@ -525,7 +525,7 @@
 
   /* About window */
   .about-window {
-    width: 37.5rem;
+    width: 38.5rem;
     height: 43.75rem;
     border: outset 2px;
     position: absolute;
