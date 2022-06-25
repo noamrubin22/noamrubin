@@ -1,5 +1,4 @@
 @media only screen and (min-width: 600px) and (max-width: 991px) {
-
   /* Themes */
   .theme-purplelady {
     --color-primary: rgb(77, 37, 77);
@@ -109,7 +108,7 @@
     box-shadow: 0.25rem 0.25rem;
   }
 
-  .settings-window>.content {
+  .settings-window > .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,8 +173,8 @@
     margin: 0;
   }
 
-  .display__props-themes>p,
-  .display__props-background>p {
+  .display__props-themes > p,
+  .display__props-background > p {
     color: black;
     margin: 0;
     padding: 0;
@@ -448,7 +447,7 @@
     margin: 1rem;
   }
 
-  .project__links>span {
+  .project__links > span {
     margin: 1rem;
   }
 
@@ -461,7 +460,7 @@
     margin-bottom: 1.5rem;
   }
 
-  .project__links-gerrit>span {
+  .project__links-gerrit > span {
     margin: 1rem;
   }
 
@@ -484,7 +483,7 @@
     margin: 3rem;
   }
 
-  .project__img-gerrit>img {
+  .project__img-gerrit > img {
     width: auto;
     height: 100%;
     margin: 0rem;
@@ -591,37 +590,46 @@
     display: inline-block;
   }
 
-  .about-window>.content>.textbox>.about-text>.project__info,
-  .about-window>.content>.textbox>.about-text>.project__info>.project__info {
+  .about-window > .content > .textbox > .about-text > .project__info,
+  .about-window
+    > .content
+    > .textbox
+    > .about-text
+    > .project__info
+    > .project__info {
     margin: 5rem;
   }
 
-  .textbox>.about-text {
+  .textbox > .about-text {
     width: 100%;
     margin: 1rem;
   }
 
-  .textbox>.about-text>.project__info>p,
-  .textbox>.about-text>.project__info>.project__info>p {
+  .textbox > .about-text > .project__info > p,
+  .textbox > .about-text > .project__info > .project__info > p {
     font-size: 2rem;
   }
 
-  .textbox>.about-text>h2 {
+  .textbox > .about-text > h2 {
     font-size: 4.5rem;
     margin: 2rem;
   }
 
-  .textbox>.about-text>.about__img-noam {
+  .textbox > .about-text > .about__img-noam {
     width: 100%;
   }
 
   /* other project windows */
-  .project-window.max>.content>.textbox>.project-header>#project-title {
+  .project-window.max > .content > .textbox > .project-header > #project-title {
     font-size: 6rem;
     margin: 0;
   }
 
-  .project-window>.content>.textbox>.project-header>.project-description {
+  .project-window
+    > .content
+    > .textbox
+    > .project-header
+    > .project-description {
     font-size: 2.5rem;
   }
 
@@ -638,45 +646,59 @@
     z-index: 9999;
   }
 
-  .project-window>.content>.textbox>.project-header,
-  .project-window>.content>.textbox>.project__content {
+  .project-window > .content > .textbox > .project-header,
+  .project-window > .content > .textbox > .project__content {
     width: 100%;
   }
 
-  .project-window>.content>.textbox>.project-header.text,
-  .project-window>.content>.textbox>.project__content {
+  .project-window > .content > .textbox > .project-header.text,
+  .project-window > .content > .textbox > .project__content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .project-window>.content>.textbox>.project-header {
+  .project-window > .content > .textbox > .project-header {
     padding-top: 2rem;
   }
 
-  .gerrit-window>.content>.textbox>.project-header {
+  .gerrit-window > .content > .textbox > .project-header {
     padding: 0;
   }
 
-  .project-window>.content>.textbox>.project-header>.project__links {
+  .project-window > .content > .textbox > .project-header > .project__links {
     display: none;
   }
 
-  .project-window>.content>.textbox>.project__content>.project__info.text {
+  .project-window
+    > .content
+    > .textbox
+    > .project__content
+    > .project__info.text {
     display: flex;
     flex-direction: column;
   }
 
-  .project-window>.content>.textbox>.project__content>.project__info.text>p {
+  .project-window
+    > .content
+    > .textbox
+    > .project__content
+    > .project__info.text
+    > p {
     font-size: 3rem;
   }
 
-  .project-window>.content>.textbox>.project__content>.project__info.text>.project__info-tech {
+  .project-window
+    > .content
+    > .textbox
+    > .project__content
+    > .project__info.text
+    > .project__info-tech {
     align-self: center;
     font-size: 3rem;
   }
 
-  .project-window>.content>.textbox>.project__links-gerrit {
+  .project-window > .content > .textbox > .project__links-gerrit {
     display: none;
   }
 
@@ -736,7 +758,8 @@
 
   .start__logo::after {
     content: "";
-    background: url(https://banner2.kisspng.com/20180821/hrt/kisspng-windows-95-windows-98-microsoft-windows-transparen-windows-95-telegram-stickers-directory-5b7c3cffc178a8.4526616315348687357925.jpg) transparent;
+    background: url(https://banner2.kisspng.com/20180821/hrt/kisspng-windows-95-windows-98-microsoft-windows-transparen-windows-95-telegram-stickers-directory-5b7c3cffc178a8.4526616315348687357925.jpg)
+      transparent;
     background-size: contain;
     mix-blend-mode: multiply;
     top: 0;
@@ -1017,7 +1040,7 @@
 
   .bingo {
     top: 22rem;
-    left: 20rem;
+    left: 3.5rem;
   }
 
   .tibetan-robot {
@@ -1213,6 +1236,6 @@
   }
 }
 
-.video-tibetan-robot>iframe {
+.video-tibetan-robot > iframe {
   width: 100%;
 }

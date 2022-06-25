@@ -95,17 +95,13 @@ window.onload = function () {
   const clickAboutMenu = document.querySelector(".about");
   const clickContactMenu = document.querySelector(".contact");
   const clickMariposaMenu = document.querySelector(".sub__projects-mariposa");
-  const clickGerritMenu = document.querySelector(".sub__projects-gerrit");
   const clickMusicMenu = document.querySelector(".sub__projects-musicvis");
-  const clickSpotavibeMenu = document.querySelector(".sub__projects-spotavibe");
   const clickBingoMenu = document.querySelector(".sub__projects-bingo");
   const clickTibetanRobotMenu = document.querySelector(
     ".sub__projects-tibetan-robot"
   );
 
   // windows
-  const gerritWindow = document.querySelector(".gerrit-window");
-  const spotavibeWindow = document.querySelector(".spotavibe-window");
   const musicWindow = document.querySelector(".music-window");
   const mariposaWindow = document.querySelector(".mariposa-window");
   const contactWindow = document.querySelector(".contact-window");
@@ -114,8 +110,6 @@ window.onload = function () {
   const tibetanRobotWindow = document.querySelector(".tibetan-robot-window");
 
   // desktop items
-  const spotavibeDesktop = document.querySelector(".spotavibe");
-  const gerritDesktop = document.querySelector(".gerrit");
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
   const bingoDesktop = document.querySelector(".bingo");
@@ -135,28 +129,12 @@ window.onload = function () {
     taskText: "contact.txt",
   };
 
-  const gerritProps = {
-    desktopButton: gerritDesktop,
-    menuButton: clickGerritMenu,
-    windowElement: gerritWindow,
-    iconClassName: "task__icon-gerrit",
-    taskText: "gerrit.txt",
-  };
-
   const musicProps = {
     desktopButton: musicDesktop,
     menuButton: clickMusicMenu,
     windowElement: musicWindow,
     iconClassName: "task__icon-musicviz",
     taskText: "music-visualization.txt",
-  };
-
-  const spotavibeProps = {
-    desktopButton: spotavibeDesktop,
-    menuButton: clickSpotavibeMenu,
-    windowElement: spotavibeWindow,
-    iconClassName: "task__icon-spotavibe",
-    taskText: "spotavibe.txt",
   };
 
   const mariposaProps = {
@@ -281,8 +259,6 @@ window.onload = function () {
   // create windows
   windowsList.push(new Window(aboutProps, windowsList));
   windowsList.push(new Window(contactProps, windowsList));
-  windowsList.push(new Window(gerritProps, windowsList));
-  windowsList.push(new Window(spotavibeProps, windowsList));
   windowsList.push(new Window(musicProps, windowsList));
   windowsList.push(new Window(mariposaProps, windowsList));
   windowsList.push(new Window(bingoProps, windowsList));
