@@ -53,11 +53,10 @@ window.onload = function () {
   // show screensaver on when "shutting down" pc
   shutDown.addEventListener("click", function () {
     screenSaver.hidden = false;
-    console.log("screensaver should work");
   });
 
   /* START MENU */
-  // start menu appears on click, dissapears on click somewhere else
+  // start menu appears on click, disappears on click somewhere else
   function closeStartMenu(e) {
     const { classList } = e.target;
     const shouldNotClose =
@@ -100,6 +99,7 @@ window.onload = function () {
   const clickTibetanRobotMenu = document.querySelector(
     ".sub__projects-tibetan-robot"
   );
+  const clickDiamondMenu = document.querySelector(".sub__projects-diamond");
 
   // windows
   const musicWindow = document.querySelector(".music-window");
@@ -108,12 +108,14 @@ window.onload = function () {
   const aboutWindow = document.querySelector(".about-window");
   const bingoWindow = document.querySelector(".bingo-window");
   const tibetanRobotWindow = document.querySelector(".tibetan-robot-window");
+  const diamondWindow = document.querySelector(".diamond-window");
 
   // desktop items
   const musicDesktop = document.querySelector(".music-vis");
   const mariposaDesktop = document.querySelector(".mariposa");
   const bingoDesktop = document.querySelector(".bingo");
   const tibetanRobotDesktop = document.querySelector(".tibetan-robot");
+  const diamondDesktop = document.querySelector(".diamond");
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -159,6 +161,14 @@ window.onload = function () {
     windowElement: tibetanRobotWindow,
     iconClassName: "task__icon-tibetan-robot",
     taskText: "tibetan-singing-robot.txt",
+  };
+
+  const diamondProps = {
+    desktopButton: diamondDesktop,
+    menuButton: clickDiamondMenu,
+    windowElement: diamondWindow,
+    iconClassName: "task__icon-diamond",
+    taskText: "diamond.txt",
   };
 
   class Window {
@@ -212,7 +222,7 @@ window.onload = function () {
         });
       }
       this.maximize.addEventListener("click", () => {
-        this.textbox.classList.toggle("max");
+        this.textBox.classList.toggle("max");
         this.props.windowElement.classList.toggle("max");
         starField();
       });
@@ -235,11 +245,8 @@ window.onload = function () {
 
     closeOpenWindows() {
       if (screenConfig.isMobile && !this.isOpen) {
-        // loop over alle windows
         windowsList.forEach((window) => {
-          // check if window.isOpen
           if (window.isOpen) {
-            // call window.close()
             window.toggleWindow();
           }
         });
@@ -251,7 +258,7 @@ window.onload = function () {
       this.maximize = windowElement.querySelector("[data-maximize]");
       this.minimize = windowElement.querySelector("[data-minimize]");
       this.close = windowElement.querySelector("[data-close]");
-      this.textbox = windowElement.querySelector("[data-textbox]");
+      this.textBox = windowElement.querySelector("[data-textbox]");
     }
   }
 
@@ -263,6 +270,7 @@ window.onload = function () {
   windowsList.push(new Window(mariposaProps, windowsList));
   windowsList.push(new Window(bingoProps, windowsList));
   windowsList.push(new Window(tibetanRobotProps, windowsList));
+  windowsList.push(new Window(diamondProps, windowsList));
 
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");

@@ -451,17 +451,6 @@
     margin: 0.3rem;
   }
 
-  .project__img-gerrit {
-    height: 35rem;
-    margin: 2rem;
-  }
-
-  .project__img-gerrit > img {
-    width: auto;
-    height: 100%;
-    margin: 0rem;
-  }
-
   .project__imgs {
     display: flex;
     justify-content: center;
