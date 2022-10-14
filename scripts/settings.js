@@ -41,10 +41,10 @@ class Settings {
       },
       {
         artist: "vika",
-        artistText: "artwork by @uuuuuvika",
-        artistInstaLink: "https://www.instagram.com/uuuuuvika",
+        artistText: "artwork by uvi",
+        artistInstaLink: "https://opensea.io/uvi",
         hasInstagram: true,
-        title: "Peaceful Warrior",
+        title: "Buoyant",
         url: "./images/peacefulwarrior.jpg",
       },
       {
