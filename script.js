@@ -122,6 +122,7 @@ window.onload = function () {
     windowElement: aboutWindow,
     iconClassName: "task__icon-about",
     taskText: "about.txt",
+    isOpenDefault: true,
   };
 
   const contactProps = {
@@ -178,6 +179,11 @@ window.onload = function () {
       this.isOpen = false;
       this.getWindowButtons();
       this.createEventHandler();
+
+      if (this.props.isOpenDefault) {
+        this.createTask();
+        this.toggleWindow();
+      }
     }
 
     createTask() {
