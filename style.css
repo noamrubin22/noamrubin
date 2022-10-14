@@ -621,15 +621,6 @@
     width: calc(100% / 2.5);
   }
 
-  .gerrit-window.max > .content > .textbox.max > .project-header {
-    margin-top: 3%;
-  }
-
-  .gerrit-window.max > .content > .textbox.max > .project-header,
-  .gerrit-window.max > .content > .textbox.max > .project__content {
-    margin-left: 3%;
-  }
-
   .project-window > .content > .textbox.max > .project__img-wrapper {
     width: calc(100% / 3 * 2);
     position: absolute;
@@ -690,45 +681,6 @@
     align-self: center;
     font-size: 1rem;
     margin: 1rem;
-  }
-
-  /* gerrit max */
-  .gerrit-window.max
-    > .content
-    > .textbox.max
-    > .project__content
-    > .project__img-wrapper {
-    width: calc(100% / 3 * 2);
-    position: absolute;
-    left: 46%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-  }
-
-  .gerrit-window.max
-    > .content
-    > .textbox.max
-    > .project-header
-    > .project__links-gerrit {
-    margin: 0;
-  }
-
-  .project-window.max > .content > .textbox.max > .project__links-gerrit,
-  .project-window.max
-    > .content
-    > .textbox.max
-    > .project-header
-    > .project-header-img2 {
-    display: none;
-  }
-
-  .gerrit-window.max
-    > .content
-    > .textbox.max
-    > .project-header
-    > .project-header-img {
-    margin-top: 0rem;
   }
 
   /* Start button */
@@ -1050,6 +1002,11 @@
     margin-left: 1rem;
   }
 
+  .desktop-icon-diamond__text {
+    margin-top: 1.5rem;
+    margin-left: 0.2rem;
+  }
+
   .desktop-icon:hover {
     cursor: pointer;
   }
@@ -1083,6 +1040,11 @@
   .tibetan-robot {
     top: 1rem;
     left: 15.5rem;
+  }
+
+  .diamond {
+    top: 10rem;
+    left: 8.5rem;
   }
 
   /*  Menubar */
@@ -1192,7 +1154,7 @@
     width: 3.5rem;
   }
 
-  .gerrit-img {
+  .diamond-img {
     width: 4.5rem;
     z-index: 2;
   }
@@ -1217,28 +1179,19 @@
     border: inset 1px;
   }
 
-  .task__icon-gerrit,
   .task__icon-mariposa,
-  .task__icon-spotavibe,
   .task__icon-musicviz,
   .task__icon-bingo,
-  .task__icon-tibetan-robot {
+  .task__icon-tibetan-robot,
+  .task__icon-diamond {
     width: 2rem;
     height: 2rem;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  .task__icon-gerrit {
-    background-image: url("./images//Gerrit_01_small.png");
-  }
-
   .task__icon-mariposa {
     background-image: url("./images//Mariposa_01_small.png");
-  }
-
-  .task__icon-spotavibe {
-    background-image: url("./images//spotavibe_01_small.png");
   }
 
   .task__icon-musicviz {
@@ -1253,6 +1206,10 @@
     width: 3rem;
     height: 3rem;
     background-image: url("./images/Tibet_robot_01_small.png");
+  }
+
+  .task__icon-diamond {
+    background-image: url("./images/diamond_small.png");
   }
 
   img {
