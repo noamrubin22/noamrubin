@@ -91,12 +91,7 @@ function starField() {
       w
     );
     c.font = "italic 24px Sans-Serif";
-    c.fillText(
-      `currently looking for new opportunities, also open for collaborations`,
-      w / 2,
-      h / 2.6,
-      w
-    );
+    c.fillText(`open for collaborations`, w / 2, h / 2.6, w);
     c.fillText(`feel free to get in touch `, w / 2, h / 2.2);
     c.font = "20px Sans-Serif";
     c.fillText(`nrubin222@gmail.com`, w / 2, h / 1.9);

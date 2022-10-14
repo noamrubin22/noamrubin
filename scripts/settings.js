@@ -135,7 +135,7 @@ class Settings {
 
   previewWallpaper(wallpaperIndex) {
     const wallpaper = this.wallpapers[wallpaperIndex];
-    // sla op in constructor en call via this. DOM interactive is duur voor performance
+    // save in constructor and call through this. DOM interactive is expensive for performance
     const monitorWallpaper = document.querySelector("[data-wallpaper-monitor]");
     const settingsMonitorWallpaper = document.querySelector(
       "[data-wallpaper-pc]"
@@ -220,7 +220,7 @@ class Settings {
         }
         return acc;
       }, undefined);
-      return Boolean(storedTheme) ? themeIndex : wiindowsClassic;
+      return Boolean(storedTheme) ? themeIndex : windowsClassic;
     }
   }
 }
