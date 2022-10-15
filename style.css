@@ -518,8 +518,8 @@
     height: 43.75rem;
     border: outset 2px;
     position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
+    left: 6.5rem;
+    top: 1.5rem;
     background: #c0c0c0;
     z-index: 9999;
   }
