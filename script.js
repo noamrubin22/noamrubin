@@ -180,7 +180,7 @@ window.onload = function () {
       this.getWindowButtons();
       this.createEventHandler();
 
-      if (this.props.isOpenDefault) {
+      if (this.props.isOpenDefault && !screenConfig.isMobile) {
         this.createTask();
         this.toggleWindow();
       }
