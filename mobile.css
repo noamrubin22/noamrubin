@@ -1013,6 +1013,11 @@
     margin-left: 2rem;
   }
 
+  .desktop-icon-diamond__text {
+    margin-top: 7rem;
+    margin-left: 2rem;
+  }
+
   .desktop-icon:hover {
     cursor: pointer;
   }
@@ -1044,8 +1049,13 @@
   }
 
   .tibetan-robot {
-    top: 3rem;
-    left: 35rem;
+    top: 22rem;
+    left: 20rem;
+  }
+
+  .diamond {
+    top: 40rem;
+    left: 3.5rem;
   }
 
   /* Desktop images */
@@ -1065,12 +1075,6 @@
     width: 7rem;
   }
 
-  .gerrit-img {
-    display: inline-block;
-    width: 10rem;
-    z-index: 2;
-  }
-
   .bingo-img {
     display: inline-block;
     width: 9rem;
@@ -1080,6 +1084,11 @@
   .tibetan-robot-img {
     display: inline-block;
     width: 9rem;
+  }
+
+  .diamond-img {
+    width: 9rem;
+    z-index: 2;
   }
 
   /*  Menubar */
