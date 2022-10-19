@@ -1018,6 +1018,11 @@
     margin-left: 2rem;
   }
 
+  .desktop-icon-searchtalent__text {
+    margin-top: 4.5rem;
+    margin-left: 1.4rem;
+  }
+
   .desktop-icon:hover {
     cursor: pointer;
   }
@@ -1025,16 +1030,6 @@
   /* Desktop icons */
   .mariposa {
     top: 3.5rem;
-    left: 3.5rem;
-  }
-
-  .spotavibe {
-    top: 20rem;
-    left: 3.5rem;
-  }
-
-  .gerrit {
-    top: 37rem;
     left: 3.5rem;
   }
 
@@ -1058,15 +1053,15 @@
     left: 3.5rem;
   }
 
+  .searchtalent {
+    top: 4.5rem;
+    left: 36rem;
+  }
+
   /* Desktop images */
   .mariposa-img {
     display: inline-block;
     width: 10rem;
-  }
-
-  .spotavibe-img {
-    display: inline-block;
-    width: 9.5rem;
   }
 
   .musicviz-img {
@@ -1089,6 +1084,10 @@
   .diamond-img {
     width: 9rem;
     z-index: 2;
+  }
+
+  .searchtalent-img {
+    width: 7.8rem;
   }
 
   /*  Menubar */
