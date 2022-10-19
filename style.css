@@ -1165,7 +1165,7 @@
   }
 
   .searchtalent-img {
-    width: 4.5rem;
+    width: 4rem;
     z-index: 2;
   }
   /* social media buttons */
@@ -1192,9 +1192,10 @@
   .task__icon-musicviz,
   .task__icon-bingo,
   .task__icon-tibetan-robot,
-  .task__icon-diamond {
-    width: 2rem;
-    height: 2rem;
+  .task__icon-diamond,
+  .task__icon-searchtalent {
+    width: 2.5rem;
+    height: 2.5rem;
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -1223,8 +1224,8 @@
 
   .task__icon-searchtalent {
     background-image: url("./images/searchtalent_small.png");
-    width: 1.5rem;
-    height: 2rem;
+    padding: 0;
+    margin: 0;
   }
 
   img {
