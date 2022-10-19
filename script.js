@@ -100,6 +100,9 @@ window.onload = function () {
     ".sub__projects-tibetan-robot"
   );
   const clickDiamondMenu = document.querySelector(".sub__projects-diamond");
+  const clickSearchTalentMenu = document.querySelector(
+    ".sub__projects-searchtalent"
+  );
 
   // windows
   const musicWindow = document.querySelector(".music-window");
@@ -109,6 +112,7 @@ window.onload = function () {
   const bingoWindow = document.querySelector(".bingo-window");
   const tibetanRobotWindow = document.querySelector(".tibetan-robot-window");
   const diamondWindow = document.querySelector(".diamond-window");
+  const searchTalentWindow = document.querySelector(".searchtalent-window");
 
   // desktop items
   const musicDesktop = document.querySelector(".music-vis");
@@ -116,6 +120,7 @@ window.onload = function () {
   const bingoDesktop = document.querySelector(".bingo");
   const tibetanRobotDesktop = document.querySelector(".tibetan-robot");
   const diamondDesktop = document.querySelector(".diamond");
+  const searchTalentDesktop = document.querySelector(".searchtalent");
 
   const aboutProps = {
     menuButton: clickAboutMenu,
@@ -170,6 +175,14 @@ window.onload = function () {
     windowElement: diamondWindow,
     iconClassName: "task__icon-diamond",
     taskText: "diamond.txt",
+  };
+
+  const searchTalentProps = {
+    desktopButton: searchTalentDesktop,
+    menuButton: clickSearchTalentMenu,
+    windowElement: searchTalentWindow,
+    iconClassName: "task__icon-searchtalent",
+    taskText: "jobplatform.txt",
   };
 
   class Window {
@@ -277,6 +290,7 @@ window.onload = function () {
   windowsList.push(new Window(bingoProps, windowsList));
   windowsList.push(new Window(tibetanRobotProps, windowsList));
   windowsList.push(new Window(diamondProps, windowsList));
+  windowsList.push(new Window(searchTalentProps, windowsList));
 
   // Make the desktop icons draggable
   const desktopIcons = document.getElementsByClassName("desktop-icon");
