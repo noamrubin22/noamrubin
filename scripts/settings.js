@@ -53,7 +53,7 @@ class Settings {
         artistInstaLink: "https://www.instagram.com/yoshikame_",
         hasInstagram: true,
         title: "A Pink Flower",
-        url: "./images/a-pink-flower.mp4",
+        url: "./images/a-pink-flower.png",
       },
       {
         artist: "yossi2",

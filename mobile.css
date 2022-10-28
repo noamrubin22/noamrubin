@@ -233,10 +233,6 @@
     outline: var(--color-primary) auto 1.25rem;
   }
 
-  #yossi2 {
-    display: none;
-  }
-
   .shruti {
     height: 100%;
   }
@@ -246,7 +242,8 @@
   }
   .kathi,
   .djamillia,
-  .vika {
+  .vika,
+  .yossi1 {
     width: 200%;
   }
 
