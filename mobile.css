@@ -237,19 +237,17 @@
     display: none;
   }
 
-  .djamillia {
-    height: 40%;
-  }
-
-  .vika,
-  .yossi1,
-  .shruti,
-  .kathi {
+  .shruti {
     height: 100%;
   }
 
   .chris {
-    width: 120%;
+    height: 50%;
+  }
+  .kathi,
+  .djamillia,
+  .vika {
+    width: 200%;
   }
 
   .since95 {
@@ -262,11 +260,9 @@
     align-self: center;
   }
 
-  .pc__background-img.chris,
-  .pc__background-img.vika {
-    height: 100%;
-    width: 100%;
-  }
+  /* .pc__background-img.chris {
+    height: 50%;
+  } */
 
   /*  Project windows  MAX is small*/
   .project-window.max {
